@@ -6,7 +6,7 @@ export default function App() {
           <div className="copyright">
               <ul>
                   <li>
-                      <a>© 2023 Stichting Accessibility</a>
+                      <a href="#">© 2023 Stichting Accessibility</a>
                   </li>
               </ul>
           </div>
