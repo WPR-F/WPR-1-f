@@ -522,11 +522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nazihrtoure/Programming Files/Webprojects/WPR/WPR-1-f/wprfAPI/wprfAPI.csproj",
+      "projectUniqueName": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
       "projectName": "wprfAPI",
-      "projectPath": "/Users/nazihrtoure/Programming Files/Webprojects/WPR/WPR-1-f/wprfAPI/wprfAPI.csproj",
+      "projectPath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
       "packagesPath": "/Users/nazihrtoure/.nuget/packages/",
-      "outputPath": "/Users/nazihrtoure/Programming Files/Webprojects/WPR/WPR-1-f/wprfAPI/obj/",
+      "outputPath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nazihrtoure/.nuget/NuGet/NuGet.Config"
@@ -535,6 +535,7 @@
         "net8.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

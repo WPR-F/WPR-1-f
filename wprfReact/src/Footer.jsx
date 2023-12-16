@@ -3,10 +3,10 @@ import './Footer.css';
 export default function App() {
   return (
       <div className="footer-container">
-          <div className="copyright">
+          <div className="footer-buttons" id="copyright">
               <ul>
                   <li>
-                      <a href="#">© 2023 Stichting Accessibility</a>
+                      <a>© 2023 Stichting Accessibility</a>
                   </li>
               </ul>
           </div>
