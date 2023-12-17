@@ -9,6 +9,7 @@
   display: flex;
   background-color: #f1f1f1;
   justify-content: space-between;
+  transition: width 1s;
   &:hover {
     width: 300px;
   }
