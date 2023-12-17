@@ -1,12 +1,17 @@
 .sidebar-container {
-  position: absolute;
+  position: fixed;
   overflow: auto;
-  left: 0;
-  height: 100vh;
-  width: 300px;
+  top: 150px;
+  border-radius: 20px;
+  left: 10px;
+  height: 800px;
+  width: 75px;
   display: flex;
-  background-color: #131B56;
+  background-color: #f1f1f1;
   justify-content: space-between;
+  &:hover {
+    width: 300px;
+  }
 }
 
 .sidebar-buttons {
@@ -16,12 +21,13 @@
     padding: 0;
     overflow: hidden;
     text-align: center;
-    font-size: 25px;
+    font-size: 16px;
     & li {
       float: left;
       display: flex;
       width: 100%;
       padding: 0 0 0 20px;
+      align-items: center;
       &:hover {
         border: solid;
         border-width: 1px;
@@ -30,15 +36,15 @@
     
         cursor: pointer;
         &:hover a {
-          color: #20A883;
+          color: black;
           font-weight: bold;
         }
       }
       & a {
-        padding: 30px 0 30px 0;
+        padding: 30px 0 30px 20px;
         left: 0;
         right: 0;
-        color: white;
+        color: black;
         text-decoration: none;
         }
       }
