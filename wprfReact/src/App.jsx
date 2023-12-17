@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar/>
-        <SidebarAdminPortal/>
+        <SidebarPanellidPortal/>
        
       </header>
       <footer><Footer/></footer>

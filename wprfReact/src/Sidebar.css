@@ -1,15 +1,16 @@
 .sidebar-container {
   position: fixed;
-  overflow: auto;
+  overflow: hidden;
+  white-space: nowrap;
   top: 150px;
   border-radius: 20px;
   left: 10px;
-  height: 800px;
-  width: 75px;
+  height: auto;
+  width: 80px;
   display: flex;
   background-color: #f1f1f1;
   justify-content: space-between;
-  transition: width 1s;
+  transition: width 1s, height 2s;
   &:hover {
     width: 300px;
   }
