@@ -1,5 +1,8 @@
 import './Sidebar.css';
-import logo from './images/icon_accessibility.png';
+import Create from './images/icons8-create-50.png';
+import Onderzoek from './images/icons8-case-study-50.png';
+import Chat from './images/icons8-chat-50.png';
+
 
 export default function App() {
 
@@ -9,12 +12,15 @@ export default function App() {
               <div className="sidebar-buttons">
                   <ul>
                       <li>
+                          <img src={Create} width="40" height="40"/>
                           <a>Onderzoeken aanmaken</a>
                       </li>
                       <li>
+                          <img src={Onderzoek} width="40" height="40"/>
                           <a>Mijn onderzoeken</a>
                       </li>
                       <li>
+                          <img src={Chat} width="40" height="40"/> 
                           <a>Chat</a>
                       </li>
                   </ul>
