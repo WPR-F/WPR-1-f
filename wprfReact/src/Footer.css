@@ -6,45 +6,45 @@
   bottom: 0;
   background-color: #131B56;
   justify-content: space-between;
-  justify-content: ;
+  margin-top: auto;
+  
 }
 .footer-buttons {
   position: relative;
   align-self: center;
   right: 20px;
-
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  text-align: center;
-  font-size: 20px;
-  float: right;
-
-  & li {
-    float: left;
-    display: flex;
-    margin: 0px 15px 0px 15px;
-    & a {
-      left: 0;
-      right: 0;
-      color: white;
-      text-align: center;
-      margin: 8px;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
+  & ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 20px;
+    float: right;
+    & li {
+      float: left;
+      display: flex;
+      margin: 0px 15px 0px 15px;
+      & a {
+        left: 0;
+        right: 0;
+        color: white;
+        text-align: center;
+        margin: 8px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
+
 }
-.copyright {
+
+#copyright {
   align-self: center;
-}
-
-li {
-  display: flex;
-
-
+  & a {
+    &:hover {
+    text-decoration: none;
+    }
+  }
 }

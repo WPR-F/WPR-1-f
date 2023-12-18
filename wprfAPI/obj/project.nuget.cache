@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f/O3btP5HrXR4ZFPfbXDDD6Kt5JD8gbsRxfXnyjPS+6lJNz1FmjM8vLiXw9HfCzQEte/LXCMq9ix7e7A2HMKKA==",
+  "dgSpecHash": "QeY94FfUYA5XOMdCg0ugkpemAzXbyzIGD8PU0mj8nwVIbdN1fKUvsqudfjUqW1Ox2Zzw2m++DrK9E64aIt3ITw==",
   "success": true,
-  "projectFilePath": "/Users/nazihrtoure/Programming Files/Webprojects/WPR/WPR-1-f/wprfAPI/wprfAPI.csproj",
+  "projectFilePath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
   "expectedPackageFiles": [
     "/Users/nazihrtoure/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/nazihrtoure/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
