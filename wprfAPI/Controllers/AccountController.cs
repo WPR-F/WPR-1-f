@@ -14,7 +14,6 @@ public class AccountsController : ControllerBase
         _context = context;
     }
 
-    // POST: api/Accounts
     [HttpPost]
     [Route("register")]
     public async Task<ActionResult<User>> PostAccount(User account)
@@ -25,7 +24,6 @@ public class AccountsController : ControllerBase
         return CreatedAtAction("GetAccount", new { id = account.Id }, account);
     }
 
-    // GET: api/Accounts/5
     [HttpGet("{id}")]
     public async Task<ActionResult<User>> GetAccount(int id)
     {

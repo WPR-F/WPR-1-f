@@ -16,6 +16,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowSpecificOrigin"); // Apply the CORS policy
+
 app.UseAuthorization();
 
 app.MapControllers();
@@ -28,6 +30,17 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
         options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))); // Use configuration parameter
 
     services.AddControllers();
+
+    services.AddCors(options =>
+    {
+        options.AddPolicy("AllowSpecificOrigin",
+            builder =>
+            {
+                builder.WithOrigins("https://localhost:5173")
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+            });
+    });
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
