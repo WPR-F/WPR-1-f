@@ -51,9 +51,10 @@ button {
     cursor: pointer;
     &:hover {
         border-style: solid;
-        border-width: 1px;
-        border-color: white;
+        border-width: 2px;
+        border-color: #21CEA1;
         font-weight: bold;
+        background-color: #131B56;
     }
 }
 
