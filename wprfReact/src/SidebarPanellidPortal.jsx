@@ -7,7 +7,6 @@ import Chat from './images/icons8-chat-50.png';
 export default function App() {
 
   return (
-      <div>
           <div className="sidebar-container">
               <div className="sidebar-buttons">
                   <ul>
@@ -30,7 +29,6 @@ export default function App() {
                   </ul>
               </div>
           </div>
-      </div>
   );
 }
 
