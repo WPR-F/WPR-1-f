@@ -1,5 +1,7 @@
 import './Navbar.css';
 import logo from './images/icon_accessibility.png';
+import { Link } from 'react-router-dom';
+import RegisterForm from './register/registerform';
 
 export default function App() {
 
@@ -18,12 +20,12 @@ export default function App() {
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
-                      <li id="register"><a href="#Registreren">Registreren</a></li>
+                      <li id="register"><Link to="/register">Registreren</Link></li>
                       <li id="login"><a href="#Login">Log in</a></li>
                   </ul>
               </div>
               <div className="mobile-menu-container">
-                  <input class="checkbox" type="checkbox"/>
+                  <input className="checkbox" type="checkbox"/>
                   <div className="hamburger-lines">
                       <span className="line line1"></span>
                       <span className="line line2"></span>
