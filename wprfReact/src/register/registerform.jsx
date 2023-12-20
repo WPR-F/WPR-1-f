@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import './registerform.css';
+import '../register/registerform.css';
+import { useEffect } from 'react';
+import { gapi} from 'gapi-script';
+import Login from '../Google/GoogleLogin.jsx';
+
+const clientId = "828244250147-lp4h35efg6s4o666t8emosrikt0ml8jm.apps.googleusercontent.com";
 
 function RegisterForm() {
     const [Name, setFirstName] = useState('');
@@ -46,6 +51,18 @@ function RegisterForm() {
         }
     };
 
+    useEffect(() => {
+        function start() {
+          gapi.client.init({
+            clientId: clientId,
+            scope: ""
+            
+          })
+        };
+    
+        gapi.load('client:auth2', start);
+      });
+
     return (
         <div className='blok'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
@@ -55,8 +72,9 @@ function RegisterForm() {
                 <input type="text" placeholder="E-mailadres" required value={email} onChange={e => setEmail(e.target.value)} />
                 <input type="password" placeholder="Wachtwoord" required value={password} onChange={e => setPassword(e.target.value)} />
                 <input type="password" placeholder="Herhaal Wachtwoord" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
-                <button type="submit">Registreren</button>
-            </form>
+                <button type="submit">Registreren</button> 
+            </form>  
+            <Login/>
         </div>
     );
 }
