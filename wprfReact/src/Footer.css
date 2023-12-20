@@ -1,5 +1,5 @@
 .footer-container {
-  position: absolute;
+  position: relative;
   height: 120px;
   width: 100%;
   display: flex;
