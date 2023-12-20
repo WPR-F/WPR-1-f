@@ -15,5 +15,6 @@ RUN dotnet publish "wprfAPI.csproj" -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ASPNETCORE_HTTPS_PORT=5001
+ENV ASPNETCORE_URLS=http://+:5210
+ENV ASPNETCORE_ENVIRONMENT=Development
 ENTRYPOINT ["dotnet", "wprfAPI.dll"]

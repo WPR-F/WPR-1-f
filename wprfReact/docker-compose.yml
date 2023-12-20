@@ -12,7 +12,7 @@ services:
       context: ../wprfAPI
       dockerfile: Dockerfile
     ports:
-      - '5001:5001'
+      - '5210:5210'
     command: dotnet wprfAPI.dll
 
 
