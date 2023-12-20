@@ -4484,19 +4484,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tris9\\.nuget\\packages\\": {}
+    "C:\\Users\\shema\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WPR\\registratie\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+      "projectUniqueName": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
       "projectName": "wprfAPI",
-      "projectPath": "E:\\WPR\\registratie\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
-      "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
-      "outputPath": "E:\\WPR\\registratie\\WPR-1-f\\wprfAPI\\obj\\",
+      "projectPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+      "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tris9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
