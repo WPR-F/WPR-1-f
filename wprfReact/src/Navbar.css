@@ -6,7 +6,78 @@
   background-color: #131B56;
   justify-content: space-between;
 }
-
+.mobile-buttons-container {
+  position: relative;
+  width: auto;
+  float: right;
+  top: 10px;
+  right: 20px;
+  background-color: #131B56;
+  border-radius: 10px;
+  z-index: 100;
+}
+.mobile-buttons {
+  width: 400px;
+   & ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 0;
+    & li {
+      display: flex;
+      margin: 10px 0px 10px 0px;
+      width: 100%;
+      &:hover {
+        border: solid;
+        border-width: 1px;
+        border-radius: 1px;
+        border-color: white;
+      }
+      & a {
+        width: 100%;
+        margin: 5px 0px 5px 0px;
+        left: 0;
+        right: 0;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.register-login-container {
+  width: auto;
+  align-self: center;
+  padding-left: 50px;
+   & ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 0;
+    & li {
+      display: flex;
+      margin: 10px 5px 10px 5px;
+      width: 100%;
+      float: left;
+      
+      &:hover {
+        border: solid;
+        border-width: 1px;
+        border-radius: 1px;
+        border-color: white;
+      }
+      & a {
+        width: 100%;
+        margin: 5px 0px 5px 0px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}
 .mobile-menu-container {
   display: none;
   position: relative;
@@ -22,12 +93,6 @@
     opacity: 0;
     margin: 0;
     cursor: pointer;
-    &:checked .nav-buttons {
-      display: block;
-    }
-    &:checked ~ .nav-buttons {
-      transform: translateX(0);
-    }
     &:checked ~ .hamburger-lines .line1 {
       transform: rotate(45deg);
     }
@@ -94,6 +159,7 @@
     }
   }
 }
+
 .logo {
   position: relative;
   left: 20px;
@@ -137,13 +203,56 @@
     }
   }
 }
+
+#registerMobile {
+  width: 40%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #20A883;
+  &:hover {
+    background-color: #20A883;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  & a {
+    margin: 8px 13px 8px 13px;
+    &:hover {
+      background-color: #20A883;
+      text-decoration: none;
+    }
+  }
+}
+
+#loginMobile {
+  width: 40%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #20A883;
+  background-color: #20A883;
+  &:hover {
+    background-color: #131B56;
+    cursor: pointer;
+  }
+  & a {
+    margin: 8px 36px 8px 37px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 @media screen and (max-width: 1610px) {
   .nav-buttons {
     display: none;
-
   }
   .mobile-menu-container {
     display: flex;
   }
 
+}
+@media screen and (min-width: 1611px) {
+  .mobile-buttons-container {
+    display: none;
+  }
 }
