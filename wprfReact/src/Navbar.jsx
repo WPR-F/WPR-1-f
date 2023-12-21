@@ -22,13 +22,13 @@ export default function App() {
                   <ul>
                       <li><a href="#Actueel">Actueel</a></li>
                       <li><a href="#Toegankelijkheid">Toegankelijkheid</a></li>
-                      <li> <a href="#Hoe wij helpen">Hoe wij helpen</a></li>
+                      <li><a href="#Hoe wij helpen">Hoe wij helpen</a></li>
                       <li><a href="#Sectoren">Sectoren</a></li>
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
                       <li id="register"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="login"><a href="#Login">Log in</a></li>
+                      <li id="login"><a>Log in</a></li>
                   </ul>
               </div>
               <div className="mobile-menu-container">
@@ -56,7 +56,7 @@ export default function App() {
               <div className="register-login-container">
                   <ul>
                       <li id="registerMobile"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="loginMobile"><a href="#Login">Log in</a></li>
+                      <li id="loginMobile"><a>Log in</a></li>
                   </ul>
               </div>
               </div>

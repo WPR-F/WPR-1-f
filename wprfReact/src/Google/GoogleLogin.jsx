@@ -6,9 +6,12 @@ const clientId = "828244250147-lp4h35efg6s4o666t8emosrikt0ml8jm.apps.googleuserc
 
 function Login() {
 
-    const response = () => {
-        console.log(response);
-    }
+    const responseGoogle = (response) => {
+          const { profileObj } = response;
+          console.log(`${profileObj.givenName}`);
+          console.log(`${profileObj.familyName}`);
+          console.log(`${profileObj.email}`);
+        }
 
    
     return (
@@ -16,8 +19,8 @@ function Login() {
             <GoogleLogin className='google-Login-Button'
                 clientId={clientId}
                 buttonText="Inloggen met Google"
-                onSuccess={response}
-                onFailure={response}
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
                 isSignedIn={true}
             />         

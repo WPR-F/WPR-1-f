@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../register/registerform.css';
 import { useEffect } from 'react';
-import { gapi} from 'gapi-script';
+import { gapi } from 'gapi-script';
 import Login from '../Google/GoogleLogin.jsx';
 
 const clientId = "828244250147-lp4h35efg6s4o666t8emosrikt0ml8jm.apps.googleusercontent.com";
