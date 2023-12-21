@@ -1,0 +1,29 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    cd wprfReact
+    npm install
+    npm run build
+  displayName: 'npm install and build for wprfReact'
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.x'
+  displayName: 'Install .NET Core'
+
+- script: |
+    cd ../wprfAPI
+    dotnet restore
+    dotnet build --configuration Release
+  displayName: 'dotnet restore and build for wprfAPI'
