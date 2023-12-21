@@ -1,6 +1,23 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+        "projectName": "wprfAPI",
+        "projectPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+        "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
     "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj": {}
   },
   "projects": {
@@ -15,6 +32,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nazihrtoure/.nuget/NuGet/NuGet.Config"
+>>>>>>> origin/Develop
         ],
         "originalTargetFrameworks": [
           "net8.0"

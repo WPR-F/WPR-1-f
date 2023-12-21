@@ -48,5 +48,8 @@
       "applicationUrl": "http://localhost:48293",
       "sslPort": 44358
     }
+  },
+  "environmentVariables": {
+    "ASPNETCORE_HTTPS_PORT": "5001"
   }
 }

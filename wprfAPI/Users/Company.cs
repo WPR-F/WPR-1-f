@@ -4,7 +4,7 @@ namespace wprfAPI.Users
 {
     public class Company: User, ICompany
     {
-        private string Name { get; set; }
+        // private string Name { get; set; }
         private string Location { get; set; }
         private string WebsiteLink { get; set; }
 
