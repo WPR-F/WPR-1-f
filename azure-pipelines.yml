@@ -1,6 +1,5 @@
 trigger:
 - main
-- Develop
 
 resources:
 - repo: self
@@ -21,6 +20,7 @@ stages:
       displayName: Docker Compose
       inputs:
         action: 'Build services'
-        dockerComposeFile: '$(Build.SourcesDirectory)/wprfReact/docker-compose.yml'
+        dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
+        # dockerComposeFile: '$(Build.SourcesDirectory)/wprfReact/docker-compose.yml'
         # dockerfile: '$(Build.SourcesDirectory)/wprfAPI/Dockerfile'
         dockerComposeCommand: 'build'
