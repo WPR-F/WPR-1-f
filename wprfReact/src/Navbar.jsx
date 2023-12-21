@@ -32,7 +32,7 @@ export default function App() {
                   </ul>
               </div>
               <div className="mobile-menu-container">
-                  <input className="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
+                  <input class="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
                   <div className="hamburger-lines">
                       <span className="line line1"></span>
                       <span className="line line2"></span>
