@@ -23,4 +23,4 @@ stages:
         action: 'Build services'
         dockerComposeFile: '$(Build.SourcesDirectory)/wprfReact/docker-compose.yml'
         # dockerfile: '$(Build.SourcesDirectory)/wprfAPI/Dockerfile'
-        dockerComposeCommand: 'up --build -d'
+        dockerComposeCommand: 'build'
