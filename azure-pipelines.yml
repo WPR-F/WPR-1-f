@@ -1,0 +1,25 @@
+trigger:
+- main
+- Develop
+
+resources:
+- repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: DockerCompose@0
+      displayName: Docker Compose
+      inputs:
+        action: 'Build services'
+        dockerComposeFile: '**/docker-compose.yml'
+        dockerComposeCommand: 'up --build -d'
