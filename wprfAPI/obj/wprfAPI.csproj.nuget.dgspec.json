@@ -1,27 +1,44 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Studie\\WPR\\wprfAPI\\wprfAPI.csproj": {}
+<<<<<<< HEAD
+    "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {}
   },
   "projects": {
-    "C:\\Studie\\WPR\\wprfAPI\\wprfAPI.csproj": {
+    "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Studie\\WPR\\wprfAPI\\wprfAPI.csproj",
+        "projectUniqueName": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
         "projectName": "wprfAPI",
-        "projectPath": "C:\\Studie\\WPR\\wprfAPI\\wprfAPI.csproj",
-        "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
-        "outputPath": "C:\\Studie\\WPR\\wprfAPI\\obj\\",
+        "projectPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+        "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tris9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+    "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj": {}
+  },
+  "projects": {
+    "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
+        "projectName": "wprfAPI",
+        "projectPath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
+        "packagesPath": "/Users/nazihrtoure/.nuget/packages/",
+        "outputPath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nazihrtoure/.nuget/NuGet/NuGet.Config"
+>>>>>>> origin/Develop
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +57,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
@@ -68,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

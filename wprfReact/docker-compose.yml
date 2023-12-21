@@ -1,0 +1,49 @@
+version: '3'
+services:
+  wprfreact:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/wprfReact
+    command: npm run dev
+  wprfapi:
+    build: 
+      context: ../wprfAPI
+      dockerfile: Dockerfile
+    ports:
+      - '5210:5210'
+    command: dotnet wprfAPI.dll
+
+
+
+# version: '3'
+# services:
+#   app:
+#     build: .
+#     ports:
+#       - "8080:8080"
+#     volumes:
+#       - .:/app
+#     command: npm start
+#   wprfapi:
+#     build: 
+#       context: ../wprfAPI
+#       dockerfile: Dockerfile
+#     ports:
+#       - '5000:5000'
+#     volumes:
+#       - ./wprfAPI:/app
+#     command: dotnet wprfAPI.dll
+
+
+
+# version: '3'
+# services:
+#   app:
+#     build: .
+#     ports:
+#       - "8080:8080"
+#     volumes:
+#       - .:/app
+#     command: npm start

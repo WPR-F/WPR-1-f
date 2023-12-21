@@ -1,0 +1,66 @@
+.sidebar-container {
+  position: fixed;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 150px;
+  border-radius: 20px;
+  left: 10px;
+  height: auto;
+  width: 80px;
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  transition: width 1s, height 2s;
+  &:hover {
+    width: 300px;
+  }
+}
+
+.sidebar-buttons {
+  width: 100%;
+   & ul {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    & li {
+      float: left;
+      display: flex;
+      width: 100%;
+      padding: 0 0 0 20px;
+      align-items: center;
+      &:hover {
+        border: solid;
+        border-width: 1px;
+        border-radius: 1px;
+        border-color: white;
+    
+        cursor: pointer;
+        &:hover a {
+          color: black;
+          font-weight: bold;
+        }
+      }
+      & a {
+        padding: 30px 0 30px 20px;
+        left: 0;
+        right: 0;
+        color: black;
+        text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1610px) {
+    .nav-buttons {
+      display: none;
+
+    }
+    .mobile-hamburger-menu-container {
+      display: flex;
+    }
+
+  }
