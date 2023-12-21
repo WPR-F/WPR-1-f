@@ -20,7 +20,7 @@ stages:
       displayName: Docker Compose
       inputs:
         action: 'Build services'
-        dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yml'
+        dockerComposeFile: 'wprfReact/docker-compose.yml'
         # dockerComposeFile: '$(Build.SourcesDirectory)/wprfReact/docker-compose.yml'
         # dockerfile: '$(Build.SourcesDirectory)/wprfAPI/Dockerfile'
         dockerComposeCommand: 'build'
