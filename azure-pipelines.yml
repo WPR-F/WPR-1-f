@@ -13,6 +13,12 @@ steps:
     packageType: 'sdk'
     version: '8.0.x'
 
+- script: |
+    echo "Cleaning NuGet cache files..."
+    find . -name "project.assets.json" -type f -delete
+    find . -name "project.nuget.cache" -type f -delete
+  displayName: 'Clean NuGet cache files'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
