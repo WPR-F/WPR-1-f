@@ -1,14 +1,14 @@
 .blok {
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     min-width: 450px;
     width: 35%;
     height: 800px;
     align-self: center;
     background-color: #131B56;
-    position: relative;
+   
     margin: 150px auto;
    
     border-radius: 25px;

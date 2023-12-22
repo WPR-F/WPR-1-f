@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import RegisterForm from './register/registerform';
 
 export default function App() {
-   
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
 
       const handleCheckboxClick = () => {
@@ -27,7 +26,7 @@ export default function App() {
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
-                      <li id="register"><a><Link to="/register">Registreren</Link></a></li>
+                      <li id="register"><Link to="/register">Registreren</Link></li>
                       <li id="login"><a>Log in</a></li>
                   </ul>
               </div>
@@ -55,7 +54,7 @@ export default function App() {
               </div>
               <div className="register-login-container">
                   <ul>
-                      <li id="registerMobile"><a><Link to="/register">Registreren</Link></a></li>
+                      <li id="registerMobile"><Link to="/register">Registreren</Link></li>
                       <li id="loginMobile"><a>Log in</a></li>
                   </ul>
               </div>

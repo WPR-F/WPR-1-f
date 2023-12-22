@@ -29,6 +29,7 @@ function RegisterForm() {
             confirmPassword
         };
     
+        
         try {
             const response = await fetch('http://localhost:5210/api/accounts/register', {
                 method: 'POST',
@@ -50,10 +51,11 @@ function RegisterForm() {
             console.error('Network error:', error);
         }
     };
+    
 
     useEffect(() => {
         function start() {
-          gapi.client.init({
+          gapi.auth2.init({
             clientId: clientId,
             scope: ""
             
@@ -77,6 +79,8 @@ function RegisterForm() {
             <Login/>
         </div>
     );
-}
+    }
+    
+    
 
 export default RegisterForm;
