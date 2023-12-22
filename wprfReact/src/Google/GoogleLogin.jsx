@@ -12,7 +12,7 @@ function Login() {
     const [confirmPassword, setConfirmPassword] = useState('');
 
 
-    const createAccount = (response) => {
+    const createAccount =  async (response) => {
         const { profileObj } = response;
         console.log(`${profileObj.givenName}`);
         console.log(`${profileObj.familyName}`);
@@ -31,7 +31,7 @@ function Login() {
             confirmPassword
         };
         try {
-            const response = fetch('http://localhost:5210/api/accounts/register', {
+            const response = await fetch('http://localhost:5210/api/accounts/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -40,18 +40,22 @@ function Login() {
             });
     
             if (!response.ok) {
-                const errorData = response.json();
+                const errorData = await response.json();
                 console.error('Error details:', errorData);
                 return;
             }
     
-            const data = response.json();
+            const data = await response.json();
             console.log(data);
         } catch (error) {
             console.error('Network error:', error);
         }
+      
     }
+    
    
+
+
     const responseGoogle = (response) => {
         const { profileObj } = response;
         console.log(`${profileObj}`);
