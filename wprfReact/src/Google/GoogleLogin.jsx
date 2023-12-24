@@ -14,15 +14,18 @@ function Login() {
 
     const createAccount =  async (response) => {
         const { profileObj } = response;
-        console.log(`${profileObj.givenName}`);
-        console.log(`${profileObj.familyName}`);
-        console.log(`${profileObj.email}`);
         setFirstName(profileObj.givenName);
         setLastName(`${profileObj.familyName}`);
         setEmail(`${profileObj.email}`);
         setPassword(null);
         setConfirmPassword(null);
         console.log(`Account aangemaakt Email: ${profileObj.email}, Voornaam: ${profileObj.givenName}, Achternaam: ${profileObj.email} `);
+       
+    }
+    const addAccountToDatabase = async () => {
+
+        createAccount();
+
         const user = {
             Name,
             lastName,
@@ -30,6 +33,10 @@ function Login() {
             password,
             confirmPassword
         };
+        
+
+    
+        
         try {
             const response = await fetch('http://localhost:5210/api/accounts/register', {
                 method: 'POST',
@@ -50,9 +57,7 @@ function Login() {
         } catch (error) {
             console.error('Network error:', error);
         }
-      
-    }
-    
+    };
    
 
 
@@ -67,7 +72,7 @@ function Login() {
             <GoogleLogin className='google-Login-Button'
                 clientId={clientId}
                 buttonText="Inloggen met Google"
-                onSuccess={createAccount}
+                onSuccess={addAccountToDatabase}
                 onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
                 isSignedIn={false}
