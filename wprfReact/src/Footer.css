@@ -3,18 +3,11 @@
   height: 120px;
   width: 100%;
   display: flex;
-  margin-top: auto;
-  padding: 0;
-  bottom: 0px;
-  left: 0;
-  right: 0;
   background-color: #131B56;
   justify-content: space-between;
-  
-  
+  bottom: 0;
 }
 .footer-buttons {
-  position: relative;
   align-self: center;
   right: 20px;
   & ul {

@@ -55,13 +55,4 @@
   }
 
 
-  @media screen and (max-width: 1610px) {
-    .nav-buttons {
-      display: none;
-
-    }
-    .mobile-hamburger-menu-container {
-      display: flex;
-    }
-
-  }
+  

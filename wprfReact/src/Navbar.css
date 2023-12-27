@@ -7,10 +7,10 @@
   justify-content: space-between;
 }
 .mobile-buttons-container {
-  position: relative;
+  position: absolute;
   width: auto;
   float: right;
-  top: 10px;
+  top: 130px;
   right: 20px;
   background-color: #131B56;
   border-radius: 10px;
@@ -80,7 +80,7 @@
 }
 .mobile-menu-container {
   display: none;
-  position: relative;
+  position: absolute;
   height: 26px;
   width: 40px;
   align-self: center;
@@ -242,7 +242,7 @@
     }
   }
 }
-@media screen and (max-width: 1610px) {
+@media screen and (max-width: 1278px) {
   .nav-buttons {
     display: none;
   }
@@ -251,7 +251,7 @@
   }
 
 }
-@media screen and (min-width: 1611px) {
+@media screen and (min-width: 1279px) {
   .mobile-buttons-container {
     display: none;
   }

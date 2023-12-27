@@ -12,7 +12,7 @@ export default function App() {
       };
   
   return (
-      <div>
+      <div className="nav-container-mobile-container">
           <div className="nav-container">
               <div className="logo">
                   <img src={logo} width="45" height="55"/>

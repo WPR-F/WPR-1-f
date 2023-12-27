@@ -14,6 +14,7 @@ function App() {
       <header className="App-header">
         <Navbar/>
       </header>
+     
       <SidebarAdminPortal/>
       <AppRouter /> {/* Render the AppRouter component here */}
       <footer>

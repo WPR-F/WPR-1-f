@@ -22,6 +22,7 @@ function Login() {
         console.log(`Account aangemaakt Email: ${profileObj.email}, Voornaam: ${profileObj.givenName}, Achternaam: ${profileObj.email} `);
        
     }
+           
     const addAccountToDatabase = async () => {
 
         createAccount();
@@ -34,15 +35,30 @@ function Login() {
             confirmPassword
         };
         
-
-    
-        
         try {
             const response = await fetch('http://localhost:5210/api/accounts/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                body: JSON.stringify(user)
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error('Error details:', errorData);
+                return;
+            }
+    
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error('Network error:', error);
+        }
+        try {
+            const response = await fetch('http://localhost:5210/api/accounts/register', {
+                method: 'POST',
+                //headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(user)
             });
     
