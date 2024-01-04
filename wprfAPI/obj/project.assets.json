@@ -4484,41 +4484,26 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\shema\\.nuget\\packages\\": {}
-=======
-    "/Users/nazihrtoure/.nuget/packages/": {}
->>>>>>> origin/Develop
+    "C:\\Users\\tris9\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+      "projectUniqueName": "C:\\accountfix\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
       "projectName": "wprfAPI",
-      "projectPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
-      "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\obj\\",
+      "projectPath": "C:\\accountfix\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
+      "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
+      "outputPath": "C:\\accountfix\\WPR-1-f\\wprfapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tris9\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
-      "projectName": "wprfAPI",
-      "projectPath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/wprfAPI.csproj",
-      "packagesPath": "/Users/nazihrtoure/.nuget/packages/",
-      "outputPath": "/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/Users/nazihrtoure/.nuget/NuGet/NuGet.Config"
->>>>>>> origin/Develop
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4575,7 +4560,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

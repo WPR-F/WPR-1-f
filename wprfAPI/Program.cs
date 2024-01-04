@@ -26,8 +26,16 @@ app.Run();
 
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration) // Add IConfiguration parameter
 {
-    services.AddDbContext<AccountContext>(options =>
-        options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))); // Use configuration parameter
+     services.AddDbContext<AccountContext>(options =>
+        options.UseSqlServer(
+            configuration.GetConnectionString("DefaultConnection"),
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null);
+            }));
 
     services.AddControllers();
 

@@ -2,7 +2,7 @@ import './Navbar.css';
 import logo from './images/icon_accessibility.png';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import RegisterForm from './register/registerform';
+
 
 export default function App() {
    
@@ -28,7 +28,7 @@ export default function App() {
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
                       <li id="register"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="login"><a href="#Login">Log in</a></li>
+                      <li id="login"><a><Link to="/login">Login</Link></a></li>
                   </ul>
               </div>
               <div className="mobile-menu-container">

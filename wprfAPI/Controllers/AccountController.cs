@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
+
 
 namespace wprfAPI.Controllers
 {
@@ -37,5 +39,20 @@ public class AccountsController : ControllerBase
         return account;
     }
 
-}
+
+    [HttpPost]
+    [Route("login")]
+    public async Task<ActionResult<User>> Login(LoginModel model)
+    {
+        var user = await _context.Accounts.FirstOrDefaultAsync(u => u.Email == model.Email);
+
+        if (user == null || user.Password != model.Password) // replace this with actual password hashing and comparison
+        {
+            return NotFound();
+        }
+
+        return Ok(user);
+    }
+
+    }
 }
