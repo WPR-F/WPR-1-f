@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-export default function App() {
+export default function App({ isLoggedIn }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
 
@@ -27,8 +27,15 @@ export default function App() {
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
+                      {!isLoggedIn ? (
+                        <>
                       <li id="register"><a><Link to="/register">Registreren</Link></a></li>
                       <li id="login"><a><Link to="/login">Login</Link></a></li>
+                       </>
+                      ) : (
+                        <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                      )}
+              
                   </ul>
               </div>
               <div className="mobile-menu-container">

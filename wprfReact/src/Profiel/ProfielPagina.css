@@ -1,0 +1,21 @@
+.blok {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    height: 52%;
+    background-color: #131B56;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+    padding-top: 1rem;
+}
+
+h1, p {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}

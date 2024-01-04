@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './loginform.css';
 
-function LoginForm() {
+function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
 
+    useEffect(() => {
+        console.log(currentUser);
+    }, [currentUser]);
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -24,7 +27,7 @@ function LoginForm() {
             });
     
             const data = await response.json();
-            
+
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error('Error details:', errorData);
@@ -34,9 +37,14 @@ function LoginForm() {
                 setErrorMessage(data.message || 'Login failed');
                 return;
             }
-    
-            console.log(data);
-            console.log("Success");
+           
+            setCurrentUser(data);
+            setIsLoggedIn(true);
+            console.log(currentUser)
+           
+            console.log(data.name)
+            
+            console.log("Successvol ingelogd");
         } catch (error) {
             console.error('Network error:', error);
         }
