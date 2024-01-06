@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowSpecificOrigin"); // Apply the CORS policy
 
+app.UseAuthentication(); // Add this line
 app.UseAuthorization();
 
 app.MapControllers();
@@ -26,7 +28,7 @@ app.Run();
 
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration) // Add IConfiguration parameter
 {
-     services.AddDbContext<AccountContext>(options =>
+    services.AddDbContext<AccountContext>(options =>
         options.UseSqlServer(
             configuration.GetConnectionString("DefaultConnection"),
             sqlServerOptionsAction: sqlOptions =>
@@ -36,6 +38,9 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
                     maxRetryDelay: TimeSpan.FromSeconds(30),
                     errorNumbersToAdd: null);
             }));
+
+    services.AddDefaultIdentity<IdentityUser>() // Add this line
+        .AddEntityFrameworkStores<AccountContext>(); // And this line
 
     services.AddControllers();
 

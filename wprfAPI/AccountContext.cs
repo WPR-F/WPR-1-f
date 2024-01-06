@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
 
-public class AccountContext : DbContext 
+public class AccountContext : IdentityDbContext<IdentityUser>
 {
 
 public AccountContext(DbContextOptions<AccountContext> options)
@@ -9,6 +11,6 @@ public AccountContext(DbContextOptions<AccountContext> options)
     {
     }
 
-    public DbSet<User> Accounts { get; set; }
+  
 
 }

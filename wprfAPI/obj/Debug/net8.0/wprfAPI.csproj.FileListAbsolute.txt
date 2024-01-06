@@ -683,3 +683,7 @@ C:\accountfix\WPR-1-f\wprfapi\obj\Debug\net8.0\refint\wprfAPI.dll
 C:\accountfix\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
 C:\accountfix\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\accountfix\WPR-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
+C:\accountfix\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
+C:\accountfix\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\accountfix\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\accountfix\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
