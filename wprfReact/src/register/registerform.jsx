@@ -17,25 +17,32 @@ function RegisterForm() {
         }
     
         const user = {
-            Name,
-            lastName,
-            email,
-            password,
-            confirmPassword
+            User: {
+                userName: Name,
+                lastName,
+                email,
+            },
+            password
         };
+        
     
         try {
+            console.log('Password:', password);
+            console.log('Request body:', JSON.stringify({ ...user, password }));
             const response = await fetch('http://localhost:5210/api/accounts/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(user)
+                body: JSON.stringify({ ...user, password })
             });
     
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error('Error details:', errorData);
+                if (errorData.errors && errorData.errors.password) {
+                    console.error('Password error:', errorData.errors.password);
+                }
                 return;
             }
     

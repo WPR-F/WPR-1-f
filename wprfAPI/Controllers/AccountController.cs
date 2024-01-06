@@ -20,13 +20,13 @@ namespace wprfAPI.Controllers
 
         [HttpPost]
         [Route("register")]
-        public async Task<ActionResult<User>> PostAccount(User account)
-        {
-            var result = await _userManager.CreateAsync(account, account.PasswordHash);
+        public async Task<ActionResult<User>> PostAccount(RegisterModel model)
+            {
+            var result = await _userManager.CreateAsync(model.User, model.Password);
 
             if (result.Succeeded)
             {
-                return CreatedAtAction("GetUser", new { id = account.Id }, account);
+                return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
             }
 
             return BadRequest(result.Errors);
