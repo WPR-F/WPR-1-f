@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './loginform.css';
+import { useNavigate } from 'react-router-dom';
 
-function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser}) {
+function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         console.log(currentUser);
@@ -38,20 +40,20 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser}) {
                 return;
             }
            
-            setCurrentUser(data);
-            setIsLoggedIn(true);
-            console.log(currentUser)
-           
-            console.log(data.name)
             
-            console.log("Successvol ingelogd");
+                setCurrentUser(data);
+                setIsLoggedIn(true);
+                console.log("Successvol ingelogd");
+                navigate('/profielpagina');
+            
+       
         } catch (error) {
             console.error('Network error:', error);
         }
         
     };
     
-    return (
+    return  (
         <div className='blok'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
             <form onSubmit={handleSubmit}>
@@ -61,6 +63,7 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser}) {
             </form>
         </div>
     );
+    
 }
 
 export default LoginForm;

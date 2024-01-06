@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import './ProfielPagina.css';
+import { useNavigate } from 'react-router-dom';
 
 function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser }) {
     const [isEditable, setIsEditable] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const loguit = () => {
         setIsLoggedIn(false);
         setCurrentUser(null);
+        navigate('/login')
         console.log("Uitgelogd");
     }
 

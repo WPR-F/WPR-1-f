@@ -29,8 +29,8 @@ export default function App({ isLoggedIn }) {
                       <li><a href="#Contact">Contact</a> </li>
                       {!isLoggedIn ? (
                         <>
-                      <li id="register"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="login"><a><Link to="/login">Login</Link></a></li>
+                      <li id="register"><Link to="/register">Registreren</Link></li>
+                      <li id="login"><Link to="/login">Login</Link></li>
                        </>
                       ) : (
                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
@@ -62,8 +62,14 @@ export default function App({ isLoggedIn }) {
               </div>
               <div className="register-login-container">
                   <ul>
-                      <li id="registerMobile"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="loginMobile"><a href="#Login">Log in</a></li>
+                  {!isLoggedIn ? (
+                        <>
+                      <li id="registerMobile"><Link to="/register">Registreren</Link></li>
+                      <li id="loginMobile"><Link to="/login">Login</Link></li>
+                      </>
+                  ) : (
+                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                  )}
                   </ul>
               </div>
               </div>
