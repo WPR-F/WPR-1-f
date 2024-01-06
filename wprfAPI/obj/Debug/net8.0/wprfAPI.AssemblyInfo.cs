@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wprfAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3812f05c652c1c4c6d28eecfc47c5334201702f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+651ae4cd3b9342e9095a6e60dd823f1761a606a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("wprfAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wprfAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

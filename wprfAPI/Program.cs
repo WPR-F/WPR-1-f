@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using wprfAPI.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,7 +40,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
                     errorNumbersToAdd: null);
             }));
 
-    services.AddDefaultIdentity<IdentityUser>() 
+    services.AddDefaultIdentity<User>() 
         .AddEntityFrameworkStores<AccountContext>(); 
 
    //Code uit dotnet identity core documentatie

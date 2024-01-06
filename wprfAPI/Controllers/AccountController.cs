@@ -10,9 +10,9 @@ namespace wprfAPI.Controllers
     public class AccountsController : ControllerBase
     {
         private readonly AccountContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
 
-        public AccountsController(AccountContext context, UserManager<IdentityUser> userManager)
+        public AccountsController(AccountContext context, UserManager<User> userManager)
         {
             _context = context;
             _userManager = userManager;
