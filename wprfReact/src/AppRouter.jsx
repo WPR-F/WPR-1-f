@@ -9,7 +9,6 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
       <Route path="/register" element={<RegisterForm />} />
       <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
       <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} />} />
-      {/* Other routes */}
     </Routes>
   );
 }

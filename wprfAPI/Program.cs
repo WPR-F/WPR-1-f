@@ -18,16 +18,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowSpecificOrigin"); // Apply the CORS policy
+app.UseCors("AllowSpecificOrigin"); 
 
-app.UseAuthentication(); // Add this line
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
 
-static void ConfigureServices(IServiceCollection services, IConfiguration configuration) // Add IConfiguration parameter
+static void ConfigureServices(IServiceCollection services, IConfiguration configuration) 
 {
     services.AddDbContext<AccountContext>(options =>
         options.UseSqlServer(
@@ -43,7 +43,8 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     services.AddDefaultIdentity<User>() 
         .AddEntityFrameworkStores<AccountContext>(); 
 
-   //Code uit dotnet identity core documentatie
+   //Code uit dotnet identity core documentatie 
+   // we moeten zelf nog kijken wat voor instellingen we willen gebruiken
    
    services.Configure<IdentityOptions>(options =>
     {

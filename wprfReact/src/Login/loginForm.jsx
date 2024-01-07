@@ -5,11 +5,9 @@ import { useNavigate } from 'react-router-dom';
 function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
-
-    useEffect(() => {
-        console.log(currentUser);
-    }, [currentUser]);
+   
     
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -19,6 +17,8 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
             password,
         };
         
+        // stuurt een POST request naar de login API endpoint met de ingevoerde gebruikersgegevens.
+        // En geeft het response object de waarde van de response van de API. 
         try {
             const response = await fetch('http://localhost:5210/api/accounts/login', {
                 method: 'POST',
@@ -30,23 +30,33 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     
             const data = await response.json();
 
+            //zet de error message als er of geen account met ingevoerde email bestaat of als het wachtwoord niet klopt
             if (!response.ok) {
-                const errorData = await response.json();
-                console.error('Error details:', errorData);
+                if (response.status === 401) {
+                    setErrorMessage('Onjuist wachtwoord of emailadres');
+                    return;
+                }
+                else if (response.status === 404) {
+                    setErrorMessage('Gebruiker niet gevonden');
+                    return;
+                }
+
+                console.error('Error details:', errorData);   
                 return;
             }
+
+            //Als de login faalt om een onbekende reden, print dan de error in de console en laat de gebruiker weten dat er iets mis gegaan is
             if (data.success === false) {
-                setErrorMessage(data.message || 'Login failed');
+                setErrorMessage('Er is iets fout gegaan');
+                console.error('Error details:', data);
                 return;
             }
-           
-            
+                //als login successvol is, word de state van de currentUser veranderd naar de data van de ingelogde gebruiker, word de state van loggedIn veranderd naar true
+                //en word de gebruiker naar de profielpagina gestuurd
                 setCurrentUser(data);
                 setIsLoggedIn(true);
-                console.log("Successvol ingelogd");
                 navigate('/profielpagina');
-            
-       
+
         } catch (error) {
             console.error('Network error:', error);
         }
@@ -61,6 +71,9 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
                 <input type="password" placeholder="Wachtwoord" required value={password} onChange={e => setPassword(e.target.value)} />
                 <button type="submit">Login</button>
             </form>
+            <div className='errormessage-container'>
+            <p className='errormessage'>{errorMessage}</p>
+            </div>
         </div>
     );
     
