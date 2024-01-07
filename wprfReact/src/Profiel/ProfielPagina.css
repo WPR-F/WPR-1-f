@@ -1,0 +1,49 @@
+.blok {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    height: 52%;
+    background-color: #131B56;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+    padding-top: 1rem;
+}
+
+h1, p {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gegevens {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.gegevens h2 {
+    flex: 1 0 20%; /* This will allow the items to shrink if necessary, but not grow beyond 20% of the container */
+    margin: 2px;
+}
+
+.gegevens textarea {
+    width: 100%;
+    resize: none; /* This will prevent the user from resizing the textarea */
+}
+
+.onderkant {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 1rem;
+    gap: 1rem;
+    
+    
+}

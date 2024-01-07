@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
 import SidebarAdminPortal from './SidebarAdminPortal.jsx';
@@ -8,14 +8,17 @@ import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+  console.log(currentUser);
   return (
     <Router>
     <div className="App">
       <header className="App-header">
-        <Navbar/>
+        <Navbar isLoggedIn={isLoggedIn} />
         <SidebarAdminPortal/>
       </header>
-      <AppRouter /> {/* Render the AppRouter component here */}
+      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />
       <footer>
         <Footer/>
       </footer>

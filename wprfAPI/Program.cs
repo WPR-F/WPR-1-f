@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using wprfAPI.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,18 +18,55 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowSpecificOrigin"); // Apply the CORS policy
+app.UseCors("AllowSpecificOrigin"); 
 
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
 
-static void ConfigureServices(IServiceCollection services, IConfiguration configuration) // Add IConfiguration parameter
+static void ConfigureServices(IServiceCollection services, IConfiguration configuration) 
 {
     services.AddDbContext<AccountContext>(options =>
-        options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))); // Use configuration parameter
+        options.UseSqlServer(
+            configuration.GetConnectionString("DefaultConnection"),
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null);
+            }));
+
+    services.AddDefaultIdentity<User>() 
+        .AddEntityFrameworkStores<AccountContext>(); 
+
+   //Code uit dotnet identity core documentatie 
+   // we moeten zelf nog kijken wat voor instellingen we willen gebruiken
+   
+   services.Configure<IdentityOptions>(options =>
+    {
+    // Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+
+    // Lockout settings.
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.AllowedForNewUsers = true;
+
+    // User settings.
+    options.User.AllowedUserNameCharacters =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    options.User.RequireUniqueEmail = false;
+    });
+
 
     services.AddControllers();
 

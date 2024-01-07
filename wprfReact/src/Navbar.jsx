@@ -2,9 +2,9 @@ import './Navbar.css';
 import logo from './images/icon_accessibility.png';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import RegisterForm from './register/registerform';
 
-export default function App() {
+
+export default function App({ isLoggedIn }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
 
@@ -27,8 +27,15 @@ export default function App() {
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
-                      <li id="register"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="login"><a href="#Login">Log in</a></li>
+                      {!isLoggedIn ? (
+                        <>
+                      <li id="register"><Link to="/register">Registreren</Link></li>
+                      <li id="login"><Link to="/login">Login</Link></li>
+                       </>
+                      ) : (
+                        <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                      )}
+              
                   </ul>
               </div>
               <div className="mobile-menu-container">
@@ -55,8 +62,14 @@ export default function App() {
               </div>
               <div className="register-login-container">
                   <ul>
-                      <li id="registerMobile"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="loginMobile"><a href="#Login">Log in</a></li>
+                  {!isLoggedIn ? (
+                        <>
+                      <li id="registerMobile"><Link to="/register">Registreren</Link></li>
+                      <li id="loginMobile"><Link to="/login">Login</Link></li>
+                      </>
+                  ) : (
+                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                  )}
                   </ul>
               </div>
               </div>
