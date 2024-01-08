@@ -39,7 +39,7 @@ export default function App({ isLoggedIn }) {
                   </ul>
               </div>
               <div className="mobile-menu-container">
-                  <input class="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
+                  <input className="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
                   <div className="hamburger-lines">
                       <span className="line line1"></span>
                       <span className="line line2"></span>

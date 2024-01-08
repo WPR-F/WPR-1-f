@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './loginform.css';
 import { useNavigate } from 'react-router-dom';
+import { GebruikerApiCall } from '../apiService';
 
 function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     const [email, setEmail] = useState('');
@@ -17,17 +18,9 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
             password,
         };
         
-        // stuurt een POST request naar de login API endpoint met de ingevoerde gebruikersgegevens.
-        // En geeft het response object de waarde van de response van de API. 
-        try {
-            const response = await fetch('http://localhost:5210/api/accounts/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user)
-            });
     
+        try {
+            const response = await GebruikerApiCall(user,"login");
             const data = await response.json();
 
             //zet de error message als er of geen account met ingevoerde email bestaat of als het wachtwoord niet klopt
