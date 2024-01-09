@@ -68,7 +68,6 @@ function RegisterForm() {
     return (
         <div className='blok'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
-            <div className="register-container">
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Voornaam" required value={Name} onChange={e => setFirstName(e.target.value)} />
                 <input type="text" placeholder="Achternaam" required value={lastName} onChange={e => setLastName(e.target.value)} />
@@ -77,7 +76,6 @@ function RegisterForm() {
                 <input type="password" placeholder="Herhaal Wachtwoord" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
                 <button type="submit">Registreren</button>
             </form>
-            </div>
         </div>
     );
 }
