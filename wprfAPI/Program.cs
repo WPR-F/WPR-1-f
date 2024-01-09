@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
 
@@ -25,28 +24,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-var roleManager = app.Services.GetRequiredService<RoleManager<IdentityRole>>();
-EnsureRolesCreated(roleManager).GetAwaiter().GetResult();
 
 app.Run();
-
-// Moet waarschijnlijk verlplaatst worden naar een aparte class
-async Task EnsureRolesCreated(RoleManager<IdentityRole> roleManager)
-{
-    if (!await roleManager.RoleExistsAsync("Admin"))
-    {
-        await roleManager.CreateAsync(new IdentityRole("Admin"));
-    }
-    if (!await roleManager.RoleExistsAsync("Panellid"))
-    {
-        await roleManager.CreateAsync(new IdentityRole("Panellid"));
-    }
-    if (!await roleManager.RoleExistsAsync("Bedrijf"))
-    {
-        await roleManager.CreateAsync(new IdentityRole("Bedrijf"));
-    }
-
-}
 
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration) 
 {
@@ -62,9 +41,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
             }));
 
     services.AddDefaultIdentity<User>() 
-        .AddEntityFrameworkStores<AccountContext>()
-        .AddRoles<IdentityRole>();
-        
+        .AddEntityFrameworkStores<AccountContext>(); 
 
    //Code uit dotnet identity core documentatie 
    // we moeten zelf nog kijken wat voor instellingen we willen gebruiken
@@ -107,6 +84,4 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
-
-    
 }
