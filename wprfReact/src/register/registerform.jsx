@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { GebruikerApiCall } from '../apiService';
 import './registerform.css';
 
 function RegisterForm() {
@@ -28,18 +29,9 @@ function RegisterForm() {
             },
             password
         };
-        
     
         try {
-            // Stuurt een POST request naar de registratie API endpoint met de ingevoerde gebruikersgegevens.
-            // En geeft het response object de waarde van de response van de API.
-            const response = await fetch('http://localhost:5210/api/accounts/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ ...user, password })
-            });
+            const response = await GebruikerApiCall(user,"register");
     
             //print error in console als die er is
             //mist nog error bericht zoals : wachtwoord te kort of email al in gebruik
