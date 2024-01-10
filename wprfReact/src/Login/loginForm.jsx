@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './loginform.css';
 import { useNavigate } from 'react-router-dom';
+import { gapi } from 'gapi-script';
+import GoogleLoginButton from '../Google/GoogleLogin.jsx';
+
+const clientId = "828244250147-lp4h35efg6s4o666t8emosrikt0ml8jm.apps.googleusercontent.com";
 
 function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     const [email, setEmail] = useState('');
@@ -62,6 +66,18 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
         }
         
     };
+
+    useEffect(() => {
+        function start() {
+          gapi.auth2.init({
+            clientId: clientId,
+            scope: ""
+            
+          })
+        };
+    
+        gapi.load('client:auth2', start);
+      });
     
     return  (
         <div className='blok'>
@@ -74,6 +90,7 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
             <div className='errormessage-container'>
             <p className='errormessage'>{errorMessage}</p>
             </div>
+            <GoogleLoginButton/>
         </div>
     );
     

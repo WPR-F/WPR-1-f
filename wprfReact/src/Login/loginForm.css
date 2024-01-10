@@ -1,19 +1,20 @@
-
-
 .blok {
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    min-width: 450px;
+    max-width: 700px;
     width: 35%;
-    height: 52%;
+    height: 900px;
+    min-height: 600px;
+    align-self: center;
     background-color: #131B56;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5%;
-    padding-top: 1rem;
+   
+    margin: auto;
+   
+    border-radius: 25px;
+  
 }
 
 form {
@@ -27,6 +28,8 @@ form {
 input {
     width: 80%;
     height: 60px;
+    max-height: 60px;
+    min-height: 50px;
     margin-bottom: 1rem;
     padding: 0 0 0 1px;
     text-align: left;
@@ -39,6 +42,7 @@ input {
         text-align: left;      
     }
 }
+
 
 button {
     width: 55%;

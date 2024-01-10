@@ -33,13 +33,13 @@ export default function App({ isLoggedIn }) {
                       <li id="login"><Link to="/login">Login</Link></li>
                        </>
                       ) : (
-                        <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                        <li id="profile"><Link to="/profielpagina">Profiel</Link></li>
                       )}
               
                   </ul>
               </div>
               <div className="mobile-menu-container">
-                  <input class="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
+                  <input className="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
                   <div className="hamburger-lines">
                       <span className="line line1"></span>
                       <span className="line line2"></span>
