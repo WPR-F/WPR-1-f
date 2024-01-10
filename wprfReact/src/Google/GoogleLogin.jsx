@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './GoogleButton.css';
 import { GoogleLogin } from 'react-google-login';
 
@@ -10,17 +11,21 @@ function GoogleLoginButton() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const navigate = useNavigate();
+    console.log()
 
    
     const createAccount =  async (response) => {
         const { profileObj } = response;
-        setFirstName(profileObj.givenName);
-        setLastName(`${profileObj.familyName}`);
-        setEmail(`${profileObj.email}`);
-        //setPassword(null);
-        //setConfirmPassword(null);
-        setPassword("Abcabc123!");
-        setConfirmPassword("Abcabc123!");
+        const googleGivenName = profileObj.givenName;
+        setFirstName(googleGivenName);
+        const googleFamilyName = profileObj.givenName;
+        setLastName(googleFamilyName);
+        const googleEmail = profileObj.email;
+        setEmail(googleEmail);
+        const googlePassword = 'Abcabc123.';
+        setPassword(googlePassword);
+        setConfirmPassword(googlePassword);
         console.log(profileObj);
         console.log(`Account aangemaakt Email: ${profileObj.email}, Voornaam: ${profileObj.givenName}, Achternaam: ${profileObj.email} `);
        
