@@ -48,6 +48,9 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
    
    services.Configure<IdentityOptions>(options =>
     {
+    //Email settings.
+    options.User.RequireUniqueEmail = true;
+    
     // Password settings.
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;

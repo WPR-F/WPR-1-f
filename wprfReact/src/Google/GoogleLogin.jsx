@@ -52,7 +52,7 @@ function GoogleLoginButton({ setCurrentUser, setIsLoggedIn, currentUser, Islogge
         const accountIsRegistered = async (userEmail) => {
             
             try {
-              const response = await fetch(`http://localhost:5210/api/accounts/email`, {
+              const response = await fetch(`http://localhost:5210/api/accounts/getemail`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' }, 
                 body: JSON.stringify(user)

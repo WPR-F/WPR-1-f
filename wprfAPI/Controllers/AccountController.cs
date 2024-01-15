@@ -32,18 +32,35 @@ namespace wprfAPI.Controllers
 
             return BadRequest(result.Errors);
         }
-         [HttpPost]
-        [Route("email")]
+        // [HttpPost]
+        // [Route("email")]
+        // public async Task<ActionResult<string>> GetEmail(string email)
+        // {
+        //     var user = await _userManager.FindByEmailAsync(email);
+
+        //     // if (user == null)
+        //     // {
+        //     //     return NotFound();
+        //     // }
+
+        //     if(user.Email != email){
+        //         return NotFound();
+        //     }
+
+        //     return user.Email;
+        // }
+
+        [HttpPost]
+        [Route("getEmail")]
         public async Task<ActionResult<string>> GetEmail(string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
 
-            if (user == null)
-            {
-                return NotFound();
+            if(user == null){
+                return BadRequest();
             }
 
-            return user.Email;
+            return Ok(user.Email);
         }
 
         [HttpGet("{id}")]
