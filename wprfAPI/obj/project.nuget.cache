@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hi91CzCAHn0j3vbdZXK8fzSk4f74CYUDunlGv7QI/f0VS/0vwYT2BfMzIBRoJq1UacLA5VHNd5/QrmT9yWbuuw==",
+  "dgSpecHash": "BAP+uLXYvpWkEai/at/zkUIxPdGL/cdxOyi4hJt/RuZf2QPcufE3Nstf4jeoDNLG53ykXW+kRpOFQYo5VYw0Yw==",
   "success": true,
-  "projectFilePath": "C:\\vscodefiles\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
+  "projectFilePath": "C:\\wpr\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tris9\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\tris9\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
