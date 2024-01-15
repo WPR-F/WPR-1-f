@@ -8,15 +8,15 @@ import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
 import Aanvragen from './AdminPortal/components/Aanvragen';
 
-function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
+function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin}) {
   return (
     <Routes>
       <Route path="/register" element={<RegisterForm />} />
-      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
-      <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} />} />
+      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} isLoggedIn={isLoggedIn}/>} />
 
       {/* AdminPortal Components */}
-      <Route path="/AdminPortal" element={<AdminPortal currentUser={currentUser}/>} />
+      <Route path="/AdminPortal" element={<AdminPortal isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
       <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst />} />
       <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
       <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />

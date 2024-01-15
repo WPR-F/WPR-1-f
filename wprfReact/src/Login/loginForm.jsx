@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './loginform.css';
 import { useNavigate } from 'react-router-dom';
-import { GebruikerApiCall } from '../apiService';
+import { GebruikerApiCall, Admincheck } from '../apiService';
 
-function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
+function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -44,10 +44,12 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
                 console.error('Error details:', data);
                 return;
             }
-                //als login successvol is, word de state van de currentUser veranderd naar de data van de ingelogde gebruiker, word de state van loggedIn veranderd naar true
-                //en word de gebruiker naar de profielpagina gestuurd
+                const isadmin = await Admincheck(data);
+                if (isadmin === true) {
+                    setIsAdmin(true);
+                }
                 setCurrentUser(data);
-                setIsLoggedIn(true);
+                setIsLoggedIn(true);              
                 navigate('/profielpagina');
 
         } catch (error) {

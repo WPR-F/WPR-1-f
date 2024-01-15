@@ -2,36 +2,18 @@ import './Navbar.css';
 import logo from './images/icon_accessibility.png';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Admincheck } from './apiService';
 
 
-export default function App({ isLoggedIn, currentUser }) {
+
+export default function App({ isLoggedIn, currentUser, isAdmin }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
-      const [isAdmin, setIsAdmin] = useState(false);
+      
 
       const handleCheckboxClick = () => {
+        console.log(isAdmin);
         setMobileButtonsVisible(!mobileButtonsVisible);
       };
-  
-      useEffect(() => {
-      
-        console.log(currentUser);
-        if(isLoggedIn) {
-            Admincheck(currentUser, "checkadmin")
-            .then(response => {
-                console.log('Admincheck response:', response);
-                if (response.ok) {
-                    setIsAdmin(true);
-                } else {
-                    setIsAdmin(false);     
-                }
-            })
-            .catch(error => {
-                console.error('There was an error!', error);
-            });
-        }
-    }, [currentUser, isLoggedIn]);
 
   return (
       <div>
