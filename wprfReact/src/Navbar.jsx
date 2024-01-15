@@ -15,7 +15,7 @@ export default function App({ isLoggedIn, currentUser }) {
       };
   
       useEffect(() => {
-        console.log("hijrunt");
+      
         console.log(currentUser);
         if(isLoggedIn) {
             Admincheck(currentUser, "checkadmin")
@@ -23,10 +23,8 @@ export default function App({ isLoggedIn, currentUser }) {
                 console.log('Admincheck response:', response);
                 if (response.ok) {
                     setIsAdmin(true);
-                    console.log("isadmin");
                 } else {
-                    setIsAdmin(false);
-                    console.log("isnietadmin");
+                    setIsAdmin(false);     
                 }
             })
             .catch(error => {

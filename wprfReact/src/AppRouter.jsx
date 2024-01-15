@@ -3,7 +3,7 @@ import RegisterForm from './register/registerform';
 import LoginForm from './Login/loginForm';
 import ProfielPagina from './Profiel/ProfielPagina';
 import AdminPortal from './AdminPortal/components/AdminPortal';
-import ErvaringsdeskundigenLijst from './AdminPortal/components/ErvaringsDeskundigenLijst';
+import PanellidLijst from './AdminPortal/components/PanellidLijst';
 import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
 import Aanvragen from './AdminPortal/components/Aanvragen';
@@ -17,7 +17,7 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
 
       {/* AdminPortal Components */}
       <Route path="/AdminPortal" element={<AdminPortal currentUser={currentUser}/>} />
-      <Route path="AdminPortal/ErvaringsDeskundigenLijst" element={<ErvaringsdeskundigenLijst />} />
+      <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst />} />
       <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
       <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />
       <Route path='AdminPortal/Aanvragen' element={<Aanvragen/>} />
