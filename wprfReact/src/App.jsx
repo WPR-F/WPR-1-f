@@ -15,7 +15,7 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
-        <Navbar isLoggedIn={isLoggedIn} />
+        <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser}/>
         <SidebarAdminPortal/>
       </header>
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />

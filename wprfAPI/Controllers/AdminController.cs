@@ -43,5 +43,26 @@ namespace wprfAPI.Controllers
             return BadRequest(result.Errors);
             
         }
+
+        [HttpPost]
+        [Route("checkAdmin")]
+        public async Task<ActionResult<User>> CheckAdmin(CheckAdminRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+             var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+
+                if (!isAdmin)
+                {
+                    return Forbid();
+                }
+
+            return Ok();
+        }
     }
 }

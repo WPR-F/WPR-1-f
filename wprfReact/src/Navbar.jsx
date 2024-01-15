@@ -1,17 +1,40 @@
 import './Navbar.css';
 import logo from './images/icon_accessibility.png';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Admincheck } from './apiService';
 
 
-export default function App({ isLoggedIn }) {
+export default function App({ isLoggedIn, currentUser }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
+      const [isAdmin, setIsAdmin] = useState(false);
 
       const handleCheckboxClick = () => {
         setMobileButtonsVisible(!mobileButtonsVisible);
       };
   
+      useEffect(() => {
+        console.log("hijrunt");
+        console.log(currentUser);
+        if(isLoggedIn) {
+            Admincheck(currentUser, "checkadmin")
+            .then(response => {
+                console.log('Admincheck response:', response);
+                if (response.ok) {
+                    setIsAdmin(true);
+                    console.log("isadmin");
+                } else {
+                    setIsAdmin(false);
+                    console.log("isnietadmin");
+                }
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+        }
+    }, [currentUser, isLoggedIn]);
+
   return (
       <div>
           <div className="nav-container">
@@ -29,12 +52,16 @@ export default function App({ isLoggedIn }) {
                       <li><a href="#Contact">Contact</a> </li>
                       {!isLoggedIn ? (
                         <>
-                      <li id="register"><Link to="/register">Registreren</Link></li>
-                      <li id="login"><Link to="/login">Login</Link></li>
-                       </>
-                      ) : (
-                        <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                      )}
+                         <li id="register"><Link to="/register">Registreren</Link></li>
+                         <li id="login"><Link to="/login">Login</Link></li>
+                            </>
+                        ) : (
+                       <>
+                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                         {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                      </>
+                    )}
+                      
               
                   </ul>
               </div>
@@ -68,7 +95,10 @@ export default function App({ isLoggedIn }) {
                       <li id="loginMobile"><Link to="/login">Login</Link></li>
                       </>
                   ) : (
+                    <>
                      <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                     {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                     </>
                   )}
                   </ul>
               </div>

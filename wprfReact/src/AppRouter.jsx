@@ -16,7 +16,7 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
       <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} />} />
 
       {/* AdminPortal Components */}
-      <Route path="/AdminPortal" element={<AdminPortal />} />
+      <Route path="/AdminPortal" element={<AdminPortal currentUser={currentUser}/>} />
       <Route path="AdminPortal/ErvaringsDeskundigenLijst" element={<ErvaringsdeskundigenLijst />} />
       <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
       <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />

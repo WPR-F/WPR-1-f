@@ -12,3 +12,14 @@ export const GebruikerApiCall = async (user, endpoint) => {
     return response;
 }
 
+export const Admincheck = async (user , endpoint) => {
+    const response = await fetch(`http://localhost:5210/api/admin/`+endpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: user.email })
+        })
+        return response;
+}
+
