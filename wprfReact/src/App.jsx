@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
-import SidebarAdminPortal from './SidebarAdminPortal.jsx';
-import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
-import SidebarPanellidPortal from './SidebarPanellidPortal.jsx';
+import './index.css'
 import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -14,16 +12,19 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <header className="App-header">
+      <div className="header">
         <Navbar isLoggedIn={isLoggedIn} />
-        <SidebarAdminPortal/>
-      </header>
+      </div>
+      <div className="content">
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />
-      <footer>
-        <Footer/>
-      </footer>
+      
+      </div>
+      <div className="footer">
+      <Footer/>
+      </div>
     </div>
     </Router>
+  
   );
 }
 

@@ -1,19 +1,21 @@
-.blok {
+.register-form-container {
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: column;
     align-items: center;
-    min-width: 450px;
-    max-width: 700px;
-    width: 35%;
-    height: 900px;
-    min-height: 800px;
+    width: clamp(450px, 35%, 700px);
+    height: clamp(750px, 50%, 750px);
     align-self: center;
     background-color: #131B56;
    
-    margin: auto;
-   
     border-radius: 25px;
+
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    margin: auto;
+    z-index: -1;
   
 }
 form {
@@ -65,7 +67,6 @@ button {
 
 .registerlogo
 {
-    min-width: 150px;
     width: 100%;
-    height: 600px;
+    height: 25%;
 }

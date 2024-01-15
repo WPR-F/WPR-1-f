@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './loginform.css';
+import './loginForm.css';
 import { useNavigate } from 'react-router-dom';
-import { gapi } from 'gapi-script';
 import GoogleLoginButton from '../Google/GoogleLogin.jsx';
+import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
 
-const clientId = "828244250147-lp4h35efg6s4o666t8emosrikt0ml8jm.apps.googleusercontent.com";
+
 
 function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     const [email, setEmail] = useState('');
@@ -21,18 +21,18 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
             password,
         };
         
+        
         // stuurt een POST request naar de login API endpoint met de ingevoerde gebruikersgegevens.
         // En geeft het response object de waarde van de response van de API. 
         try {
             const response = await fetch('http://localhost:5210/api/accounts/login', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(user)
             });
     
             const data = await response.json();
+
 
             //zet de error message als er of geen account met ingevoerde email bestaat of als het wachtwoord niet klopt
             if (!response.ok) {
@@ -67,20 +67,12 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
         
     };
 
-    useEffect(() => {
-        function start() {
-          gapi.auth2.init({
-            clientId: clientId,
-            scope: ""
-            
-          })
-        };
-    
-        gapi.load('client:auth2', start);
-      });
+    loadGoogleServiceApi();
+
+   
     
     return  (
-        <div className='blok'>
+        <div className='login-form-container'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="E-mailadres" required value={email} onChange={e => setEmail(e.target.value)} />
@@ -90,7 +82,7 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
             <div className='errormessage-container'>
             <p className='errormessage'>{errorMessage}</p>
             </div>
-            <GoogleLoginButton/>
+            <GoogleLoginButton />
         </div>
     );
     

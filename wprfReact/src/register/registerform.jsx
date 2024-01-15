@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './registerform.css';
+import './registerForm.css';
 import { gapi } from 'gapi-script';
 import GoogleLoginButton from '../Google/GoogleLogin.jsx';
+import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
 
-const clientId = "828244250147-lp4h35efg6s4o666t8emosrikt0ml8jm.apps.googleusercontent.com";
 
 function RegisterForm() {
     const [Name, setFirstName] = useState('');
@@ -12,6 +12,7 @@ function RegisterForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [registerType, setRegisterType] = useState('System');
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -29,6 +30,7 @@ function RegisterForm() {
                 userName: Name,
                 lastName,
                 email,
+                registerType,
             },
             password
         };
@@ -39,9 +41,7 @@ function RegisterForm() {
             // En geeft het response object de waarde van de response van de API.
             const response = await fetch('http://localhost:5210/api/accounts/register', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...user, password })
             });
     
@@ -53,14 +53,7 @@ function RegisterForm() {
                 if (errorData.errors && errorData.errors.password) {
                     console.error('Password error:', errorData.errors.password);
                 }
-                return;
-            }
-    
-            //als registratie successvol is, ga naar login pagina en log response data voor debugging
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data);
-                navigate('/login'); 
+                return navigate('/login');
             }
             
             //print netwerk error in console als die er is
@@ -69,20 +62,10 @@ function RegisterForm() {
         }
     };
 
-    useEffect(() => {
-        function start() {
-          gapi.auth2.init({
-            clientId: clientId,
-            scope: ""
-            
-          })
-        };
-    
-        gapi.load('client:auth2', start);
-      });
+    loadGoogleServiceApi();
 
     return (
-        <div className='blok'>
+        <div className='register-form-container'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Voornaam" required value={Name} onChange={e => setFirstName(e.target.value)} />

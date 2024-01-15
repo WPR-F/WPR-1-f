@@ -1,20 +1,20 @@
-.blok {
+.login-form-container {
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: column;
     align-items: center;
-    min-width: 450px;
-    max-width: 700px;
-    width: 35%;
-    height: 900px;
-    min-height: 600px;
+    width: clamp(450px, 35%, 700px);
+    height: clamp(650px, 50%, 700px);
     align-self: center;
     background-color: #131B56;
-   
-    margin: auto;
-   
+    overflow: hidden;
     border-radius: 25px;
-  
+
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    margin: auto;
 }
 
 form {
@@ -68,7 +68,7 @@ button {
 .registerlogo
 {
     width: 100%;
-    height: auto;
+    height: 25%;
 }
 
 .errormessage-container {

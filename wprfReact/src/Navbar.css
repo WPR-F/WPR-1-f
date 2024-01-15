@@ -1,20 +1,25 @@
 .nav-container {
-  position: relative;
-  height: 120px;
+  position: absolute;
+  height: clamp(100px, 10%, 120px);
   width: 100%;
   display: flex;
   background-color: #131B56;
   justify-content: space-between;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translate(-0%);
 }
 .mobile-buttons-container {
-  position: relative;
+  position: absolute;
   width: auto;
   float: right;
-  top: 10px;
+  top: 110px;
   right: 20px;
   background-color: #131B56;
   border-radius: 10px;
-  z-index: 100;
+  z-index: 1000;
 }
 .mobile-buttons {
   width: 400px;
@@ -146,6 +151,7 @@
       display: flex;
       margin: 0px 15px 0px 15px;
       & a {
+        font-size: 100%;
         margin: 8px 0px 0px 0px;
         left: 0;
         right: 0;
@@ -161,7 +167,7 @@
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   left: 20px;
   align-self: center;
 
@@ -242,16 +248,17 @@
     }
   }
 }
-@media screen and (max-width: 1610px) {
+@media screen and (max-width: 1264px) {
   .nav-buttons {
     display: none;
   }
   .mobile-menu-container {
+    position: absolute;
     display: flex;
   }
 
 }
-@media screen and (min-width: 1611px) {
+@media screen and (min-width: 1265px) {
   .mobile-buttons-container {
     display: none;
   }

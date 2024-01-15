@@ -68,7 +68,7 @@ export default function App({ isLoggedIn }) {
                       <li id="loginMobile"><Link to="/login">Login</Link></li>
                       </>
                   ) : (
-                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                     <li id="profileMobile"><Link to="/profielpagina">Profiel</Link></li>
                   )}
                   </ul>
               </div>
