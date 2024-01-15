@@ -17,5 +17,5 @@ input {
 button{
     padding: 0;
     margin: 0;
-    width :100px;
+    width: clamp(75px, 8%, 100px);
 }

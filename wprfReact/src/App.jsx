@@ -17,9 +17,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar isLoggedIn={isLoggedIn} />
-        <SidebarAdminPortal/>
+        <SidebarBedrijfPortal/>
       </header>
-      <Chat/>
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />
       <footer>
         <Footer/>

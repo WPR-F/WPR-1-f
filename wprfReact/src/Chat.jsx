@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as signalR from '@microsoft/signalr';
-import './chat.css'
+import { Link } from 'react-router-dom';
+import './Chat.css'
 
 function Chat() {
     const [hubConnection, setHubConnection] = useState(null);

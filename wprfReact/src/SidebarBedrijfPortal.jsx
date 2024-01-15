@@ -2,7 +2,8 @@ import './Sidebar.css';
 import Create from './images/icons8-create-50.png';
 import Onderzoek from './images/icons8-case-study-50.png';
 import Chat from './images/icons8-chat-50.png';
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function App() {
 
@@ -21,7 +22,7 @@ export default function App() {
                       </li>
                       <li>
                           <img src={Chat} width="40" height="40"/> 
-                          <a>Chat</a>
+                          <Link to="/chat">Chat</Link>
                       </li>
                   </ul>
               </div>

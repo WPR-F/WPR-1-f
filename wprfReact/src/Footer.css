@@ -2,7 +2,7 @@
   position: absolute;
   height: 120px;
   width: 100%;
-  display: flex;
+  display: none;
   bottom: 0;
   background-color: #131B56;
   justify-content: space-between;
