@@ -5,8 +5,6 @@ using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
 {
-    
-    
     [ApiController]
     [Route("api/[controller]")]
     public class AdminController : ControllerBase
@@ -14,9 +12,14 @@ namespace wprfAPI.Controllers
         private readonly AccountContext _context;
         private readonly UserManager<User> _userManager;
 
+        public AdminController(UserManager<User> userManager)
+        {
+            _userManager = userManager;
+        }
+
         [HttpPost]
         [Route("createAdmin")]
-        public async Task<ActionResult<Admin>> CreateAdmin(string id)
+        public async Task<ActionResult<User>> CreateAdmin(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
 
@@ -24,7 +27,6 @@ namespace wprfAPI.Controllers
             {
                 return NotFound();
             }
-
 
             //here it adds the user to the role as dotnet wants it
             var result = await _userManager.AddToRoleAsync(user, "Admin");

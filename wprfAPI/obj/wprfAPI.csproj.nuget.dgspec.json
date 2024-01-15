@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {}
+    "C:\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {
+    "C:\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+        "projectUniqueName": "C:\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
         "projectName": "wprfAPI",
-        "projectPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
-        "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shema\\OneDrive\\Documenten\\GitHub\\WPR-1-f\\wprfAPI\\obj\\",
+        "projectPath": "C:\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
+        "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
+        "outputPath": "C:\\wpr\\WPR-1-f\\wprfapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tris9\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,6 +51,10 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
