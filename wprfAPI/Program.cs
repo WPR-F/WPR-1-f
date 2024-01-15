@@ -4,10 +4,28 @@ using wprfAPI.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
+async Task CreateRoles(IServiceProvider serviceProvider)
+{
+    using var scope = serviceProvider.CreateScope();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    string[] roleNames = { "Admin", "Panellid", "Company" };
+    foreach (var roleName in roleNames)
+    {
+        var roleExist = await roleManager.RoleExistsAsync(roleName);
+        if (!roleExist)
+        {
+            await roleManager.CreateAsync(new IdentityRole(roleName));
+        }
+    }
+}
+
 // Add services to the container.
 ConfigureServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
+
+CreateRoles(app.Services).Wait();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -27,6 +45,7 @@ app.MapControllers();
 
 app.Run();
 
+
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration) 
 {
     services.AddDbContext<AccountContext>(options =>
@@ -40,8 +59,12 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
                     errorNumbersToAdd: null);
             }));
 
-    services.AddDefaultIdentity<User>() 
-        .AddEntityFrameworkStores<AccountContext>(); 
+    // services.AddDefaultIdentity<User>() 
+    //     .AddEntityFrameworkStores<AccountContext>();
+
+    services.AddIdentity<User, IdentityRole>()
+        .AddEntityFrameworkStores<AccountContext>()
+        .AddDefaultTokenProviders(); 
 
    //Code uit dotnet identity core documentatie 
    // we moeten zelf nog kijken wat voor instellingen we willen gebruiken
@@ -84,4 +107,8 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
+
 }
+
+
+
