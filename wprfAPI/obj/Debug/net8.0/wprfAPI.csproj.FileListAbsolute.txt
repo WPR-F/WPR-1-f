@@ -969,3 +969,7 @@ C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\refint\wprfAPI.dll
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll

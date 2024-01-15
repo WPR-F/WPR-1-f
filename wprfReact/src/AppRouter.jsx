@@ -7,6 +7,7 @@ import ErvaringsdeskundigenLijst from './AdminPortal/components/ErvaringsDeskund
 import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
 import Aanvragen from './AdminPortal/components/Aanvragen';
+import Chat from './Chat';
 
 function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
   return (
@@ -14,6 +15,7 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
       <Route path="/register" element={<RegisterForm />} />
       <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
       <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} />} />
+     <Route path="/chat" element={<Chat />} />
 
       {/* AdminPortal Components */}
       <Route path="/AdminPortal" element={<AdminPortal />} />

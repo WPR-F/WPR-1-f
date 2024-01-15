@@ -6,6 +6,7 @@ import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
 import SidebarPanellidPortal from './SidebarPanellidPortal.jsx';
 import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
+import Chat from './Chat';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,6 +19,7 @@ function App() {
         <Navbar isLoggedIn={isLoggedIn} />
         <SidebarAdminPortal/>
       </header>
+      <Chat/>
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />
       <footer>
         <Footer/>

@@ -1,0 +1,21 @@
+input {
+    
+    border-style: solid;
+    border-right: 2px;
+    border-color: black;
+}
+.input-button-container{
+    margin: 0 10px 0 10px;
+    justify-content: space-between;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 150px;
+    left: 150px;
+
+}
+button{
+    padding: 0;
+    margin: 0;
+    width :100px;
+}

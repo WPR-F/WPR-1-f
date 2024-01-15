@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
+using wprfAPI.Hubs;
+using Microsoft.AspNetCore.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +44,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();
 
@@ -107,7 +111,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
-
+    services.AddSignalR();
 }
 
 
