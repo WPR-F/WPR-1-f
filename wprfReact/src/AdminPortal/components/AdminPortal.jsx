@@ -6,20 +6,18 @@ import { useNavigate } from 'react-router-dom';
 const AdminPortal = ({ isAdmin, isLoggedIn }) => {
     const [melding, setMelding] = useState(0);
     const navigate = useNavigate();
-
-    // Uitgecomment om testen makkelijker te maken
     
-    // useEffect(() => {
-    //     if (!isLoggedIn) {
-    //         navigate("/login");
-    //         console.log("niet ingelogd");
-    //     }
-    //     if (!isAdmin) {
-    //         navigate("/profielpagina");
-    //         console.log(isAdmin+"geen admin");
-    //     }
+    useEffect(() => {
+        if (!isLoggedIn) {
+            navigate("/login");
+            console.log("niet ingelogd");
+        }
+        if (!isAdmin) {
+            navigate("/profielpagina");
+            console.log(isAdmin+"geen admin");
+        }
      
-    // }, [isAdmin, isLoggedIn]);
+    }, [isAdmin, isLoggedIn]);
 
     return ( 
     <div className="adminportalbg"><h1>AdminPortal</h1>

@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -10,7 +9,6 @@ namespace wprfAPI.Controllers
     [Route("api/[controller]")]
     public class CompanyController : ControllerBase
     {
-       // private readonly AccountContext _context;
         private readonly UserManager<User> _userManager;
 
         public CompanyController(UserManager<User> userManager)
