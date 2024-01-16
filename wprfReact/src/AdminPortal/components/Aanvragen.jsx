@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate } from 'react-router-dom';
 
 const Aanvragen = () => {
+
     const navigate = useNavigate();
     return ( 
         <div  className="blok">
@@ -10,7 +11,6 @@ const Aanvragen = () => {
         <div className="terugknop">
             <button onClick={() => navigate("/AdminPortal")}>Terug</button>
         </div>
-    
     </div>
      );
 }

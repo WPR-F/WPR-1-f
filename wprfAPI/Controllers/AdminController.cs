@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -9,7 +8,7 @@ namespace wprfAPI.Controllers
     [Route("api/[controller]")]
     public class AdminController : ControllerBase
     {
-        private readonly AccountContext _context;
+
         private readonly UserManager<User> _userManager;
 
         public AdminController(UserManager<User> userManager)
@@ -42,6 +41,27 @@ namespace wprfAPI.Controllers
             
             return BadRequest(result.Errors);
             
+        }
+
+        [HttpPost]
+        [Route("checkAdmin")]
+        public async Task<ActionResult<User>> CheckAdmin(CheckAdminRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+             var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+
+                if (!isAdmin)
+                {
+                    return Forbid();
+                }
+
+            return Ok();
         }
     }
 }

@@ -12,3 +12,33 @@ export const GebruikerApiCall = async (user, endpoint) => {
     return response;
 }
 
+    export const Admincheck = async (user) => {
+    const response = await fetch(`http://localhost:5210/api/admin/checkAdmin`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: user.email })
+        })
+        
+        if (response.status === 200) {
+            return true;
+        }
+        else {
+            return false;
+        }
+}
+
+    export const GetUsers = async (endpoint) => {
+        try {
+        const response = await fetch('http://localhost:5210/api/'+endpoint);
+        const users = await response.json();
+        return users;
+        }
+        catch (error) {
+            console.error('Network error:', error);
+        }
+    };
+
+
+

@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProfielPagina.css';
 import { useNavigate } from 'react-router-dom';
 
-function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser }) {
+function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn}) {
     const [isEditable, setIsEditable] = useState(false);
     const navigate = useNavigate();
 
     const loguit = () => {
         setIsLoggedIn(false);
         setCurrentUser(null);
-        navigate('/login')
-        console.log("Uitgelogd");
     }
+
+    useEffect(() => {
+    if (!isLoggedIn)
+    {
+        navigate('/login');
+        console.log(isLoggedIn);
+    }
+    }, [isLoggedIn]);
+    
 
     // NOG NIET AF (aangepaste gegevens worden nog niet opgeslagen)
     // zorgt er nu voor dat de gegevens van de gebruiker in een textarea komen te staan
@@ -31,7 +38,7 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser }) {
                     </div>
                 </div>
             ) : (
-                // Als er geen gebruiker is ingelogd, laat dan dit zien (eigenlijk zou dit niet moeten kunnen gebeuren) 
+                // Als er geen gebruiker is ingelogd, laat dan dit zien ( dit zou niet moeten kunnen) 
                 <p>Log eerst in</p>
             )}
             <div className='onderkant'>
