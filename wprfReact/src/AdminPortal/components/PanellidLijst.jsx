@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
+import { GetUsers } from '../../apiService';
 import { useNavigate } from 'react-router-dom';
 
 const PanellidLijst = () => {
     const navigate = useNavigate();
-    const [users, setUsers] = useState([]); // Define users as a state variable
+    const [users, setUsers] = useState([]); 
 
     const fetchUsers = async () => {
-        try {
-            const response = await fetch('http://localhost:5210/api/Panellid/getPanellidUsers');
-            const users = await response.json();
-            setUsers(users); // Set the state of users to the fetched users
-            console.log(users);
-        } catch (error) {
-            console.error('Network error:', error);
-        }
+    setUsers(await GetUsers('Panellid/getPanellidUsers'));
     };
 
     useEffect(() => {

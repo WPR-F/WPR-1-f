@@ -29,3 +29,16 @@ export const GebruikerApiCall = async (user, endpoint) => {
         }
 }
 
+    export const GetUsers = async (endpoint) => {
+        try {
+        const response = await fetch('http://localhost:5210/api/'+endpoint);
+        const users = await response.json();
+        return users;
+        }
+        catch (error) {
+            console.error('Network error:', error);
+        }
+    };
+
+
+
