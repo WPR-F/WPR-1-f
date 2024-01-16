@@ -7,6 +7,10 @@ import PanellidLijst from './AdminPortal/components/PanellidLijst';
 import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
 import Aanvragen from './AdminPortal/components/Aanvragen';
+import PanellidPortal from './PanellidPortal/components/PanellidPortal';
+import PanellidProfiel from './PanellidPortal/components/PanellidProfiel';
+import OpenOnderzoeken from './PanellidPortal/components/OpenOnderzoeken';
+import ActieveOnderzoeken from './PanellidPortal/components/ActieveOnderzoeken';
 
 function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin}) {
   return (
@@ -21,6 +25,12 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isA
       <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
       <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />
       <Route path='AdminPortal/Aanvragen' element={<Aanvragen/>} />
+
+      {/* PanellidPortal Components */}
+      <Route path='/PanellidPortal' element={<PanellidPortal/>} />
+      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel/>} />
+      <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken/>} />
+      <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken/>} />
 
     </Routes>
   );
