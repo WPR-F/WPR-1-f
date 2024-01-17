@@ -19,7 +19,7 @@ const PanellidProfiel = ({ currentUser }) => {
         typeBeperking: '',
         hulpmiddelen: '',
         aandoening: '',
-        typeOnderzoek: '',
+        typeOnderzoek: [],
         voorkeurBenadering: '',
         commercielePartijen: 'Ja',
         beschikbaarheid: ''
@@ -34,7 +34,7 @@ const PanellidProfiel = ({ currentUser }) => {
             DisabilityType: form.typeBeperking,
             Tools: form.hulpmiddelen,
             condition: form.aandoening,
-            ResearchType: form.typeOnderzoek,
+            ResearchType: form.typeOnderzoek.join(', '),
             PreferdresearchApproach: form.voorkeurBenadering,
             CommercialApproach: form.commercielePartijen === 'Ja', // Convert to boolean
             Availibility: form.beschikbaarheid
@@ -59,10 +59,23 @@ const PanellidProfiel = ({ currentUser }) => {
 
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target;
-        setForm(prevState => ({
-            ...prevState,
-            [name]: type === 'checkbox' ? (checked ? 'Ja' : 'Nee') : value
-        }));
+    
+        if (name === 'typeOnderzoek' && type === 'checkbox') {
+            setForm(prevState => {
+                let newTypeOnderzoek = [...prevState.typeOnderzoek];
+                if (checked) {
+                    newTypeOnderzoek.push(value);
+                } else {
+                    newTypeOnderzoek = newTypeOnderzoek.filter(item => item !== value);
+                }
+                return { ...prevState, typeOnderzoek: newTypeOnderzoek };
+            });
+        } else {
+            setForm(prevState => ({
+                ...prevState,
+                [name]: type === 'checkbox' ? (checked ? 'Ja' : 'Nee') : value
+            }));
+        }
     };
 
     const handleDayChange = (e) => {
@@ -99,6 +112,7 @@ const PanellidProfiel = ({ currentUser }) => {
         setActiveGroup('onderzoek');
     }
 
+    //Veel te groot component geworden Moet opgesplitst worden in meerdere componenten!!!
     
 
     return ( 
@@ -180,6 +194,8 @@ const PanellidProfiel = ({ currentUser }) => {
                                             id="Interview"
                                             name="typeOnderzoek"
                                             value="Interview"
+                                            checked={form.typeOnderzoek.includes('Interview')}
+                                            onChange={handleChange}
                                             aria-label="Interview"
                                         />
                                     </label>
@@ -190,6 +206,8 @@ const PanellidProfiel = ({ currentUser }) => {
                                             id="Groepsgesprekken"
                                             name="typeOnderzoek"
                                             value="Groepsgesprekken"
+                                            checked={form.typeOnderzoek.includes('Groepsgesprekken')}
+                                            onChange={handleChange}
                                             aria-label="Groepsgesprekken"
                                         />
                                     </label>
@@ -200,6 +218,8 @@ const PanellidProfiel = ({ currentUser }) => {
                                             id="Engelstalig onderzoek"
                                             name="typeOnderzoek"
                                             value="Engelstalig onderzoek"
+                                            checked={form.typeOnderzoek.includes('Engelstalig onderzoek')}
+                                            onChange={handleChange}
                                             aria-label="Engelstalig onderzoek"
                                         />
                                     </label>
@@ -211,7 +231,11 @@ const PanellidProfiel = ({ currentUser }) => {
                                 <div className="form-group">
                                     <label htmlFor="voorkeurBenadering">Voorkeur benadering</label>
                                     <div className="form-input">
-                                        <input type="text" id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleChange} placeholder="Voorkeur benadering" readOnly={!isEditable}/>
+                                    <select id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleChange} disabled={!isEditable}>
+                                        <option value="">Selecteer type</option>
+                                        <option value="Telefonisch">Telefonisch</option>
+                                        <option value="Via Portal">Via Portal</option>
+                                    </select>
                                     </div>
                                 </div>
                                 <div className="form-group">
