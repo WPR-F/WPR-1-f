@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Logging;
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -32,27 +33,10 @@ namespace wprfAPI.Controllers
 
             return BadRequest(result.Errors);
         }
-        // [HttpPost]
-        // [Route("email")]
-        // public async Task<ActionResult<string>> GetEmail(string email)
-        // {
-        //     var user = await _userManager.FindByEmailAsync(email);
-
-        //     // if (user == null)
-        //     // {
-        //     //     return NotFound();
-        //     // }
-
-        //     if(user.Email != email){
-        //         return NotFound();
-        //     }
-
-        //     return user.Email;
-        // }
-
+        /*
         [HttpPost]
-        [Route("getEmail")]
-        public async Task<ActionResult<string>> GetEmail(string email)
+        [Route("getemail")]
+        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
 
@@ -61,6 +45,44 @@ namespace wprfAPI.Controllers
             }
 
             return Ok(user.Email);
+        }
+        */
+
+        /*
+        [HttpPost]
+        [Route("getemail")]
+        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            
+            return Ok(user.Email);
+        }
+        */
+        [HttpPost]
+        [Route("getemail")]
+        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                {
+                    return BadRequest("Email is required.");
+                }
+
+                var user = await _userManager.FindByEmailAsync(email);
+
+                if (user != null)
+                {
+                    return Ok(user.Email);
+                }
+
+                return NotFound("User does not exist");
+                System.Diagnostics.Debug.WriteLine("This is a log");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
 
         [HttpGet("{id}")]

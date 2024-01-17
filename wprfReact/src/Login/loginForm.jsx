@@ -79,6 +79,7 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
                 <input type="password" placeholder="Wachtwoord" required value={password} onChange={e => setPassword(e.target.value)} />
                 <button type="submit">Login</button>
             </form>
+            
             <div className='errormessage-container'>
             <p className='errormessage'>{errorMessage}</p>
             </div>
