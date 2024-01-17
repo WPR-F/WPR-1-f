@@ -23,6 +23,7 @@ export default function App({ isLoggedIn, currentUser, isAdmin }) {
               </div>
               <div className="nav-buttons">
                   <ul>
+                     <li id="profile"><a><Link to="/PanellidPortal">Panellid Test knop</Link></a></li>
                       <li><a href="#Actueel">Actueel</a></li>
                       <li><a href="#Toegankelijkheid">Toegankelijkheid</a></li>
                       <li> <a href="#Hoe wij helpen">Hoe wij helpen</a></li>

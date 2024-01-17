@@ -11,10 +11,12 @@ namespace wprfAPI.Controllers
     {
         
         private readonly UserManager<User> _userManager;
+        private readonly AccountContext _context;
 
-          public PanellidController(UserManager<User> userManager)
+        public PanellidController(UserManager<User> userManager, AccountContext context)
         {
             _userManager = userManager;
+            _context = context;
         }
 
 
@@ -53,5 +55,35 @@ namespace wprfAPI.Controllers
             return Ok(users);
         }
 
-    }
+        [HttpPost]
+        [Route("UpdatePanellidInfo")]
+        public async Task<ActionResult<Panellid>> UpdatePanellidInfo([FromBody] Panellid panellidInfo)
+        {
+            var existingPanellid = await _context.Panelleden.FindAsync(panellidInfo.UserId);
+
+            if (existingPanellid != null)
+            {
+                // Update existing Panellid
+                existingPanellid.postalCode = panellidInfo.postalCode;
+                existingPanellid.phoneNumber = panellidInfo.phoneNumber;
+                existingPanellid.DisabilityType = panellidInfo.DisabilityType;
+                existingPanellid.Tools = panellidInfo.Tools;
+                existingPanellid.condition = panellidInfo.condition;
+                existingPanellid.ResearchType = panellidInfo.ResearchType;
+                existingPanellid.PreferdresearchApproach = panellidInfo.PreferdresearchApproach;
+                existingPanellid.CommercialApproach = panellidInfo.CommercialApproach;
+                existingPanellid.Availibility = panellidInfo.Availibility;
+            }
+            else
+            {
+                // Add new Panellid
+                _context.Panelleden.Add(panellidInfo);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok(panellidInfo);
+        }       
+                
+    } 
 }

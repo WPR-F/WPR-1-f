@@ -13,3 +13,16 @@
     border-radius: 5%;
     padding-top: 1rem;
 }
+
+.BottomRowButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+   
+}
+
+.BottomRowButtons button {
+   
+    margin: 25px 10px;
+}

@@ -28,7 +28,7 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isA
 
       {/* PanellidPortal Components */}
       <Route path='/PanellidPortal' element={<PanellidPortal/>} />
-      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel/>} />
+      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel currentUser={currentUser} />} />
       <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken/>} />
       <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken/>} />
 
