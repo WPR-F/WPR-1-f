@@ -1,10 +1,11 @@
 .scrollableForm {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  
-    max-height: 55%;
+    
+    max-height: 55%; /* Adjust as needed */
     min-height: 55%; /* Adjust as needed */
 }
 
@@ -45,4 +46,57 @@
 
 .dateTime input[type="checkbox"] {
     margin-right: 5px; /* Adjust as needed */
+}
+
+.form-group {
+    display: flex;
+    justify-content: center; /* Aligns items horizontally in the center */
+    align-items: center; /* Aligns items vertically in the center */
+    margin-bottom: 10px;
+    max-width: 100%;
+    min-width: 20rem;
+    min-height: 18%;
+    max-height: 50%;
+}
+.form-group label {
+    padding-right: 5px;
+    color: white;
+}
+
+.form-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    max-width: 10rem;
+    min-width: 10rem;
+    max-height: 1rem;
+    
+}
+
+.form-input input {
+  max-height: 2rem;
+}
+
+.typeonderzoekboxen {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+   
+    gap: 2rem;
+    
+}
+
+.typeonderzoekboxen input[type="checkbox"] {
+    padding: 10px; /* Adjust as needed */
+}
+
+.typeonderzoekboxen label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between the text and the checkbox */
+    height: 80px; /* Adjust as needed */
+    width: 90px;
 }

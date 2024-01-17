@@ -107,29 +107,123 @@ const PanellidProfiel = ({ currentUser }) => {
         <div className="scrollableForm">
                 <form >
                     {activeGroup === 'normal' && (
-                         <>
-                         <input type="text" name="voornaam" value={form.voornaam} onChange={handleChange} placeholder="Voornaam" readOnly={!isEditable} />
-                         <input type="text" name="achternaam" value={form.achternaam} onChange={handleChange} placeholder="Achternaam" readOnly={!isEditable} />
-                         <input type="text" name="postcode" value={form.postcode} onChange={handleChange} placeholder="Postcode" readOnly={!isEditable} />
-                         <input type="text" name="email" value={form.email} onChange={handleChange} placeholder="Email" readOnly={!isEditable} />
-                         <input type="text" name="telefoonnummer" value={form.telefoonnummer} onChange={handleChange} placeholder="Telefoonnummer" readOnly={!isEditable} />
-                         </>
+                        <>
+                        <div className="form-group">
+                            <label htmlFor="voornaam">Voornaam:</label>
+                            <div className="form-input">
+                                <input type="text" id="voornaam" name="voornaam" value={form.voornaam} onChange={handleChange} placeholder="Voornaam" readOnly={!isEditable} />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="achternaam">Achternaam:</label>
+                            <div className="form-input">
+                                <input type="text" id="achternaam" name="achternaam" value={form.achternaam} onChange={handleChange} placeholder="Achternaam" readOnly={!isEditable} />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="postcode">Postcode:</label>
+                            <div className="form-input">
+                                <input type="text" id="postcode" name="postcode" value={form.postcode} onChange={handleChange} placeholder="Postcode" readOnly={!isEditable} />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email:</label>
+                            <div className="form-input">
+                                <input type="text" id="email" name="email" value={form.email} onChange={handleChange} placeholder="Email" readOnly={!isEditable} />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="telefoonnummer">Telefoonnummer:</label>
+                            <div className="form-input">
+                                <input type="tel" id="telefoonnummer" name="telefoonnummer" value={form.telefoonnummer} onChange={handleChange} placeholder="Telefoonnummer"  readOnly={!isEditable} />
+                            </div>
+                        </div>
+                    </>
                     )}
                     {activeGroup === 'beperking' && (
-                        <>
-                            
-                        <input type="text" name="typeBeperking" value={form.typeBeperking} onChange={handleChange} placeholder="Type beperking" readOnly={!isEditable}/>
-                        <input type="text" name="hulpmiddelen" value={form.hulpmiddelen} onChange={handleChange} placeholder="Hulpmiddelen" readOnly={!isEditable}/>
-                        <input type="text" name="aandoening" value={form.aandoening} onChange={handleChange} placeholder="Aandoening" readOnly={!isEditable}/>
-                        </>
+                       <>
+                       <div className="form-group">
+                           <label htmlFor="typeBeperking">wat voor type beperking heeft u?</label>
+                           <div className="form-input">
+                           <select id="typeBeperking" name="typeBeperking" value={form.typeBeperking} onChange={handleChange} disabled={!isEditable}>
+                               <option value="">Selecteer type beperking</option>
+                               <option value="Motorisch">Motorisch</option>
+                               <option value="Zintuigelijk">Zintuigelijk</option>
+                               <option value="Mentaal">Mentaal</option>
+                           </select>
+                           </div>
+                       </div>
+                       <div className="form-group">
+                           <label htmlFor="hulpmiddelen">welke hulpmiddelen gebruikt u?</label>
+                           <div className="form-input">
+                               <input type="text" id="hulpmiddelen" name="hulpmiddelen" value={form.hulpmiddelen} onChange={handleChange} placeholder="Hulpmiddelen" readOnly={!isEditable}/>
+                           </div>
+                       </div>
+                       <div className="form-group">
+                           <label htmlFor="aandoening">Wat voor aandoening heeft u?</label>
+                           <div className="form-input">
+                               <input type="text" id="aandoening" name="aandoening" value={form.aandoening} onChange={handleChange} placeholder="Aandoening" readOnly={!isEditable}/>
+                           </div>
+                       </div>
+                   </>
                     )}
                     {activeGroup === 'onderzoek' && (
-                        <>
-                        <input type="text" name="typeOnderzoek" value={form.typeOnderzoek} onChange={handleChange} placeholder="Type onderzoek" readOnly={!isEditable}/>
-                        <input type="text" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleChange} placeholder="Voorkeur benadering" readOnly={!isEditable}/>
-                        <input type="checkbox" name="commercielePartijen" checked={form.commercielePartijen === 'Ja'} onChange={handleChange} readOnly={!isEditable} />
-                        <button onClick={() => setActiveGroup('dateTme')} disabled={!isEditable}>Beschikbaarheid</button>
-                        </>
+                            <>
+                            <div className="form-group">
+                                <label htmlFor="typeOnderzoek">Type onderzoek</label>
+                                <div className="form-input">
+                                    <div class="typeonderzoekboxen">
+                                    <label htmlFor="Interview">
+                                        <span>Interview</span>
+                                        <input
+                                            type="checkbox"
+                                            id="Interview"
+                                            name="typeOnderzoek"
+                                            value="Interview"
+                                            aria-label="Interview"
+                                        />
+                                    </label>
+                                    <label htmlFor="Groepsgesprekken">
+                                        <span>Groepsgesprekken</span>
+                                        <input
+                                            type="checkbox"
+                                            id="Groepsgesprekken"
+                                            name="typeOnderzoek"
+                                            value="Groepsgesprekken"
+                                            aria-label="Groepsgesprekken"
+                                        />
+                                    </label>
+                                    <label htmlFor="Engelstalig onderzoek">
+                                        <span>Engelstalig onderzoek</span>
+                                        <input
+                                            type="checkbox"
+                                            id="Engelstalig onderzoek"
+                                            name="typeOnderzoek"
+                                            value="Engelstalig onderzoek"
+                                            aria-label="Engelstalig onderzoek"
+                                        />
+                                    </label>
+                                    </div>
+                        
+                                </div>
+                                    
+                            </div>
+                                <div className="form-group">
+                                    <label htmlFor="voorkeurBenadering">Voorkeur benadering</label>
+                                    <div className="form-input">
+                                        <input type="text" id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleChange} placeholder="Voorkeur benadering" readOnly={!isEditable}/>
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="commercielePartijen">Wilt u deelnamen aan onderzoeken van commerciële partijen?</label>
+                                    <div className="form-input">
+                                        <input type="checkbox" id="commercielePartijen" name="commercielePartijen" checked={form.commercielePartijen === 'Ja'} onChange={handleChange} readOnly={!isEditable} />
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <button onClick={() => setActiveGroup('dateTme')} disabled={!isEditable}>Beschikbaarheid</button>
+                                </div>
+                            </>
                     )}
                     {activeGroup === 'dateTme' && (
                         <>
