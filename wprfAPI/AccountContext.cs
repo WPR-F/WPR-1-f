@@ -9,11 +9,14 @@ using wprfAPI.Users;
 public class AccountContext : IdentityDbContext<User>
 {
 
-public AccountContext(DbContextOptions<AccountContext> options)
-        : base(options)
+    public AccountContext(DbContextOptions<AccountContext> options)
+            : base(options)
+        {
+        }
+
+    // parameterloze constructor voor moq
+    public AccountContext()
     {
     }
-
-  
 
 }
