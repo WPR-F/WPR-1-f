@@ -12,11 +12,11 @@ import PanellidProfiel from './PanellidPortal/components/PanellidProfiel';
 import OpenOnderzoeken from './PanellidPortal/components/OpenOnderzoeken';
 import ActieveOnderzoeken from './PanellidPortal/components/ActieveOnderzoeken';
 
-function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin}) {
+function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin, isPanellid, setIsPanellid}) {
   return (
     <Routes>
       <Route path="/register" element={<RegisterForm />} />
-      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn} isPanellid={isPanellid} setIsPanellid={setIsPanellid}/> } />
       <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} isLoggedIn={isLoggedIn}/>} />
 
       {/* AdminPortal Components */}

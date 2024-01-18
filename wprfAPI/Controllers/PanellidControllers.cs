@@ -83,7 +83,29 @@ namespace wprfAPI.Controllers
             await _context.SaveChangesAsync();
 
             return Ok(panellidInfo);
-        }       
+        }    
+
+        
+        [HttpPost]
+        [Route("checkPanellid")]
+        public async Task<ActionResult<User>> checkPanellid(CheckPanellidRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+             var isAdmin = await _userManager.IsInRoleAsync(user, "Panellid");
+
+                if (!isAdmin)
+                {
+                    return Forbid();
+                }
+
+            return Ok();
+        }   
                 
     } 
 }
