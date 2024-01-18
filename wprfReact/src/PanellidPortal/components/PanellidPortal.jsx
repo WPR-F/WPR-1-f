@@ -3,8 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import '../css/PanellidPortal.css';
 
 
-const PanellidPortal = ({}) => {
+const PanellidPortal = ({ isPanellid, isLoggedIn }) => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!isLoggedIn) {
+            navigate("/login");
+        }
+        if (!isPanellid) {
+            navigate("/profielpagina");
+        }
+     
+    }, [isPanellid, isLoggedIn]);
 
     return ( 
     <div className="PanellidPortallbg"><h1>PanellidPortal</h1>
