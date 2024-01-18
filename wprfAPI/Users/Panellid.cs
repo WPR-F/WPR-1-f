@@ -1,28 +1,23 @@
-﻿using wprfAPI.Users.UserInterfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace wprfAPI.Users
 {
-    public class Panellid : User, IPanellid
+    public class Panellid
     {
-        private string TypeDisability { get; set; }
-        private string Tools { get; set; }
-        private string Handicap { get; set; }
-        private string PrefferdResearch { get; set; }
-        private string PreferdresearchApproach { get; set; }
-        private string CommercialApproach { get; set; }
-        private List<DateTime> Availibility { get; set; }
-
-        public Panellid(int id, string name, string lastname, string email, string password, string typeDisability, string tools, string handicap, string preferredResearch, string preferredResearchApproach, string commercialApproach, List<DateTime> availability) : base(id, name, lastname, email, password)
-        {
-            TypeDisability = typeDisability;
-            Tools = tools;
-            Handicap = handicap;
-            PrefferdResearch = preferredResearch;
-            PreferdresearchApproach = preferredResearchApproach;
-            CommercialApproach = commercialApproach;
-            Availibility = availability;
-        }
+        [Key]
+        [ForeignKey("User")]
+        public string UserId { get; set; } // Primary key and foreign key to User
+        public string? postalCode { get; set; }
+        public string? phoneNumber { get; set; }
+        public string? DisabilityType { get; set; }
+        public string? Tools { get; set; }
+        public string? condition { get; set; }
+        public string? ResearchType { get; set; }
+        public string? PreferdresearchApproach { get; set; }
+        public bool? CommercialApproach { get; set; }
+        public string? Availibility { get; set; }
     }
-
-
 }

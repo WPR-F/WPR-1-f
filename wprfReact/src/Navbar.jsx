@@ -1,17 +1,19 @@
 import './Navbar.css';
 import logo from './images/icon_accessibility.png';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import RegisterForm from './register/registerform';
 
-export default function App() {
+
+
+export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
+      
 
       const handleCheckboxClick = () => {
         setMobileButtonsVisible(!mobileButtonsVisible);
       };
-  
+
   return (
       <div>
           <div className="nav-container">
@@ -27,12 +29,24 @@ export default function App() {
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
-                      <li id="register"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="login"><a href="#Login">Log in</a></li>
+                      {!isLoggedIn ? (
+                        <>
+                         <li id="register"><Link to="/register">Registreren</Link></li>
+                         <li id="login"><Link to="/login">Login</Link></li>
+                            </>
+                        ) : (
+                       <>
+                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                         {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                         {isPanellid && <li id="Panellidknop"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
+                      </>
+                    )}
+                      
+              
                   </ul>
               </div>
               <div className="mobile-menu-container">
-                  <input class="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
+                  <input className="checkbox" type="checkbox" id="checkbox"  onChange={handleCheckboxClick} checked={mobileButtonsVisible}/>
                   <div className="hamburger-lines">
                       <span className="line line1"></span>
                       <span className="line line2"></span>
@@ -55,8 +69,17 @@ export default function App() {
               </div>
               <div className="register-login-container">
                   <ul>
-                      <li id="registerMobile"><a><Link to="/register">Registreren</Link></a></li>
-                      <li id="loginMobile"><a href="#Login">Log in</a></li>
+                  {!isLoggedIn ? (
+                        <>
+                      <li id="registerMobile"><Link to="/register">Registreren</Link></li>
+                      <li id="loginMobile"><Link to="/login">Login</Link></li>
+                      </>
+                  ) : (
+                    <>
+                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                     {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                     </>
+                  )}
                   </ul>
               </div>
               </div>

@@ -1,41 +1,88 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
 {
-[Route("api/[controller]")]
-[ApiController]
-public class AccountsController : ControllerBase
-{
-    private readonly AccountContext _context;
-
-    public AccountsController(AccountContext context)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AccountsController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly AccountContext _context;
+        private readonly UserManager<User> _userManager;
 
-    [HttpPost]
-    [Route("register")]
-    public async Task<ActionResult<User>> PostAccount(User account)
-    {
-        _context.Accounts.Add(account);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction("GetAccount", new { id = account.Id }, account);
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult<User>> GetAccount(int id)
-    {
-        var account = await _context.Accounts.FindAsync(id);
-
-        if (account == null)
+        public AccountsController(AccountContext context, UserManager<User> userManager)
         {
-            return NotFound();
+            _context = context;
+            _userManager = userManager;
         }
 
-        return account;
-    }
+        [HttpPost]
+        [Route("register")]
+        public async Task<ActionResult<User>> PostAccount(RegisterModel model)
+            {
+            var result = await _userManager.CreateAsync(model.User, model.Password);
 
-}
+            if (result.Succeeded)
+            {
+                return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
+            }
+
+            return BadRequest(result.Errors);
+        }
+        
+        [HttpPost]
+        [Route("getEmail")]
+        public async Task<ActionResult<string>> GetEmail(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if(user == null){
+                return BadRequest();
+            }
+
+            return Ok(user.Email);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user as User;
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<ActionResult<User>> Login(LoginModel model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+            
+            {
+
+            }
+
+            var isCorrectPassword = await _userManager.CheckPasswordAsync(user, model.Password);
+
+            if (!isCorrectPassword)
+            {
+                return Unauthorized();
+            }
+
+            return Ok(user);
+        }
+        
+    }
 }

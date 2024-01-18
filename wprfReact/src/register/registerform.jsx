@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { GebruikerApiCall } from '../apiService';
 import './registerform.css';
 
 function RegisterForm() {
@@ -7,6 +9,7 @@ function RegisterForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -16,31 +19,39 @@ function RegisterForm() {
             return;
         }
     
+            // user object bestaat uit een User object met daarin de gebruikersgegevens en een password string.
+            // op deze manier gedaan zodat de API de gebruikersgegevens en het wachtwoord apart kan verwerken.
         const user = {
-            Name,
-            lastName,
-            email,
-            password,
-            confirmPassword
+            User: {
+                userName: Name,
+                lastName,
+                email,
+            },
+            password
         };
     
         try {
-            const response = await fetch('http://localhost:5210/api/accounts/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user)
-            });
+            const response = await GebruikerApiCall(user,"register");
     
+            //print error in console als die er is
+            //mist nog error bericht zoals : wachtwoord te kort of email al in gebruik
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error('Error details:', errorData);
+                if (errorData.errors && errorData.errors.password) {
+                    console.error('Password error:', errorData.errors.password);
+                }
                 return;
             }
     
-            const data = await response.json();
-            console.log(data);
+            //als registratie successvol is, ga naar login pagina en log response data voor debugging
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+                navigate('/login'); 
+            }
+            
+            //print netwerk error in console als die er is
         } catch (error) {
             console.error('Network error:', error);
         }
@@ -49,6 +60,7 @@ function RegisterForm() {
     return (
         <div className='blok'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
+            <div className="register-container">
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Voornaam" required value={Name} onChange={e => setFirstName(e.target.value)} />
                 <input type="text" placeholder="Achternaam" required value={lastName} onChange={e => setLastName(e.target.value)} />
@@ -57,6 +69,7 @@ function RegisterForm() {
                 <input type="password" placeholder="Herhaal Wachtwoord" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
                 <button type="submit">Registreren</button>
             </form>
+            </div>
         </div>
     );
 }

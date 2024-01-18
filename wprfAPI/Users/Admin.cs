@@ -4,12 +4,14 @@ using wprfAPI.Users.UserInterfaces;
 
 namespace wprfAPI.Users
 {
-    public class Admin: User, IAdmin
+    
+    public class Admin: IAdmin
     {
+        public string Id { get; set; }
 
-        public Admin(int id, string name, string lastname, string email, string password) : base(id, name, lastname, email, password)   
+        public Admin(string id)  
         {
-
+            id = Id;
         }
         public void Viewlogs()
         {

@@ -13,14 +13,7 @@
     border-radius: 5%;
     padding-top: 1rem;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 80%;
-    height: 80%
-}
+
 input {
     width: 80%;
     height: 60px;
@@ -62,4 +55,14 @@ button {
 {
     width: 100%;
     height: auto;
+}
+
+.register-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 80%
 }

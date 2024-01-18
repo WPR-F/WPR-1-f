@@ -1,35 +1,24 @@
-﻿using wprfAPI.Users.UserInterfaces;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace wprfAPI.Users
 {
-    public class User : Iaccount
+    //we maken nu gebruik van de IdentityUser class van Microsoft.AspNetCore.Identity inplaats van onze eigen Iuser interface
+    // Moet nog veranderd worden in UML
+    // Mogelijk zijn overige User classes ook niet meer nodig omdat we rollen kunnen toevoegen aan de IdentityUser class (moet ik nog uitzoeken)
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+       
 
         public User() { }
         
-        public User(int id, string name, string lastname, string email, string password) {
-
-            Id = id;
-            Name = name;
-            LastName = lastname;
+        public User(string userName, string lastName, string email, string passwordHash)
+        {
+            UserName = userName;
+            LastName = lastName;
             Email = email;
-            Password = password;
-
-        }
-
-        public void Login()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Logout()
-        {
-            throw new NotImplementedException();
+            PasswordHash = passwordHash;
         }
     }
 }
