@@ -29,25 +29,23 @@ namespace wprfAPI.Controllers
             if (result.Succeeded)
             {
                 return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
+            } 
+
+            return BadRequest(result.Errors);
+        }
+        [HttpPost]
+        [Route("google")]
+        public async Task<ActionResult<User>> PostGoogleAccount(GoogleModel model)
+            {
+            var result = await _userManager.CreateAsync(model.User);
+
+            if (result.Succeeded)
+            {
+                return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
             }
 
             return BadRequest(result.Errors);
         }
-        /*
-        [HttpPost]
-        [Route("getemail")]
-        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
-        {
-            var user = await _userManager.FindByEmailAsync(email);
-
-            if(user == null){
-                return BadRequest();
-            }
-
-            return Ok(user.Email);
-        }
-        */
-
         /*
         [HttpPost]
         [Route("getemail")]

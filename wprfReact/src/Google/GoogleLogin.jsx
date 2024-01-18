@@ -5,7 +5,7 @@ import { clientId } from './GoogleserviceApi.js';
 import { GoogleLogin } from 'react-google-login';
 import axios from 'axios';
 
-function GoogleLoginButton({ googleResponse, setIsLoggedIn, currentUser, IsloggedIn}) {
+function GoogleLoginButton({setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
     const [Name, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -27,59 +27,54 @@ function GoogleLoginButton({ googleResponse, setIsLoggedIn, currentUser, Islogge
             data.append('email', google.email);
         
             const response = await axios.post(url, data);
-            //console.log(response.data);
             if (response.data === google.email) {
                 console.log("Emailadres: "+ google.email +" is al in gebruik!")
-        }
-            
+
+                //setCurrentUser(response.data);
+                //setIsLoggedIn(true);
+                navigate('/profielpagina');
+            } 
+                
         } catch (error) {
             //console.error(error);
             console.log(`Account aangemaakt Email: ${google.email}, Voornaam: ${google.givenName}, Achternaam: ${google.familyName}`);
+            await addAccountToDataBase(google);
 
         }
     };
+    
 
-    const addAccountToDataBase =  async () => { 
+    const addAccountToDataBase =  async (google) => { 
+        console.log("Test addAccountToDataBase");
         const user = {
             User: {
-                userName: Name,
-                lastName,
-                email,
+                userName : google.givenName,
+                lastName : google.familyName,
+                email : google.email,
                 registerType,
-            },
-            password
+            }
+
         };
+
+        
         try {
-            const url = 'http://localhost:5210/api/accounts/register';
+            const url = 'http://localhost:5210/api/accounts/google';
             const response = await axios.post(url, user);
             console.log(response.data);
-            // Handle the response or do any necessary actions
+            //setCurrentUser(response.data);
+            //setIsLoggedIn(true);
+            navigate('/profielpagina');
         } catch (error) {
             console.error('Error adding account to database:', error);
             // Handle the error, show an error message, etc.
         }
-        /*
-        try {
-            // Stuurt een POST request naar de registratie API endpoint met de ingevoerde gebruikersgegevens.
-            // En geeft het response object de waarde van de response van de API.
-            const response = await fetch('http://localhost:5210/api/accounts/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...user, password })
-            });
+        
     
-            //print error in console als die er is
-            //mist nog error bericht zoals : wachtwoord te kort of email al in gebruik
-    
-            
-            //print netwerk error in console als die er is
-        } catch (error) {
-            console.error('Network error:', error);
-        }
-        */
+    };
+        
 
        
-    };
+    
 
     const googleLoginAuthentication =  async (response) => {
         const { profileObj } = response;
@@ -91,37 +86,21 @@ function GoogleLoginButton({ googleResponse, setIsLoggedIn, currentUser, Islogge
         const googleEmail = profileObj.email;
         setEmail(googleEmail);
         //Wachtwoord is hardcoded dit moet nog worden aangepast 
-        const googlePassword = 'Abcabc123.';
+        const googlePassword = '';
         setPassword(googlePassword);
         setConfirmPassword(googlePassword);
         
         try {
-           await isAccountregistered(profileObj);
+            await isAccountregistered(profileObj);
             
         } catch (error) {
-            await addAccountToDataBase();
+            console.log(error);
             
-            try {
-                const url = 'http://localhost:5210/api/Accounts/register';
-                const data = {user: user, password: password};
-                //data.append('email', googleEmail);
-               
-            
-                const response = await axios.post(url, data);
-                //console.log(response.data);
-                
-            } catch (error) {
-                console.log(error);
-            }
+           
             
         }
     }
-        
-
-          
     
-    
-
     const responseGoogle = (response) => {
         const { profileObj } = response;
         console.log(`${profileObj}`);
