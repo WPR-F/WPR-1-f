@@ -63,6 +63,25 @@ public class AccountControllerTests
         var notFoundResult = Assert.IsType<NotFoundResult>(result.Result);
     }
 
+    [Fact]
+    public async Task GetUser_ReturnsUser_WhenUserExists()
+    {
+        // Arrange
+        var mockUserManager = new Mock<UserManager<User>>(
+            Mock.Of<IUserStore<User>>(), null, null, null, null, null, null, null, null);
+        var user = new User { Id = "existingId", UserName = "testUser" };
+        mockUserManager.Setup(x => x.FindByIdAsync(It.IsAny<string>())).ReturnsAsync(user);
+        var controller = new AccountsController(null, mockUserManager.Object);
+
+        // Act
+        var result = await controller.GetUser("existingId");
+
+        // Assert
+        var actionResult = Assert.IsType<ActionResult<User>>(result);
+        var returnedUser = Assert.IsType<User>(actionResult.Value);
+        Assert.Equal("testUser", returnedUser.UserName);
+    }
+
     //test for login
     [Fact]
     public async Task Login_ReturnsNotFound_WhenUserDoesNotExist()
@@ -70,7 +89,7 @@ public class AccountControllerTests
         // Arrange
         var mockUserManager = GetMockUserManager();
         mockUserManager.Setup(um => um.FindByEmailAsync(It.IsAny<string>())).ReturnsAsync((User)null);
-        var mockAccountContext = new Mock<AccountContext>(); // Add this line
+        var mockAccountContext = new Mock<AccountContext>();
         var controller = new AccountsController(mockAccountContext.Object, mockUserManager.Object);
         var model = new LoginModel { Email = "test@test.com", Password = "Test123!" };
 
@@ -80,4 +99,5 @@ public class AccountControllerTests
         // Assert
         Assert.IsType<NotFoundResult>(result.Result);
     }
+
 }
