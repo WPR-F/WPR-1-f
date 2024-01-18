@@ -12,8 +12,8 @@ export const GebruikerApiCall = async (user, endpoint) => {
     return response;
 }
 
-    export const Admincheck = async (user) => {
-    const response = await fetch(`http://localhost:5210/api/admin/checkAdmin`, {
+    export const RoleCheck = async (user, endpoint) => {
+    const response = await fetch(`http://localhost:5210/api/`+endpoint, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

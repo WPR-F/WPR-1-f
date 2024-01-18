@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './loginform.css';
 import { useNavigate } from 'react-router-dom';
-import { GebruikerApiCall, Admincheck } from '../apiService';
+import { GebruikerApiCall, RoleCheck } from '../apiService';
 
-function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin}) {
+function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -44,10 +44,19 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin}) {
                 console.error('Error details:', data);
                 return;
             }
-                const isadmin = await Admincheck(data);
+                const isadmin = await RoleCheck(data, "Admin/checkAdmin");
                 if (isadmin === true) {
                     setIsAdmin(true);
                 }
+                else setIsAdmin(false);
+
+                const ispanellid = await RoleCheck(data, "Panellid/checkPanellid");
+                if (ispanellid === true) {
+                    console.log("ispanellid1"+ispanellid);
+                    setIsPanellid(true);
+                }
+                else setIsPanellid(false);
+               
                 setCurrentUser(data);
                 setIsLoggedIn(true);              
                 navigate('/profielpagina');

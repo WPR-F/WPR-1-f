@@ -14,6 +14,6 @@ public AccountContext(DbContextOptions<AccountContext> options)
     {
     }
 
-  
+     public DbSet<Panellid> Panelleden { get; set; }
 
 }
