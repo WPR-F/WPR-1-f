@@ -4637,11 +4637,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
       "projectName": "wprfAPI",
       "projectPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
       "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\obj\\",
+=======
+      "projectUniqueName": "C:\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
+      "projectName": "wprfAPI",
+      "projectPath": "C:\\wpr\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
+      "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
+      "outputPath": "C:\\wpr\\WPR-1-f\\wprfapi\\obj\\",
+>>>>>>> origin/Develop
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",

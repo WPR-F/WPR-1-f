@@ -19,4 +19,9 @@ public class AccountContext : IdentityDbContext<User>
     {
     }
 
+<<<<<<< HEAD
+=======
+     public DbSet<Panellid> Panelleden { get; set; }
+
+>>>>>>> origin/Develop
 }
