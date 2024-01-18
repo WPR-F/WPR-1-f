@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './registerForm.css';
-import { gapi } from 'gapi-script';
 import GoogleLoginButton from '../Google/GoogleLogin.jsx';
 import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
 
