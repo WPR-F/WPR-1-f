@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
 import { GetUsers } from '../../apiService';
-import { useNavigate } from 'react-router-dom';
+
 
 const PanellidLijst = () => {
     const navigate = useNavigate();
@@ -27,7 +28,7 @@ const PanellidLijst = () => {
             <ul>
             {users.map((user, index) => (
             <li key={index} className="listItem">
-                <button onClick={() => console.log("Clicked user: " + user.userName)}>
+                <button onClick={() => navigate(`./Panellidinfo/${user.id}`)}>
                     {user.userName + " " + user.lastName }
                 </button>
             </li>
