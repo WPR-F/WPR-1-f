@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function App({ isLoggedIn, currentUser, isAdmin }) {
+export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
       
 
       const handleCheckboxClick = () => {
-        console.log(isAdmin);
         setMobileButtonsVisible(!mobileButtonsVisible);
       };
 
@@ -47,6 +46,7 @@ export default function App({ isLoggedIn, currentUser, isAdmin }) {
                        <>
                          <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
                          {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                         {isPanellid && <li id="Panellidknop"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
                       </>
                     )}
                       

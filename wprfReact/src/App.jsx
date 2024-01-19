@@ -9,6 +9,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isPanellid, setIsPanellid] = useState(false);
   console.log(currentUser);
   return (
     <Router>
@@ -26,10 +27,11 @@ function App() {
       </div>
 =======
       <header className="App-header">
-        <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}/>
+        <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
         <SidebarAdminPortal/>
       </header>
-      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
+      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} 
+      isAdmin={isAdmin} setIsAdmin={setIsAdmin} isPanellid={isPanellid} setIsPanellid={setIsPanellid} />
       <footer>
         <Footer/>
       </footer>

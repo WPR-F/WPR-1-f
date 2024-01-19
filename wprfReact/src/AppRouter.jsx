@@ -7,7 +7,12 @@ import PanellidLijst from './AdminPortal/components/PanellidLijst';
 import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
 import Aanvragen from './AdminPortal/components/Aanvragen';
+import PanellidPortal from './PanellidPortal/components/PanellidPortal';
+import PanellidProfiel from './PanellidPortal/components/PanellidProfiel';
+import OpenOnderzoeken from './PanellidPortal/components/OpenOnderzoeken';
+import ActieveOnderzoeken from './PanellidPortal/components/ActieveOnderzoeken';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
@@ -23,10 +28,13 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser }) {
       <Route path="/profielpagina" element={<><ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser}/><SidebarAdminPortal/></>} />
 =======
 function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin}) {
+=======
+function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin, isPanellid, setIsPanellid}) {
+>>>>>>> origin/Develop
   return (
     <Routes>
       <Route path="/register" element={<RegisterForm />} />
-      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn} isPanellid={isPanellid} setIsPanellid={setIsPanellid}/> } />
       <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} isLoggedIn={isLoggedIn}/>} />
 
       {/* AdminPortal Components */}
@@ -36,7 +44,16 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isA
       <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />
       <Route path='AdminPortal/Aanvragen' element={<Aanvragen/>} />
 
+<<<<<<< HEAD
 >>>>>>> Develop
+=======
+      {/* PanellidPortal Components */}
+      <Route path='/PanellidPortal' element={<PanellidPortal isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
+      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel currentUser={currentUser} />} />
+      <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken/>} />
+      <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken/>} />
+
+>>>>>>> origin/Develop
     </Routes>
   );
 }
