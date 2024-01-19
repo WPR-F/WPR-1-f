@@ -36,7 +36,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowSpecificOrigin"); 
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthentication(); 
 app.UseAuthorization();
@@ -71,6 +71,9 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
    
    services.Configure<IdentityOptions>(options =>
     {
+    //Email settings.
+    options.User.RequireUniqueEmail = true;
+    
     // Password settings.
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;

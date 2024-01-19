@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
-import SidebarAdminPortal from './SidebarAdminPortal.jsx';
-import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
-import SidebarPanellidPortal from './SidebarPanellidPortal.jsx';
+import './index.css'
 import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -16,6 +14,18 @@ function App() {
   return (
     <Router>
     <div className="App">
+<<<<<<< HEAD
+      <div className="header">
+        <Navbar isLoggedIn={isLoggedIn} />
+      </div>
+      <div className="content">
+      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />
+      
+      </div>
+      <div className="footer">
+      <Footer/>
+      </div>
+=======
       <header className="App-header">
         <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
         <SidebarAdminPortal/>
@@ -25,8 +35,10 @@ function App() {
       <footer>
         <Footer/>
       </footer>
+>>>>>>> Develop
     </div>
     </Router>
+  
   );
 }
 
