@@ -9,6 +9,7 @@ namespace wprfAPI.Users
     public class User : IdentityUser
     {
         public string LastName { get; set; }
+       
 
         public string RegisterType { get; set; }
 

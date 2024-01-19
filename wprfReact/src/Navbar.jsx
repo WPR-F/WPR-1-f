@@ -1,17 +1,20 @@
 import './Navbar.css';
 import logo from './images/icon_accessibility.png';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
-export default function App({ isLoggedIn }) {
+
+export default function App({ isLoggedIn, currentUser, isAdmin }) {
    
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
+      
 
       const handleCheckboxClick = () => {
+        console.log(isAdmin);
         setMobileButtonsVisible(!mobileButtonsVisible);
       };
-  
+
   return (
       <div>
           <div className="nav-container">
@@ -29,12 +32,25 @@ export default function App({ isLoggedIn }) {
                       <li><a href="#Contact">Contact</a> </li>
                       {!isLoggedIn ? (
                         <>
+<<<<<<< HEAD
                       <li id="register"><Link to="/register">Registreren</Link></li>
                       <li id="login"><Link to="/login">Login</Link></li>
                        </>
                       ) : (
                         <li id="profile"><Link to="/profielpagina">Profiel</Link></li>
                       )}
+=======
+                         <li id="register"><Link to="/register">Registreren</Link></li>
+                         <li id="login"><Link to="/login">Login</Link></li>
+                            </>
+                        ) : (
+                       <>
+                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                         {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                      </>
+                    )}
+                      
+>>>>>>> Develop
               
                   </ul>
               </div>
@@ -68,7 +84,14 @@ export default function App({ isLoggedIn }) {
                       <li id="loginMobile"><Link to="/login">Login</Link></li>
                       </>
                   ) : (
+<<<<<<< HEAD
                      <li id="profileMobile"><Link to="/profielpagina">Profiel</Link></li>
+=======
+                    <>
+                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
+                     {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                     </>
+>>>>>>> Develop
                   )}
                   </ul>
               </div>

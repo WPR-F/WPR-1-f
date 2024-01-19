@@ -1,6 +1,8 @@
-﻿namespace wprfAPI.Users.UserInterfaces
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace wprfAPI.Users.UserInterfaces
 {
-    public interface IAdmin
+    public interface IAdmin 
     {
     }
 }
