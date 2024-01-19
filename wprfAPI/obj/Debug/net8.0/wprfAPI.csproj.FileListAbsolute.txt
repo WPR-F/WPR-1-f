@@ -976,14 +976,6 @@ C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
 >>>>>>> origin/Develop
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.csproj.AssemblyReference.cache
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.AssemblyInfoInputs.cache
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.AssemblyInfo.cs
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.csproj.CoreCompileInputs.cache
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.sourcelink.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
@@ -1103,6 +1095,14 @@ C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\runtimes\win\lib\ne
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.csproj.AssemblyReference.cache
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.AssemblyInfoInputs.cache
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.AssemblyInfo.cs
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.csproj.CoreCompileInputs.cache
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.sourcelink.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\staticwebassets\msbuild.wprfAPI.Microsoft.AspNetCore.StaticWebAssets.props

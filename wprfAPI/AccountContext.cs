@@ -19,6 +19,6 @@ public class AccountContext : IdentityDbContext<User>
     {
     }
 
-     public DbSet<Panellid> Panelleden { get; set; }
+     public virtual DbSet<Panellid> Panelleden { get; set; }
 
 }
