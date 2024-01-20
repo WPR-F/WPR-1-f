@@ -1,15 +1,13 @@
 .footer-container {
-  display: none;
   position: absolute;
-  height: clamp(100px, 10%, 120px);
+  height: 120px;
   width: 100%;
   display: flex;
-  bottom: 0px;
-
+  bottom: 0;
   background-color: #131B56;
   justify-content: space-between;
   margin-top: auto;
-  z-index: 10;
+  
 }
 .footer-buttons {
   position: relative;

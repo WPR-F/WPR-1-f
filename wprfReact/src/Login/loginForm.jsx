@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './loginForm.css';
+import './loginform.css';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import GoogleLoginButton from '../Google/GoogleLogin.jsx';
-import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
-
-
-=======
-import { GebruikerApiCall, Admincheck } from '../apiService';
->>>>>>> Develop
-=======
 import { GebruikerApiCall, RoleCheck } from '../apiService';
->>>>>>> origin/Develop
 
 function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) {
     const [email, setEmail] = useState('');
@@ -29,18 +18,10 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) 
             password,
         };
         
-        
-        // stuurt een POST request naar de login API endpoint met de ingevoerde gebruikersgegevens.
-        // En geeft het response object de waarde van de response van de API. 
-        try {
-            const response = await fetch('http://localhost:5210/api/accounts/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(user)
-            });
     
+        try {
+            const response = await GebruikerApiCall(user,"login");
             const data = await response.json();
-
 
             //zet de error message als er of geen account met ingevoerde email bestaat of als het wachtwoord niet klopt
             if (!response.ok) {
@@ -85,24 +66,18 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) 
         }
         
     };
-
-    loadGoogleServiceApi();
-
-   
     
     return  (
-        <div className='login-form-container'>
+        <div className='blok'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="E-mailadres" required value={email} onChange={e => setEmail(e.target.value)} />
                 <input type="password" placeholder="Wachtwoord" required value={password} onChange={e => setPassword(e.target.value)} />
                 <button type="submit">Login</button>
             </form>
-            
             <div className='errormessage-container'>
             <p className='errormessage'>{errorMessage}</p>
             </div>
-            <GoogleLoginButton />
         </div>
     );
     

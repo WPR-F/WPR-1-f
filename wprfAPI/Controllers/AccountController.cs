@@ -2,10 +2,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-<<<<<<< HEAD
-using Microsoft.Extensions.Logging;
-=======
->>>>>>> origin/Develop
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -32,61 +28,10 @@ namespace wprfAPI.Controllers
             if (result.Succeeded)
             {
                 return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
-            } 
-
-            return BadRequest(result.Errors);
-        }
-        [HttpPost]
-        [Route("google")]
-        public async Task<ActionResult<User>> PostGoogleAccount(GoogleModel model)
-            {
-            var result = await _userManager.CreateAsync(model.User);
-
-            if (result.Succeeded)
-            {
-                return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
             }
 
             return BadRequest(result.Errors);
         }
-<<<<<<< HEAD
-        /*
-        [HttpPost]
-        [Route("getemail")]
-        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
-        {
-            var user = await _userManager.FindByEmailAsync(email);
-            
-            return Ok(user.Email);
-        }
-        */
-        [HttpPost]
-        [Route("getemail")]
-        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(email))
-                {
-                    return BadRequest("Email is required.");
-                }
-
-                var user = await _userManager.FindByEmailAsync(email);
-
-                if (user != null)
-                {
-                    return Ok(user.Email);
-                }
-
-                return NotFound("User does not exist");
-                System.Diagnostics.Debug.WriteLine("This is a log");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, "Internal server error. Please try again later.");
-            }
-        }
-=======
         
         [HttpPost]
         [Route("getEmail")]
@@ -100,7 +45,6 @@ namespace wprfAPI.Controllers
 
             return Ok(user.Email);
         }
->>>>>>> origin/Develop
 
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(string id)
