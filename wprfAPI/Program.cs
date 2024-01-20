@@ -59,6 +59,29 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
                     errorNumbersToAdd: null);
             }));
 
+   
+    services.AddDbContext<OnderzoekContext>(options =>
+        options.UseSqlServer(
+            configuration.GetConnectionString("DefaultConnection"),
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null);
+            }));
+
+    services.AddDbContext<ClickstreamContext>(options =>
+        options.UseSqlServer(
+            configuration.GetConnectionString("DefaultConnection"),
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null);
+            }));
+
     // services.AddDefaultIdentity<User>() 
     //     .AddEntityFrameworkStores<AccountContext>();
 
@@ -107,6 +130,9 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
+
+
+    
 
 }
 

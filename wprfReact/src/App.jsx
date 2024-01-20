@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
-import SidebarAdminPortal from './SidebarAdminPortal.jsx';
-import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
-import SidebarPanellidPortal from './SidebarPanellidPortal.jsx';
 import AppRouter from './AppRouter.jsx'; // Import the router
+import ClickstreamApi from './ClickstreamApi.jsx';
+import Onderzoek from './BedrijfsPortal/components/Onderzoek.jsx';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,14 +18,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
-        <SidebarAdminPortal/>
       </header>
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} 
       isAdmin={isAdmin} setIsAdmin={setIsAdmin} isPanellid={isPanellid} setIsPanellid={setIsPanellid} />
+      <Onderzoek/>
       <footer>
         <Footer/>
       </footer>
     </div>
+    <ClickstreamApi/>
     </Router>
   );
 }
