@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../css/PanellidPortal.css';
 import { useNavigate } from 'react-router-dom';
-import { roleValidation } from '../../roleValidation';
 
-const ActieveOnderzoeken = ({ isPanellid, isLoggedIn }) => {
+const ActieveOnderzoeken = () => {
     const navigate = useNavigate();
-
-    useEffect(() => {
-        roleValidation(navigate, isPanellid, isLoggedIn);
-        }, [isPanellid, isLoggedIn]);
-
     return ( 
     <div  className="PanellidPortallbg">
         <h1>Actieve Onderzoeken Niet af</h1>
