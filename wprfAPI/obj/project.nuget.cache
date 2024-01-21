@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "yOvu3ODzpiwcD0j9X9kUS7LwvwPgVHl0Fz+f4osTfoSRp48OYILwW68X5nljgzZGfQ7PrNyB+V3WhT6UaWiWkg==",
+  "success": true,
+  "projectFilePath": "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
+=======
   "dgSpecHash": "ICFryjcFDaT/hkM28fKtM2xHMMgQRcCq+OjBx384Nxw94FTEm+4lD0E3SPIllnD5t1PjJRpc8Z9PCXXgOLn3Ig==",
   "success": true,
   "projectFilePath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+>>>>>>> origin/Develop
   "expectedPackageFiles": [
     "C:\\Users\\shema\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\shema\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

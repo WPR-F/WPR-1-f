@@ -28,22 +28,20 @@ h1, p {
 }
 
 .gegevens h2 {
-    flex: 1 0 20%; /* This will allow the items to shrink if necessary, but not grow beyond 20% of the container */
+    flex: 1 0 20%;
     margin: 2px;
 }
 
 .gegevens textarea {
     width: 100%;
-    resize: none; /* This will prevent the user from resizing the textarea */
+    resize: none; 
 }
 
 .onderkant {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 80%;
     margin-top: 1rem;
-    gap: 1rem;
-    
-    
 }

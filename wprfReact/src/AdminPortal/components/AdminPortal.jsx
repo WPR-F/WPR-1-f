@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate } from 'react-router-dom';
+import { roleValidation } from '../../roleValidation';
 
 
 const AdminPortal = ({ isAdmin, isLoggedIn }) => {
-    const [melding, setMelding] = useState(0);
     const navigate = useNavigate();
     
     useEffect(() => {
-        if (!isLoggedIn) {
-            navigate("/login");
-            console.log("niet ingelogd");
-        }
-        if (!isAdmin) {
-            navigate("/profielpagina");
-            console.log(isAdmin+"geen admin");
-        }
-     
+    roleValidation(navigate, isAdmin, isLoggedIn);
     }, [isAdmin, isLoggedIn]);
 
     return ( 
@@ -25,7 +17,9 @@ const AdminPortal = ({ isAdmin, isLoggedIn }) => {
         <button onClick={() => navigate("./PanellidLijst")}>Ervaringsdeskundigen</button>
         <button onClick={() => navigate("./HuidigeOnderzoeken")}>Onderzoeken</button>
         <button onClick={() => navigate("./BedrijvenLijst")} >Bedrijven</button>
-        <button onClick={() => navigate("./Aanvragen")}>Aanvragen {melding} </button>
+    </div>
+    <div className="terugknop">
+        <button onClick={() => navigate("/profielpagina")}>Terug naar profiel</button>
     </div>
     </div> 
     
