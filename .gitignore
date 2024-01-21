@@ -17,3 +17,5 @@ dist/
 # macOS
 .DS_Store
 .fake
+
+**/staticwebassets.build.json

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YhbKIXFXKy9N/YqHqGIrdZ/iewo1I1w+9uNngUlnBLpxPGyGPg22lxHUKrKgeDt4yCVpZuRgrgrtKKr0qyumxg==",
+  "dgSpecHash": "QGi9job9vHDByMMhT+XWDZ1k6lGgS2LiFH6/J/6FKJoZdg5q3XpTDzhAGwqIx83cGynPWOW/OTTGDsCXK59OEg==",
   "success": true,
-  "projectFilePath": "C:\\vscodefiles\\mergeconflicts\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+  "projectFilePath": "C:\\vscodefiles\\bedrijfbranchtest\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tris9\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\tris9\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -90,12 +90,5 @@
     "C:\\Users\\tris9\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\tris9\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\vscodefiles\\mergeconflicts\\WPR-1-f\\wprfAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
