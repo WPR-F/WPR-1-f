@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './registerForm.css';
-import GoogleLoginButton from '../Google/GoogleLogin.jsx';
-import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
-
+import { GebruikerApiCall } from '../apiService';
+import './registerform.css';
 
 function RegisterForm() {
     const [Name, setFirstName] = useState('');
@@ -11,7 +9,6 @@ function RegisterForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [registerType, setRegisterType] = useState('System');
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -29,20 +26,12 @@ function RegisterForm() {
                 userName: Name,
                 lastName,
                 email,
-                registerType,
             },
             password
         };
-        
     
         try {
-            // Stuurt een POST request naar de registratie API endpoint met de ingevoerde gebruikersgegevens.
-            // En geeft het response object de waarde van de response van de API.
-            const response = await fetch('http://localhost:5210/api/accounts/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...user, password })
-            });
+            const response = await GebruikerApiCall(user,"register");
     
             //print error in console als die er is
             //mist nog error bericht zoals : wachtwoord te kort of email al in gebruik
@@ -52,7 +41,14 @@ function RegisterForm() {
                 if (errorData.errors && errorData.errors.password) {
                     console.error('Password error:', errorData.errors.password);
                 }
-                return navigate('/login');
+                return;
+            }
+    
+            //als registratie successvol is, ga naar login pagina en log response data voor debugging
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+                navigate('/login'); 
             }
             
             //print netwerk error in console als die er is
@@ -61,11 +57,10 @@ function RegisterForm() {
         }
     };
 
-    loadGoogleServiceApi();
-
     return (
-        <div className='register-form-container'>
+        <div className='blok'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
+            <div className="register-container">
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Voornaam" required value={Name} onChange={e => setFirstName(e.target.value)} />
                 <input type="text" placeholder="Achternaam" required value={lastName} onChange={e => setLastName(e.target.value)} />
@@ -74,7 +69,7 @@ function RegisterForm() {
                 <input type="password" placeholder="Herhaal Wachtwoord" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
                 <button type="submit">Registreren</button>
             </form>
-            <GoogleLoginButton/>
+            </div>
         </div>
     );
 }

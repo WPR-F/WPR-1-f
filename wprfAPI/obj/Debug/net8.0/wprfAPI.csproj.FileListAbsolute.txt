@@ -1,428 +1,3 @@
-<<<<<<< HEAD
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/appsettings.Development.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/appsettings.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.staticwebassets.runtime.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.exe
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.deps.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.runtimeconfig.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.pdb
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Azure.Core.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Azure.Identity.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Humanizer.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.UI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Data.SqlClient.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Identity.Client.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Mono.TextTemplating.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.CodeDom.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.AttributedModel.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.Convention.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.Hosting.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.Runtime.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.TypedParts.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Drawing.Common.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Memory.Data.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Runtime.Caching.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Security.Permissions.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Windows.Extensions.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.AssemblyReference.cache
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfoInputs.cache
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfo.cs
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.CoreCompileInputs.cache
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.MvcApplicationPartsAssemblyInfo.cs
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.MvcApplicationPartsAssemblyInfo.cache
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.sourcelink.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.build.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.development.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.wprfAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.wprfAPI.props
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.wprfAPI.props
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.wprfAPI.props
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.pack.json
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/scopedcss/bundle/wprfAPI.styles.css
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.CopyComplete
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/refint/wprfAPI.dll
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.pdb
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.genruntimeconfig.cache
-C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/ref/wprfAPI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/appsettings.Development.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/appsettings.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.staticwebassets.runtime.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.deps.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.runtimeconfig.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.pdb
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Azure.Core.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Azure.Identity.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Humanizer.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.UI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Data.SqlClient.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Identity.Client.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Mono.TextTemplating.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.CodeDom.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.AttributedModel.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.Convention.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.Hosting.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.Runtime.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Composition.TypedParts.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Drawing.Common.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Memory.Data.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Runtime.Caching.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Security.Permissions.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/System.Windows.Extensions.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.AssemblyReference.cache
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfoInputs.cache
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfo.cs
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.CoreCompileInputs.cache
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.MvcApplicationPartsAssemblyInfo.cs
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.MvcApplicationPartsAssemblyInfo.cache
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.sourcelink.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.build.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.development.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.wprfAPI.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.wprfAPI.props
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.wprfAPI.props
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.wprfAPI.props
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.pack.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/scopedcss/bundle/wprfAPI.styles.css
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.CopyComplete
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/refint/wprfAPI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.pdb
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.genruntimeconfig.cache
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/ref/wprfAPI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\appsettings.Development.json
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\appsettings.json
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.exe
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.deps.json
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.runtimeconfig.json
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.pdb
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Azure.Core.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Azure.Identity.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Humanizer.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Mono.TextTemplating.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.CodeDom.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Composition.Convention.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Composition.Hosting.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Composition.Runtime.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Composition.TypedParts.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Memory.Data.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Runtime.Caching.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\System.Windows.Extensions.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\registerformding\wpr-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.csproj.AssemblyReference.cache
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.AssemblyInfoInputs.cache
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.AssemblyInfo.cs
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.csproj.CoreCompileInputs.cache
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.sourcelink.json
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets.build.json
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets.development.json
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.wprfAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.build.wprfAPI.props
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.wprfAPI.props
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.wprfAPI.props
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\staticwebassets.pack.json
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\scopedcss\bundle\wprfAPI.styles.css
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.csproj.CopyComplete
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.dll
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\refint\wprfAPI.dll
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
-C:\registerformding\wpr-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
-=======
 E:\WPR\accounts\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.csproj.AssemblyReference.cache
 E:\WPR\accounts\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
 E:\WPR\accounts\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.AssemblyInfoInputs.cache
@@ -1258,9 +833,6 @@ C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
 <<<<<<< HEAD
->>>>>>> Develop
-=======
-<<<<<<< HEAD
 =======
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.Development.json
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.json
@@ -1403,6 +975,149 @@ C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\refint\wprfAPI.dll
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
+<<<<<<< HEAD
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.Development.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.exe
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.deps.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.runtimeconfig.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.pdb
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Azure.Core.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Azure.Identity.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Humanizer.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.CodeDom.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Memory.Data.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.csproj.AssemblyReference.cache
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.AssemblyInfoInputs.cache
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.AssemblyInfo.cs
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.csproj.CoreCompileInputs.cache
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.sourcelink.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets.build.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets.development.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.wprfAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.build.wprfAPI.props
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.wprfAPI.props
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.wprfAPI.props
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\staticwebassets.pack.json
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\scopedcss\bundle\wprfAPI.styles.css
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.csproj.CopyComplete
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\refint\wprfAPI.dll
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
+C:\vscodefiles\componentsplit\WPR-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
+=======
 >>>>>>> origin/Develop
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\bin\Debug\net8.0\appsettings.json
