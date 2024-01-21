@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wprfAPITests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99583b0086ed6632f8e31b40aaac09c16421cc7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+980b91f94a2596235bb2b83c44b17f4961824c9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("wprfAPITests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wprfAPITests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

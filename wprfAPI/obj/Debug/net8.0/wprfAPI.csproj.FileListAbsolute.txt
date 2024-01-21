@@ -1257,11 +1257,7 @@ C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\refint\wprfAPI.dll
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.pdb
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\vscodefiles\wpr\wpr-1-f\wprfapi\obj\Debug\net8.0\ref\wprfAPI.dll
-<<<<<<< HEAD
 >>>>>>> Develop
-=======
-<<<<<<< HEAD
-=======
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.Development.json
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.json
 C:\vscodefiles\fixding\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
@@ -1545,4 +1541,3 @@ C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\refint\wprfAPI.dll
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.pdb
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\Users\shema\source\repos\WPR-1-f\wprfAPI\obj\Debug\net8.0\ref\wprfAPI.dll
->>>>>>> origin/Develop
