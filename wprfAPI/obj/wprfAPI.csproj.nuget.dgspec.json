@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj": {}
   },
   "projects": {
@@ -12,9 +13,22 @@
         "projectPath": "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
         "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
         "outputPath": "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\obj\\",
+=======
+    "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+        "projectName": "wprfAPI",
+        "projectPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
+        "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\obj\\",
+>>>>>>> origin/Develop
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tris9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
