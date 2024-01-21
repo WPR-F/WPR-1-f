@@ -130,7 +130,7 @@ function Onderzoek() {
                 <select id="uitvoerders" onChange={handleUitvoerderChange}>
                   <option value="">Selecteer een uitvoerder</option>
                   {accounts.map((account) => (
-                  <option key={account.id} value={account.id}>{account.userName} {account.lastName}</option>))}
+                  <option key={account.id} value={account.username}>{account.userName} {account.lastName}</option>))}
                 </select>
                
                 <label>Beloning:</label>

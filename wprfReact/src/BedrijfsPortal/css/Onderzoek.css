@@ -68,7 +68,20 @@ label {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     overflow: auto;
     border-bottom: solid;
+    table-layout: auto;
 }
+
+.styled-table th,
+.styled-table td {
+  
+  text-align: left;
+  overflow: hidden; /* Hide overflow content */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Display ellipsis for overflow text */
+  width:100%;
+}
+
+
 .styled-table thead tr {
     background-color: #131B56;
     color: #131B56;
