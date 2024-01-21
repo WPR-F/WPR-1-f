@@ -19,3 +19,12 @@ dist/
 .fake
 
 **/staticwebassets.build.json
+wprfAPI/obj/project.assets.json
+wprfAPI/obj/project.nuget.cache
+wprfAPI/obj/wprfAPI.csproj.nuget.dgspec.json
+wprfAPI/obj/wprfAPI.csproj.nuget.g.props
+wprfAPI/obj/wprfAPI.csproj.nuget.g.targets
+wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfo.cs
+wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfoInputs.cache
+wprfAPI/obj/Debug/net8.0/wprfAPI.assets.cache
+wprfAPI/obj/Debug/net8.0/wprfAPI.GeneratedMSBuildEditorConfig.editorconfig
