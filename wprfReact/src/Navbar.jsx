@@ -31,26 +31,12 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
                       <li><a href="#Contact">Contact</a> </li>
                       {!isLoggedIn ? (
                         <>
-<<<<<<< HEAD
                       <li id="register"><Link to="/register">Registreren</Link></li>
                       <li id="login"><Link to="/login">Login</Link></li>
                        </>
                       ) : (
                         <li id="profile"><Link to="/profielpagina">Profiel</Link></li>
                       )}
-=======
-                         <li id="register"><Link to="/register">Registreren</Link></li>
-                         <li id="login"><Link to="/login">Login</Link></li>
-                            </>
-                        ) : (
-                       <>
-                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                         {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
-                         {isPanellid && <li id="Panellidknop"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
-                      </>
-                    )}
-                      
->>>>>>> Develop
               
                   </ul>
               </div>
@@ -84,14 +70,7 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
                       <li id="loginMobile"><Link to="/login">Login</Link></li>
                       </>
                   ) : (
-<<<<<<< HEAD
                      <li id="profileMobile"><Link to="/profielpagina">Profiel</Link></li>
-=======
-                    <>
-                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                     {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
-                     </>
->>>>>>> Develop
                   )}
                   </ul>
               </div>

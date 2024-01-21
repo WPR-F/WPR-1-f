@@ -14,8 +14,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-<<<<<<< HEAD
-      <div className="header">
+<       div className="header">
         <Navbar isLoggedIn={isLoggedIn} />
       </div>
       <div className="content">
@@ -25,17 +24,6 @@ function App() {
       <div className="footer">
       <Footer/>
       </div>
-=======
-      <header className="App-header">
-        <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
-        <SidebarAdminPortal/>
-      </header>
-      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} 
-      isAdmin={isAdmin} setIsAdmin={setIsAdmin} isPanellid={isPanellid} setIsPanellid={setIsPanellid} />
-      <footer>
-        <Footer/>
-      </footer>
->>>>>>> Develop
     </div>
     </Router>
   
