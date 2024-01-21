@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj": {}
-  },
-  "projects": {
-    "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
-        "projectName": "wprfAPI",
-        "projectPath": "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\wprfAPI.csproj",
-        "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
-        "outputPath": "C:\\vscodefiles\\componentsplit\\WPR-1-f\\wprfapi\\obj\\",
-=======
     "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
         "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\obj\\",
->>>>>>> origin/Develop
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,6 +43,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
