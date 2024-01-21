@@ -4,6 +4,7 @@ import Footer from './Footer.jsx';
 import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
 import SidebarPanellidPortal from './SidebarPanellidPortal.jsx';
+import ClickstreamApi from './ClickstreamApi.jsx';  
 import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -26,6 +27,7 @@ function App() {
         <Footer/>
       </footer>
     </div>
+    <ClickstreamApi/>
     </Router>
   );
 }

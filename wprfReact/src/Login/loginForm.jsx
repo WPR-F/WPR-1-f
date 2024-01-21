@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './loginform.css';
 import { useNavigate } from 'react-router-dom';
 import { GebruikerApiCall, RoleCheck } from '../apiService';
+import GoogleLoginButton from '../Google/GoogleLogin.jsx';
+import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
 
 function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) {
     const [email, setEmail] = useState('');
@@ -64,11 +66,11 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) 
         } catch (error) {
             console.error('Network error:', error);
         }
-        
     };
+    loadGoogleServiceApi();
     
     return  (
-        <div className='blok'>
+        <div className='login-form-container'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="E-mailadres" required value={email} onChange={e => setEmail(e.target.value)} />
@@ -78,9 +80,9 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) 
             <div className='errormessage-container'>
             <p className='errormessage'>{errorMessage}</p>
             </div>
+            <GoogleLoginButton/>
         </div>
     );
-    
 }
 
 export default LoginForm;
