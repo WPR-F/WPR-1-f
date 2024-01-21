@@ -54,22 +54,51 @@ const PanellidLijst = ({ isAdmin, isLoggedIn }) => {
                 <button onClick={() => navigate("/AdminPortal")}>Terug</button>
             </div>
             <div className="filterOptions">
-            <select onChange={(e) => setSortOption(e.target.value)}> {/* New dropdown menu */}
-                    <option value="">Sort by...</option>
+            <select onChange={(e) => setSortOption(e.target.value)}
+            style={{ 
+                backgroundColor: 'white', 
+                color: 'black', 
+                width: '150px', 
+                height: '30px',
+                fontSize: '12px'
+            }}
+            > 
+                    <option value="">Sorteer op naam</option>
                     <option value="Naam">Naam</option>
             </select>
-            <select onChange={(e) => setDisabilityType(e.target.value)}> {/* New dropdown menu for the filter */}
+            <select onChange={(e) => setDisabilityType(e.target.value)}
+            style={{ 
+                backgroundColor: 'white', 
+                color: 'black', 
+                width: '150px', 
+                height: '30px',
+                fontSize: '12px'
+            }}> 
                     <option value="">Filter by disability type...</option>
                     <option value="Motorisch">Motorisch</option>
                     <option value="Zintuigelijk">Zintuigelijk</option>
                     <option value="Mentaal">Mentaal</option>
             </select>
-                    <select onChange={(e) => setResearchApproachOption(e.target.value)}>
+                    <select onChange={(e) => setResearchApproachOption(e.target.value)}
+                    style={{ 
+                        backgroundColor: 'white', 
+                        color: 'black', 
+                        width: '150px', 
+                        height: '30px',
+                        fontSize: '12px'
+                    }}>
                 <option value="">Filter op Voorkeur benadering</option>
                 <option value="Telefonisch">Telefonisch</option>
                 <option value="Portal">Via portal</option>
             </select>
-            <select onChange={(e) => setCommercialApproachOption(e.target.value)}>
+            <select onChange={(e) => setCommercialApproachOption(e.target.value)}
+            style={{ 
+                backgroundColor: 'white', 
+                color: 'black', 
+                width: '170px', 
+                height: '30px',
+                fontSize: '12px'
+            }}>
                 <option value="">filter op commerciële benadering</option>
                 <option value="true">commerciële benadering</option>
                 <option value="false">geen commerciële benadering</option>

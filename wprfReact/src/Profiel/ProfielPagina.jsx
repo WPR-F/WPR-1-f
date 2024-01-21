@@ -19,11 +19,6 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn,
     }
     }, [isLoggedIn]);
     
-
-    const toggleEditable = () => {
-        setIsEditable(!isEditable);
-    }
-
     return (
         <div className='blok'>
             {currentUser ? (

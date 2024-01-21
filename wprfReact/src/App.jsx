@@ -21,7 +21,6 @@ function App() {
       </header>
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} 
       isAdmin={isAdmin} setIsAdmin={setIsAdmin} isPanellid={isPanellid} setIsPanellid={setIsPanellid} />
-      <Onderzoek/>
       <footer>
         <Footer/>
       </footer>

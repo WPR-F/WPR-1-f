@@ -43,7 +43,14 @@ const PanellidProfielForm = ({ form, handleInputChange, isEditable, activeGroup,
                        <div className="form-group">
                            <label htmlFor="typeBeperking">wat voor type beperking heeft u?</label>
                            <div className="form-input">
-                           <select id="typeBeperking" name="typeBeperking" value={form.typeBeperking} onChange={handleInputChange} disabled={!isEditable}>
+                           <select id="typeBeperking" name="typeBeperking" value={form.typeBeperking} onChange={handleInputChange} disabled={!isEditable}
+                             style={{ 
+                                backgroundColor: 'white', 
+                                color: 'black', 
+                                width: '150px', 
+                                height: '30px',
+                                fontSize: '12px'
+                            }}>
                                <option value="">Selecteer type beperking</option>
                                <option value="Motorisch">Motorisch</option>
                                <option value="Zintuigelijk">Zintuigelijk</option>
@@ -115,7 +122,14 @@ const PanellidProfielForm = ({ form, handleInputChange, isEditable, activeGroup,
                                 <div className="form-group">
                                     <label htmlFor="voorkeurBenadering">Voorkeur benadering</label>
                                     <div className="form-input">
-                                    <select id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleInputChange} disabled={!isEditable}>
+                                    <select id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleInputChange} disabled={!isEditable}
+                                      style={{ 
+                                        backgroundColor: 'white', 
+                                        color: 'black', 
+                                        width: '150px', 
+                                        height: '30px',
+                                        fontSize: '12px'
+                                    }}>
                                         <option value="">Selecteer type</option>
                                         <option value="Telefonisch">Telefonisch</option>
                                         <option value="Via Portal">Via Portal</option>

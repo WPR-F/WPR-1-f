@@ -35,7 +35,7 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isA
       <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
 
       {/* BedrijfsPortal Components */} 
-      <Route path='/BedrijfsPortal' element={<PanellidPortal isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
+      <Route path='/BedrijfsPortal' element={<Onderzoek isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
       <Route path='BedrijfsPortal/Onderzoeken' element={<Onderzoek/>} />
 
     </Routes>
