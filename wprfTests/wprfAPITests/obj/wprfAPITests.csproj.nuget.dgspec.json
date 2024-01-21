@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprftests\\wprfAPITests\\wprfAPITests.csproj": {}
+    "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfTests\\wprfAPITests\\wprfAPITests.csproj": {}
   },
   "projects": {
     "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfAPI\\wprfAPI.csproj": {
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -98,14 +102,14 @@
         }
       }
     },
-    "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprftests\\wprfAPITests\\wprfAPITests.csproj": {
+    "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfTests\\wprfAPITests\\wprfAPITests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprftests\\wprfAPITests\\wprfAPITests.csproj",
+        "projectUniqueName": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfTests\\wprfAPITests\\wprfAPITests.csproj",
         "projectName": "wprfAPITests",
-        "projectPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprftests\\wprfAPITests\\wprfAPITests.csproj",
+        "projectPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfTests\\wprfAPITests\\wprfAPITests.csproj",
         "packagesPath": "C:\\Users\\shema\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprftests\\wprfAPITests\\obj\\",
+        "outputPath": "C:\\Users\\shema\\source\\repos\\WPR-1-f\\wprfTests\\wprfAPITests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",

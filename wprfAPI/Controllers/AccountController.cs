@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Logging;
+
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -81,6 +83,19 @@ namespace wprfAPI.Controllers
                 return StatusCode(500, "Internal server error. Please try again later.");
             }
         }
+        // [HttpPost]
+        // [Route("getEmail")]
+        // public async Task<ActionResult<string>> GetEmail(string email)
+        // {
+        //     var user = await _userManager.FindByEmailAsync(email);
+
+        //     if(user == null){
+        //         return BadRequest();
+        //     }
+
+        //     return Ok(user.Email);
+        // }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(string id)
         {
