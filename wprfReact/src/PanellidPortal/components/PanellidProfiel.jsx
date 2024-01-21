@@ -20,6 +20,7 @@ const PanellidProfiel = ({ currentUser, isPanellid, isLoggedIn }) => {
 
     useEffect(() => {
         setPanellidinfo(fetchUserInformation());
+        
     }, []);
 
     const fetchUserInformation = async () => {

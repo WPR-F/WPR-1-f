@@ -9,6 +9,7 @@ const AdminPortal = ({ isAdmin, isLoggedIn }) => {
     
     useEffect(() => {
     roleValidation(navigate, isAdmin, isLoggedIn);
+    
     }, [isAdmin, isLoggedIn]);
 
     return ( 
