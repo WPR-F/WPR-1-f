@@ -14,4 +14,9 @@ public class OnderzoekContext : DbContext
 {
     
 }
+
+    internal void SaveChanges()
+    {
+        throw new NotImplementedException();
+    }
 }

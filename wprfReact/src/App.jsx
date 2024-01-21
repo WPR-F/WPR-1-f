@@ -5,6 +5,7 @@ import AppRouter from './AppRouter.jsx'; // Import the router
 import ClickstreamApi from './ClickstreamApi.jsx';
 import Onderzoek from './BedrijfsPortal/components/Onderzoek.jsx';
 import { BrowserRouter as Router } from 'react-router-dom';
+import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       </header>
       <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} 
       isAdmin={isAdmin} setIsAdmin={setIsAdmin} isPanellid={isPanellid} setIsPanellid={setIsPanellid} />
+      <SidebarAdminPortal/>
       <footer>
         <Footer/>
       </footer>

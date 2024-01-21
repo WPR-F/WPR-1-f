@@ -2,12 +2,12 @@ import './Navbar.css';
 import logo from './images/icon_accessibility.png';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 
 export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
-   
       const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
+      const navigate = useNavigate();
       
 
       const handleCheckboxClick = () => {
@@ -31,14 +31,14 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
                       <li><a href="#Contact">Contact</a> </li>
                       {!isLoggedIn ? (
                         <>
-                         <li id="register"><Link to="/register">Registreren</Link></li>
-                         <li id="login"><Link to="/login">Login</Link></li>
+                         <li id="register" onClick={() => navigate("./register")}><a>Registreren</a></li>
+                         <li id="login" onClick={() => navigate("./login")}><a>login</a></li>
                             </>
                         ) : (
                        <>
-                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                         {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
-                         {isPanellid && <li id="Panellidknop"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
+                         <li id="profile" onClick={() => navigate("./profielpagina")}><a>Profiel</a></li>
+                         {isAdmin && <li id="Adminknop" onClick={() => navigate("./AdminPortal")}><a>Adminportal</a></li>}
+                         {isPanellid && <li id="Panellidknop" onClick={() => navigate("./PanellidPortal")}><a>Panellidportal</a></li>}
                       </>
                     )}
                       
@@ -71,14 +71,14 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
                   <ul>
                   {!isLoggedIn ? (
                         <>
-                      <li id="registerMobile"><Link to="/register">Registreren</Link></li>
-                      <li id="loginMobile"><Link to="/login">Login</Link></li>
+                      <li id="registerMobile" onClick={() => navigate("./register")}><a>Registreren</a></li>
+                      <li id="loginMobile" onClick={() => navigate("./login")}><a>login</a></li>
                       </>
                   ) : (
                     <>
-                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                     {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
-                     {isPanellid && <li id="PanellidknopMobile"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
+                      <li id="profile" onClick={() => navigate("./profielpagina")}><a>Profiel</a></li>
+                        {isAdmin && <li id="Adminknop" onClick={() => navigate("./AdminPortal")}><a>Adminportal</a></li>}
+                        {isPanellid && <li id="Panellidknop" onClick={() => navigate("./PanellidPortal")}><a>Panellidportal</a></li>}
                      </>
                   )}
                   </ul>
