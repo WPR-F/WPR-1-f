@@ -63,8 +63,6 @@ function Onderzoek() {
         setOnderzoeken(response.data);
       }
       fetchOnderzoeken();
-      var date = new Date().toLocaleDateString();
-      console.log(date);
     }, []);
       
 
