@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
 public class PanellidManager
 {
@@ -12,5 +13,10 @@ public class PanellidManager
     {
         return await _context.Panelleden.FindAsync(id);
     }
+
+    public async Task<List<Panellid>> GetAllAsync()
+{
+    return await _context.Panelleden.ToListAsync();
+}
 
 }

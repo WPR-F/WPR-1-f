@@ -45,17 +45,24 @@ namespace wprfAPI.Controllers
 
         [HttpGet]
         [Route("getPanellidUsers")]
-        public async Task<ActionResult<IEnumerable<User>>> GetPanellidUsers()
+        public async Task<ActionResult<dynamic>> getPanellidUsers()
         {
-            var users = await _userManager.GetUsersInRoleAsync("Panellid");
+            var panellid = await _panellidManager.GetAllAsync();
 
-            if (users == null || !users.Any())
+            if (panellid == null)
             {
                 return NotFound();
             }
 
-            return Ok(users);
-        }
+            var user = await _userManager.GetUsersInRoleAsync("Panellid");
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new { Panellid = panellid, User = user });
+        } 
 
         [HttpPost]
         [Route("UpdatePanellidInfo")]

@@ -29,7 +29,7 @@ const PanellidInfo = () => {
     return (  <>
     <div className='blok'>
         <h1>{panellidinfo.user && panellidinfo.user.userName +" "+ panellidinfo.user.lastName}</h1>
-        <ul>
+        <ul className='panellidInfo'>
             <li>Voornaam: {panellidinfo.panellid && panellidinfo.user.userName}</li>
             <li>Achternaam: {panellidinfo.panellid && panellidinfo.user.lastName}</li>
             <li>E-mail adres: {panellidinfo.panellid && panellidinfo.user.email}</li>

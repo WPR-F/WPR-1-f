@@ -37,8 +37,12 @@ export const GebruikerApiCall = async (user, endpoint) => {
         }
         catch (error) {
             console.error('Network error:', error);
+            return;
         }
     };
+
+
+ 
 
 
 
