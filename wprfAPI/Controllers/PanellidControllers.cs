@@ -11,13 +11,11 @@ namespace wprfAPI.Controllers
     {
         
         private readonly UserManager<User> _userManager;
-        private readonly PanellidManager _panellidManager;
         private readonly AccountContext _context;
 
-        public PanellidController(UserManager<User> userManager, AccountContext context, PanellidManager panellidManager)
+        public PanellidController(UserManager<User> userManager, AccountContext context)
         {
             _userManager = userManager;
-            _panellidManager = panellidManager;
             _context = context;
         }
 
@@ -45,24 +43,17 @@ namespace wprfAPI.Controllers
 
         [HttpGet]
         [Route("getPanellidUsers")]
-        public async Task<ActionResult<dynamic>> getPanellidUsers()
+        public async Task<ActionResult<IEnumerable<User>>> GetPanellidUsers()
         {
-            var panellid = await _panellidManager.GetAllAsync();
+            var users = await _userManager.GetUsersInRoleAsync("Panellid");
 
-            if (panellid == null)
+            if (users == null || !users.Any())
             {
                 return NotFound();
             }
 
-            var user = await _userManager.GetUsersInRoleAsync("Panellid");
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(new { Panellid = panellid, User = user });
-        } 
+            return Ok(users);
+        }
 
         [HttpPost]
         [Route("UpdatePanellidInfo")]
@@ -114,28 +105,7 @@ namespace wprfAPI.Controllers
                 }
 
             return Ok();
-        } 
-
-        [HttpGet]
-        [Route("getPanellidInfo")]
-        public async Task<ActionResult<dynamic>> getPanellidInfo(string id)
-        {
-            var panellid = await _panellidManager.FindByIdAsync(id);
-
-            if (panellid == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _userManager.FindByIdAsync(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(new { Panellid = panellid, User = user });
-        }             
+        }   
                 
     } 
 }

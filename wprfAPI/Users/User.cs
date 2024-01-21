@@ -11,14 +11,25 @@ namespace wprfAPI.Users
         public string LastName { get; set; }
        
 
+        public string RegisterType { get; set; }
+
         public User() { }
         
-        public User(string userName, string lastName, string email, string passwordHash)
+        public User(string userName, string lastName, string email, string registerType)
+        {
+            UserName = userName;
+            LastName = lastName;
+            Email = email;
+            RegisterType = registerType;
+        }
+        
+        public User(string userName, string lastName, string email, string passwordHash, string registerType)
         {
             UserName = userName;
             LastName = lastName;
             Email = email;
             PasswordHash = passwordHash;
+            RegisterType = registerType;
         }
     }
 }

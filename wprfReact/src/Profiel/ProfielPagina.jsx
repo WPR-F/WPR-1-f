@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ProfielPagina.css';
 import { useNavigate } from 'react-router-dom';
 
-function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn, isAdmin, isPanellid }) {
+function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn}) {
     const [isEditable, setIsEditable] = useState(false);
     const navigate = useNavigate();
 
@@ -19,6 +19,16 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn,
     }
     }, [isLoggedIn]);
     
+<<<<<<< HEAD
+=======
+
+    // NOG NIET AF (aangepaste gegevens worden nog niet opgeslagen)
+    // zorgt er nu voor dat de gegevens van de gebruiker in een textarea komen te staan
+    const toggleEditable = () => {
+        setIsEditable(!isEditable);
+    }
+
+>>>>>>> origin/Develop
     return (
         <div className='blok'>
             {currentUser ? (
@@ -31,14 +41,16 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn,
                     </div>
                 </div>
             ) : (
+                // Als er geen gebruiker is ingelogd, laat dan dit zien ( dit zou niet moeten kunnen) 
                 <p>Log eerst in</p>
             )}
             <div className='onderkant'>
-               
-                    {isPanellid && <button onClick={() => navigate('/PanellidPortal')}>Panellidportal</button>}
-                    {isAdmin && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
-            
+            <button onClick={toggleEditable}>{isEditable ? 'Opslaan' : 'Bewerk'}</button>
             <button onClick={loguit}>Uitloggen</button>
+
+            {/*Alle knoppen hieronder niet functioneel (NF) */}
+            <button>Verwijder account nf</button>
+            <button>Meer nf</button>
             </div>
         </div>
     );

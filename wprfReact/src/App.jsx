@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
+<<<<<<< HEAD
+=======
+import './index.css'
+>>>>>>> origin/Develop
 import AppRouter from './AppRouter.jsx'; // Import the router
 import ClickstreamApi from './ClickstreamApi.jsx';
 import Onderzoek from './BedrijfsPortal/components/Onderzoek.jsx';
@@ -17,6 +21,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+<<<<<<< HEAD
       <header className="App-header">
         <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
       </header>
@@ -26,9 +31,22 @@ function App() {
       <footer>
         <Footer/>
       </footer>
+=======
+<       div className="header">
+        <Navbar isLoggedIn={isLoggedIn} />
+      </div>
+      <div className="content">
+      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} />
+      
+      </div>
+      <div className="footer">
+      <Footer/>
+      </div>
+>>>>>>> origin/Develop
     </div>
     <ClickstreamApi/>
     </Router>
+  
   );
 }
 
