@@ -6,7 +6,6 @@ import AdminPortal from './AdminPortal/components/AdminPortal';
 import PanellidLijst from './AdminPortal/components/PanellidLijst';
 import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
-import Aanvragen from './AdminPortal/components/Aanvragen';
 import PanellidPortal from './PanellidPortal/components/PanellidPortal';
 import PanellidProfiel from './PanellidPortal/components/PanellidProfiel';
 import OpenOnderzoeken from './PanellidPortal/components/OpenOnderzoeken';
@@ -22,17 +21,16 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isA
 
       {/* AdminPortal Components */}
       <Route path="/AdminPortal" element={<AdminPortal isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
-      <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst />} />
-      <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
-      <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />
-      <Route path='AdminPortal/Aanvragen' element={<Aanvragen/>} />
-      <Route path='/AdminPortal/PanellidLijst/Panellidinfo/:id' element={<PanellidInfo/>} /> 
+      <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path='/AdminPortal/PanellidLijst/Panellidinfo/:id' element={<PanellidInfo isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} /> 
 
       {/* PanellidPortal Components */}
       <Route path='/PanellidPortal' element={<PanellidPortal isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
-      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel currentUser={currentUser} />} />
-      <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken/>} />
-      <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken/>} />
+      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel currentUser={currentUser} isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
+      <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
+      <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
 
     </Routes>
   );

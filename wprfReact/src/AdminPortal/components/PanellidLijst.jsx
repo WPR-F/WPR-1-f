@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
 import { GetUsers } from '../../apiService';
+import { roleValidation } from '../../roleValidation';
 
 
-const PanellidLijst = () => {
+const PanellidLijst = ({ isAdmin, isLoggedIn }) => {
     const navigate = useNavigate();
     const [panelledenList, setpanelledenList] = useState({user: []});
     const [unsortedList, setUnsortedList] = useState({user: []}); 
@@ -14,6 +15,9 @@ const PanellidLijst = () => {
     const [researchApproachOption, setResearchApproachOption] = useState('');
     const [commercialApproachOption, setCommercialApproachOption] = useState('');
     
+    useEffect(() => {
+        roleValidation(navigate, isAdmin, isLoggedIn);
+        }, [isAdmin, isLoggedIn]);
 
     const fetchUsers = async () => {
         const users = await GetUsers('Panellid/getPanellidUsers');

@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react';
 import '../css/PanellidPortal.css';
 import '../css/PanellidProfiel.css';
 import { useNavigate } from 'react-router-dom';
+import { roleValidation } from '../../roleValidation';
 
 
-const PanellidProfiel = ({ currentUser }) => {
+const PanellidProfiel = ({ currentUser, isPanellid, isLoggedIn }) => {
     const navigate = useNavigate();
     const [activeGroup, setActiveGroup] = useState('normal');
     const [isEditable, setIsEditable] = useState(false);
     const [selectedDays, setSelectedDays] = useState({});
     const [panellidinfo, setPanellidinfo] = useState({user: []});
+
+    useEffect(() => {
+        roleValidation(navigate, isPanellid, isLoggedIn);
+        }, [isPanellid, isLoggedIn]);
 
     const fetchUserInformation = async () => {
 
