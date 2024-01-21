@@ -22,22 +22,16 @@ namespace wprfAPI.Controllers
         {
             var clickstreamData = new Clickstream 
              {
-            GebeurtenisType = clickstream.GebeurtenisType,
+            Event = clickstream.Event,
             ElementId = clickstream.ElementId,
             PaginaUrl = clickstream.PaginaUrl,
             Tijd = clickstream.Tijd
             };
-
-            Console.WriteLine($"GebeurtenisType: {clickstream.GebeurtenisType}");
-            Console.WriteLine($"ElementId: {clickstream.ElementId}");
-            Console.WriteLine($"PaginaUrl: {clickstream.PaginaUrl}");
-            Console.WriteLine($"Tijd: {clickstream.Tijd}");
-
         
             _context.Clickstream.Add(clickstream);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(getClickstream), new { id = clickstream.ClickstreamId }, clickstream);
+            return CreatedAtAction(nameof(getClickstream), new { id = clickstream.id }, clickstream);
 
         }
     }

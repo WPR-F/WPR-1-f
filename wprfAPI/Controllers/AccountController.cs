@@ -65,5 +65,16 @@ namespace wprfAPI.Controllers
 
             return Ok(user);
         }
+        [HttpGet]
+        [Route("getAccounts")]
+        public IActionResult GetAccounts()
+        {
+            var users = _context.Users.ToList();
+
+             if (users == null) {
+                return NotFound();
+            }
+            return Ok(users);
+        }
     }
 }

@@ -14,10 +14,5 @@ namespace wprfAPI.Users
             Location = location;
             WebsiteLink = websiteLink;
         }
-        public void plaatsOnderzoek(string titel, string typeBeperking, string postcode, int leeftijd) {
-
-            Onderzoek onderzoek = new Onderzoek(titel, typeBeperking, postcode, leeftijd);
-
-        }
     }
 }

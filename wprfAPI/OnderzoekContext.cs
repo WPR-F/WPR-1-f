@@ -11,7 +11,7 @@ public class OnderzoekContext : DbContext
     public DbSet<Onderzoek> Onderzoeken { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        
-    }
+{
+    
+}
 }

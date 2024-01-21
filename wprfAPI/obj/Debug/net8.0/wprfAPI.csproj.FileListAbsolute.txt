@@ -1118,9 +1118,6 @@ C:/vscodefiles/fixding/WPR-1-f/wprfapi/obj/Debug/net8.0/ref/wprfAPI.dll
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.MvcApplicationPartsAssemblyInfo.cs
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.MvcApplicationPartsAssemblyInfo.cache
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.sourcelink.json
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/refint/wprfAPI.dll
-/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.pdb
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/appsettings.Development.json
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/appsettings.json
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/bin/Debug/net8.0/wprfAPI.staticwebassets.runtime.json
@@ -1249,5 +1246,8 @@ C:/vscodefiles/fixding/WPR-1-f/wprfapi/obj/Debug/net8.0/ref/wprfAPI.dll
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/scopedcss/bundle/wprfAPI.styles.css
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.csproj.CopyComplete
+/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.dll
+/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/refint/wprfAPI.dll
+/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.pdb
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.genruntimeconfig.cache
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/ref/wprfAPI.dll

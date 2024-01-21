@@ -22,14 +22,37 @@ namespace wprfAPI.Migrations.Onderzoek
 
             modelBuilder.Entity("Onderzoek", b =>
                 {
-                    b.Property<int>("OnderzoekId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OnderzoekId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("aanmeldingen")
+                        .HasColumnType("int");
+
+                    b.Property<string>("beloning")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("beschrijving")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("categorie")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("datum")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("leeftijd")
                         .HasColumnType("int");
+
+                    b.Property<string>("locatie")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("postcode")
                         .IsRequired()
@@ -43,7 +66,11 @@ namespace wprfAPI.Migrations.Onderzoek
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("OnderzoekId");
+                    b.Property<string>("uitvoerder")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
 
                     b.ToTable("Onderzoeken");
                 });

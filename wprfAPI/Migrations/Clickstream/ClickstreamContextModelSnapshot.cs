@@ -23,17 +23,17 @@ namespace wprfAPI.Migrations.Clickstream
 
             modelBuilder.Entity("Clickstream", b =>
                 {
-                    b.Property<int>("ClickstreamId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClickstreamId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("ElementId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("GebeurtenisType")
+                    b.Property<string>("Event")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -44,7 +44,7 @@ namespace wprfAPI.Migrations.Clickstream
                     b.Property<DateTime>("Tijd")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("ClickstreamId");
+                    b.HasKey("id");
 
                     b.ToTable("Clickstream");
                 });

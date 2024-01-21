@@ -4,7 +4,7 @@ export const ClickstreamApi = () => {
     document.addEventListener('click', function (event) {
         
         const clickstreamData = {
-            GebeurtenisType: 'click',
+            Event: 'click',
             ElementId: event.target.id, 
             PaginaUrl: window.location.href,
             Tijd: new Date().toISOString(),

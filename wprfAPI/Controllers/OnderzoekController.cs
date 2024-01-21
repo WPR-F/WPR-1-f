@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -20,17 +21,25 @@ namespace wprfAPI.Controllers
         [Route("createOnderzoek")]
         public IActionResult CreateOnderzoek([FromBody] Onderzoek onderzoek)
         {
-            var onderzoekData = new Onderzoek(onderzoek.titel, onderzoek.typeBeperking, onderzoek.postcode, onderzoek.leeftijd);
-           
-            Console.WriteLine($"Titel: {onderzoek.titel}");
-            Console.WriteLine($"Type beperking: {onderzoek.typeBeperking}");
-            Console.WriteLine($"Postcode: {onderzoek.postcode}");
-            Console.WriteLine($"Leeftijd: {onderzoek.leeftijd}");
-
-            _context.Onderzoeken.Add(onderzoekData);
+            var onderzoekData = new Onderzoek 
+            {
+            titel = onderzoek.titel,
+            beschrijving = onderzoek.beschrijving,
+            locatie = onderzoek.locatie,
+            datum = onderzoek.datum,
+            uitvoerder = onderzoek.uitvoerder,
+            beloning = onderzoek.beloning,
+            categorie = onderzoek.categorie,
+            aanmeldingen = onderzoek.aanmeldingen,
+            typeBeperking = onderzoek.typeBeperking,
+            postcode = onderzoek.postcode,
+            leeftijd = onderzoek.leeftijd,
+            };
+            
+            _context.Onderzoeken.Add(onderzoek);
             _context.SaveChanges();
 
-             return CreatedAtAction(nameof(CreateOnderzoek), new { id = onderzoek.OnderzoekId }, onderzoekData);
+             return CreatedAtAction(nameof(CreateOnderzoek), new { id = onderzoek.id }, onderzoek);
         }
                 
         [HttpGet]
@@ -38,6 +47,10 @@ namespace wprfAPI.Controllers
         public IActionResult GetOnderzoeken()
         {
             var onderzoeken = _context.Onderzoeken.ToList();
+
+            if (onderzoeken == null) {
+                return NotFound();
+            }
             return Ok(onderzoeken);
         }
     }
