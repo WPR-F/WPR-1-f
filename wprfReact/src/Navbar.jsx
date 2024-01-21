@@ -78,6 +78,7 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
                     <>
                      <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
                      {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
+                     {isPanellid && <li id="PanellidknopMobile"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
                      </>
                   )}
                   </ul>
