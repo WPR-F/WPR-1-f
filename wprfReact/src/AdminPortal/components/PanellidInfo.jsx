@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { roleValidation } from '../../roleValidation';
+import { fetchPanellidInformation } from '../../apiService';
 
 const PanellidInfo = ({ isAdmin, isLoggedIn }) => {
     const navigate = useNavigate();
@@ -10,27 +11,18 @@ const PanellidInfo = ({ isAdmin, isLoggedIn }) => {
 
     useEffect(() => {
         roleValidation(navigate, isAdmin, isLoggedIn);
-        }, [isAdmin, isLoggedIn]);
-
-    const fetchUserInformation = async () => {
-
-        try {
-            const response = await fetch('http://localhost:5210/api/Panellid/getPanellidInfo?id=' + id);
-            const data = await response.json();
-            setPanellidinfo(data);
-            
-            }
-            catch (error) {
-                console.error('Network error:', error);
-            }
-
-    }
+    }, [isAdmin, isLoggedIn]);
 
     useEffect(() => {
         fetchUserInformation();
-        console.log(panellidinfo);
-        
+        console.log(panellidinfo);     
     }, []);
+
+
+    const fetchUserInformation = async () => {
+       setPanellidinfo(await fetchPanellidInformation(id));
+    }
+    
     return (  <>
     <div className='blok'>
         

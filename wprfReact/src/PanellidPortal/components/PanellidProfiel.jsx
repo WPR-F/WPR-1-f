@@ -3,6 +3,7 @@ import '../css/PanellidPortal.css';
 import '../css/PanellidProfiel.css';
 import { useNavigate } from 'react-router-dom';
 import { roleValidation } from '../../roleValidation';
+import { fetchPanellidInformation, updatePanellidInformation } from '../../apiService';
 
 
 const PanellidProfiel = ({ currentUser, isPanellid, isLoggedIn }) => {
@@ -16,21 +17,13 @@ const PanellidProfiel = ({ currentUser, isPanellid, isLoggedIn }) => {
         roleValidation(navigate, isPanellid, isLoggedIn);
         }, [isPanellid, isLoggedIn]);
 
-    const fetchUserInformation = async () => {
-
-        try {
-            const response = await fetch('http://localhost:5210/api/Panellid/getPanellidInfo?id=' + currentUser.id);
-            const data = await response.json();
-            setPanellidinfo(data);
-            }
-            catch (error) {
-                console.error('Network error:', error);
-            }
-    }
-
     useEffect(() => {
         setPanellidinfo(fetchUserInformation());
     }, []);
+
+    const fetchUserInformation = async () => {
+        setPanellidinfo(await fetchPanellidInformation(currentUser.id));
+    }
 
     const [form, setForm] = useState({
         voornaam: currentUser?.userName,
@@ -79,21 +72,7 @@ const PanellidProfiel = ({ currentUser, isPanellid, isLoggedIn }) => {
             Availibility: form.beschikbaarheid
         };
         console.log(panellidInfo);
-    
-        const response = await fetch('http://localhost:5210/api/Panellid/UpdatePanellidInfo', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(panellidInfo),
-        });
-    
-        if (response.ok) {
-            const updatedPanellidInfo = await response.json();
-            console.log(updatedPanellidInfo);
-        } else {
-            console.error('Failed to update panellid info');
-        }
+        updatePanellidInformation(panellidInfo);
     };
 
     const handleTypeOnderzoekChange = (event) => {
