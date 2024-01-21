@@ -3,9 +3,14 @@
   position: absolute;
   height: clamp(100px, 10%, 120px);
   width: 100%;
+<<<<<<< HEAD
+  display: none;
+  bottom: 0;
+=======
   display: flex;
   bottom: 0px;
 
+>>>>>>> origin/Develop
   background-color: #131B56;
   justify-content: space-between;
   margin-top: auto;

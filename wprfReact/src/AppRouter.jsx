@@ -6,11 +6,46 @@ import AdminPortal from './AdminPortal/components/AdminPortal';
 import PanellidLijst from './AdminPortal/components/PanellidLijst';
 import HuidigeOnderzoeken from './AdminPortal/components/HuidigeOnderzoeken';
 import BedrijvenLijst from './AdminPortal/components/BedrijvenLijst';
+<<<<<<< HEAD
+// import Aanvragen from './AdminPortal/components/Aanvragen';
+=======
 import Aanvragen from './AdminPortal/components/Aanvragen';
+>>>>>>> origin/Develop
 import PanellidPortal from './PanellidPortal/components/PanellidPortal';
 import PanellidProfiel from './PanellidPortal/components/PanellidProfiel';
 import OpenOnderzoeken from './PanellidPortal/components/OpenOnderzoeken';
 import ActieveOnderzoeken from './PanellidPortal/components/ActieveOnderzoeken';
+<<<<<<< HEAD
+import Onderzoek from './BedrijfsPortal/components/Onderzoek';
+import SidebarAdminPortal from './SidebarAdminPortal';
+import SidebarPanellidPortal from './SidebarPanellidPortal';
+import SidebarBedrijfsPortal from './SidebarBedrijfPortal';
+
+function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin, isPanellid, setIsPanellid, isBedrijf, setIsBedrijf}) {
+  return (
+    <Routes>
+      <Route path="/register" element={<RegisterForm />} />
+      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn} isPanellid={isPanellid} isBedrijf={isBedrijf} setIsBedrijf={setIsBedrijf}/> } />
+      <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} isLoggedIn={isLoggedIn}/>} />
+
+      {/* AdminPortal Components */}
+      <Route path="/AdminPortal" element={<AdminPortal isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
+      <Route path="/AdminPortal/PanellidLijst" element={<PanellidLijst />} />
+      <Route path="/AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
+      <Route path="/AdminPortal/BedrijvenLijst" element={<BedrijvenLijst/>} />
+      {/* <Route path='/AdminPortal/Aanvragen' element={<Aanvragen/>} /> */}
+
+      {/* PanellidPortal Components */}
+      <Route path='/PanellidPortal' element={<PanellidPortal isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
+      <Route path='/PanellidPortal/PanellidProfiel' element={<PanellidProfiel currentUser={currentUser} />} />
+      <Route path='/PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken/>} />
+      <Route path='/PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken/>} />
+
+      {/* BedrijfsPortal Components */} 
+      <Route path='/BedrijfsPortal' element={<SidebarBedrijfsPortal/>} />
+      <Route path='/BedrijfsPortal/Onderzoeken' element={<Onderzoek/>} />
+
+=======
 
 import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
@@ -37,6 +72,7 @@ function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isA
         <Route path="/OpenOnderzoeken" element={<OpenOnderzoeken />} />
         <Route path="/ActieveOnderzoeken" element={<ActieveOnderzoeken />} />
       </Routes></PanellidPortal>} />
+>>>>>>> origin/Develop
     </Routes>
   );
 }

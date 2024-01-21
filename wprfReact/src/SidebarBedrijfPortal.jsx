@@ -1,32 +1,38 @@
 import './Sidebar.css';
-import Create from './images/icons8-create-50.png';
-import Onderzoek from './images/icons8-case-study-50.png';
-import Chat from './images/icons8-chat-50.png';
+import { useNavigate } from 'react-router-dom';
+import CreateIcon from './images/icons8-create-50.png';
+import OnderzoekIcon from './images/icons8-case-study-50.png';
+import ChatIcon from './images/icons8-chat-50.png';
 
+function SidebarBedrijfsPortal() {
+    const Authenticatation = ({ isBedrijf, isLoggedIn }) => {
+        const navigate = useNavigate();
 
-export default function App() {
+        useEffect(() => {
+            roleValidation(navigate, isBedrijf, isLoggedIn);
+            }, [isBedrijf, isLoggedIn]);
 
-  return (
-      <div>
-          <div className="sidebar-container">
-              <div className="sidebar-buttons">
-                  <ul>
-                      <li>
-                          <img src={Create} width="40" height="40"/>
-                          <a>Onderzoeken aanmaken</a>
-                      </li>
-                      <li>
-                          <img src={Onderzoek} width="40" height="40"/>
-                          <a>Mijn onderzoeken</a>
-                      </li>
-                      <li>
-                          <img src={Chat} width="40" height="40"/> 
-                          <a>Chat</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  );
+            return (
+                <div>
+                    <div className="sidebar-container">
+                        <div className="sidebar-buttons">
+                            <ul>
+                                <li>
+                                    <img src={CreateIcon} width="40" height="40"/>
+                                    <a onClick={() => navigate("./BedrijfsPortal/Onderzoeken")}>Onderzoeken aanmaken</a>
+                                </li>
+                                <li>
+                                    <img src={ChatIcon} width="40" height="40"/> 
+                                    <a>Chat</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+        );
+    }
 }
+ 
+export default SidebarBedrijfsPortal;
 

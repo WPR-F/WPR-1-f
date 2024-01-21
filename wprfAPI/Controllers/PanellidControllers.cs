@@ -80,7 +80,7 @@ namespace wprfAPI.Controllers
                 _context.Panelleden.Add(panellidInfo);
             }
 
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
             return Ok(panellidInfo);
         }    

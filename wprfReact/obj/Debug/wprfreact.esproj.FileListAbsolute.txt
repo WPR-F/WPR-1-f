@@ -8,4 +8,9 @@ C:\registerformding\wpr-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInpu
 C:\accountfix\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
 C:\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
 C:\vscodefiles\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+C:\vscodefiles\componentsplit\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
+C:\vscodefiles\bedrijfbranchtest\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
+=======
 >>>>>>> Develop
+>>>>>>> origin/Develop

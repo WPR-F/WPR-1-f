@@ -19,6 +19,8 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn}
     }
     }, [isLoggedIn]);
     
+<<<<<<< HEAD
+=======
 
     // NOG NIET AF (aangepaste gegevens worden nog niet opgeslagen)
     // zorgt er nu voor dat de gegevens van de gebruiker in een textarea komen te staan
@@ -26,6 +28,7 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn}
         setIsEditable(!isEditable);
     }
 
+>>>>>>> origin/Develop
     return (
         <div className='blok'>
             {currentUser ? (

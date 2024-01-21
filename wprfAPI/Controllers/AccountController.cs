@@ -2,7 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+<<<<<<< HEAD
+=======
 using Microsoft.Extensions.Logging;
+>>>>>>> origin/Develop
 
 using wprfAPI.Users;
 
@@ -132,6 +135,17 @@ namespace wprfAPI.Controllers
             }
 
             return Ok(user);
+        }
+        [HttpGet]
+        [Route("getAccounts")]
+        public IActionResult GetAccounts()
+        {
+            var users = _context.Users.ToList();
+
+             if (users == null) {
+                return NotFound();
+            }
+            return Ok(users);
         }
         
     }
