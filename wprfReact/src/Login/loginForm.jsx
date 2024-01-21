@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './loginForm.css';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import GoogleLoginButton from '../Google/GoogleLogin.jsx';
 import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
-
-
-=======
-import { GebruikerApiCall, Admincheck } from '../apiService';
->>>>>>> Develop
-=======
 import { GebruikerApiCall, RoleCheck } from '../apiService';
->>>>>>> origin/Develop
 
 function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) {
     const [email, setEmail] = useState('');
