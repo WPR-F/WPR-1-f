@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Logging;
+
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -28,22 +30,48 @@ namespace wprfAPI.Controllers
             if (result.Succeeded)
             {
                 return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
+            } 
+
+            return BadRequest(result.Errors);
+        }
+        [HttpPost]
+        [Route("google")]
+        public async Task<ActionResult<User>> PostGoogleAccount(GoogleModel model)
+            {
+            var result = await _userManager.CreateAsync(model.User);
+
+            if (result.Succeeded)
+            {
+                return CreatedAtAction("GetUser", new { id = model.User.Id }, model.User);
             }
 
             return BadRequest(result.Errors);
         }
-        
         [HttpPost]
-        [Route("getEmail")]
-        public async Task<ActionResult<string>> GetEmail(string email)
+        [Route("getemail")]
+        public async Task<ActionResult<string>> GetEmail([FromForm]string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                {
+                    return BadRequest("Email is required.");
+                }
 
-            if(user == null){
-                return BadRequest();
+                var user = await _userManager.FindByEmailAsync(email);
+
+                if (user != null)
+                {
+                    return Ok(user.Email);
+                }
+
+                return NotFound("User does not exist");
+                System.Diagnostics.Debug.WriteLine("This is a log");
             }
-
-            return Ok(user.Email);
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
 
         [HttpGet("{id}")]
@@ -68,10 +96,7 @@ namespace wprfAPI.Controllers
             if (user == null)
             {
                 return NotFound();
-            }
             
-            {
-
             }
 
             var isCorrectPassword = await _userManager.CheckPasswordAsync(user, model.Password);
@@ -82,6 +107,17 @@ namespace wprfAPI.Controllers
             }
 
             return Ok(user);
+        }
+        [HttpGet]
+        [Route("getAccounts")]
+        public IActionResult GetAccounts()
+        {
+            var users = _context.Users.ToList();
+
+             if (users == null) {
+                return NotFound();
+            }
+            return Ok(users);
         }
         
     }

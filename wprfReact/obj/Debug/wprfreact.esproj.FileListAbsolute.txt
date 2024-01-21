@@ -1,5 +1,6 @@
 /Users/nazihrtoure/Programming Files/Webprojects/WPR/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
-C:\accountfix\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
-C:\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
-C:\vscodefiles\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
-C:\vscodefiles\componentsplit\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
+C:/accountfix/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
+C:/wpr/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
+C:/vscodefiles/wpr/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
+C:/vscodefiles/componentsplit/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
+/Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache

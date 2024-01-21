@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GebruikerApiCall } from '../apiService';
 import './registerform.css';
+import GoogleLoginButton from '../Google/GoogleLogin.jsx';
+import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
 
 function RegisterForm() {
     const [Name, setFirstName] = useState('');
@@ -56,9 +58,10 @@ function RegisterForm() {
             console.error('Network error:', error);
         }
     };
+    loadGoogleServiceApi();
 
     return (
-        <div className='blok'>
+        <div className='register-form-container'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
             <div className="register-container">
             <form onSubmit={handleSubmit}>
@@ -69,6 +72,7 @@ function RegisterForm() {
                 <input type="password" placeholder="Herhaal Wachtwoord" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
                 <button type="submit">Registreren</button>
             </form>
+            <GoogleLoginButton/>
             </div>
         </div>
     );
