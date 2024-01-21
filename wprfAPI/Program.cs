@@ -115,6 +115,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
 
 
     services.AddControllers();
+    services.AddScoped<PanellidManager>();
 
     services.AddCors(options =>
     {

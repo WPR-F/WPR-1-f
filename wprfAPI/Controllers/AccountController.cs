@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -31,6 +33,19 @@ namespace wprfAPI.Controllers
 
             return BadRequest(result.Errors);
         }
+        
+        [HttpPost]
+        [Route("getEmail")]
+        public async Task<ActionResult<string>> GetEmail(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if(user == null){
+                return BadRequest();
+            }
+
+            return Ok(user.Email);
+        }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(string id)
@@ -55,6 +70,10 @@ namespace wprfAPI.Controllers
             {
                 return NotFound();
             }
+            
+            {
+
+            }
 
             var isCorrectPassword = await _userManager.CheckPasswordAsync(user, model.Password);
 
@@ -76,5 +95,6 @@ namespace wprfAPI.Controllers
             }
             return Ok(users);
         }
+        
     }
 }

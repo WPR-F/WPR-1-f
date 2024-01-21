@@ -3,14 +3,24 @@ import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
 import { useNavigate } from 'react-router-dom';
 import { GetUsers } from '../../apiService';
+import { roleValidation } from '../../roleValidation';
 
-const BedrijvenLijst = () => {
+const BedrijvenLijst = ({ isAdmin, isLoggedIn }) => {
     const [users, setUsers] = useState([]); 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        roleValidation(navigate, isAdmin, isLoggedIn);
+        }, [isAdmin, isLoggedIn]);
+
     const fetchUsers = async () => {
-        setUsers(await GetUsers('Company/getCompanyUsers'));
+        try {
+            setUsers(await GetUsers('Company/getCompanyUsers'));
+        }
+        catch (error) {
+            console.log(error);
         };
+    }
     
         useEffect(() => {
             fetchUsers();
