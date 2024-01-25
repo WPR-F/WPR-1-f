@@ -62,6 +62,7 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) 
                 setCurrentUser(data);
                 setIsLoggedIn(true);              
                 navigate('/profielpagina');
+                
 
         } catch (error) {
             console.error('Network error:', error);
