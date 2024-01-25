@@ -9,12 +9,12 @@ namespace wprfAPI.Controllers
     [Route("api/[controller]")]
     public class PanellidController : ControllerBase
     {
-        
+
         private readonly UserManager<User> _userManager;
-        private readonly PanellidManager _panellidManager;
+        private readonly IPanellidManager _panellidManager;
         private readonly AccountContext _context;
 
-        public PanellidController(UserManager<User> userManager, AccountContext context, PanellidManager panellidManager)
+        public PanellidController(UserManager<User> userManager, AccountContext context, IPanellidManager panellidManager)
         {
             _userManager = userManager;
             _panellidManager = panellidManager;
@@ -39,7 +39,7 @@ namespace wprfAPI.Controllers
             {
                 return Ok();
             }
-            
+
             return BadRequest(result.Errors);
         }
 
@@ -49,25 +49,51 @@ namespace wprfAPI.Controllers
         {
             var panellid = await _panellidManager.GetAllAsync();
 
-            if (panellid == null)
+            if (!panellid.Any()) // Check if the list is empty
             {
                 return NotFound();
             }
 
             var user = await _userManager.GetUsersInRoleAsync("Panellid");
 
-            if (user == null)
+            if (!user.Any()) // Check if the list is empty
             {
                 return NotFound();
             }
 
             return Ok(new { Panellid = panellid, User = user });
-        } 
+        }
+
+        // [HttpGet]
+        // [Route("getPanellidUsers")]
+        // public async Task<ActionResult<dynamic>> getPanellidUsers()
+        // {
+        //     var panellid = await _panellidManager.GetAllAsync();
+
+        //     if (panellid == null)
+        //     {
+        //         return NotFound();
+        //     }
+
+        //     var user = await _userManager.GetUsersInRoleAsync("Panellid");
+
+        //     if (user == null)
+        //     {
+        //         return NotFound();
+        //     }
+
+        //     return Ok(new { Panellid = panellid, User = user });
+        // } 
 
         [HttpPost]
         [Route("UpdatePanellidInfo")]
         public async Task<ActionResult<Panellid>> UpdatePanellidInfo([FromBody] Panellid panellidInfo)
         {
+            if (panellidInfo == null)
+            {
+                return BadRequest("Panellid info is null");
+            }
+
             var existingPanellid = await _context.Panelleden.FindAsync(panellidInfo.UserId);
 
             if (existingPanellid != null)
@@ -92,9 +118,9 @@ namespace wprfAPI.Controllers
             await _context.SaveChangesAsync();
 
             return Ok(panellidInfo);
-        }    
+        }
 
-        
+
         [HttpPost]
         [Route("checkPanellid")]
         public async Task<ActionResult<User>> checkPanellid(CheckPanellidRequest request)
@@ -106,15 +132,15 @@ namespace wprfAPI.Controllers
                 return NotFound();
             }
 
-             var isAdmin = await _userManager.IsInRoleAsync(user, "Panellid");
+            var isAdmin = await _userManager.IsInRoleAsync(user, "Panellid");
 
-                if (!isAdmin)
-                {
-                    return Forbid();
-                }
+            if (!isAdmin)
+            {
+                return Forbid();
+            }
 
             return Ok();
-        } 
+        }
 
         [HttpGet]
         [Route("getPanellidInfo")]
@@ -135,7 +161,7 @@ namespace wprfAPI.Controllers
             }
 
             return Ok(new { Panellid = panellid, User = user });
-        }             
-                
-    } 
+        }
+
+    }
 }

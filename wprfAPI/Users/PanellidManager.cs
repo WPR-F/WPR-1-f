@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using wprfAPI.Users;
-public class PanellidManager
+public class PanellidManager : IPanellidManager
 {
     private readonly AccountContext _context;
 
