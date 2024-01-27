@@ -11,7 +11,10 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install production dependencies.
-RUN npm install
+RUN npm install --legacy-peer-deps
+
+# Install additional dependencies
+RUN npm install axios gapi-script react-google-login --legacy-peer-deps
 
 # Copy local code to the container image.
 COPY . .
@@ -20,7 +23,7 @@ COPY . .
 RUN npm run build
 
 # Install Express
-RUN npm install express
+RUN npm install express --legacy-peer-deps
 
 # Copy the server script
 COPY server.cjs .

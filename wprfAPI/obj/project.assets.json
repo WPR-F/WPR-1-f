@@ -4632,16 +4632,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\shema\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\tris9\\.nuget\\packages\\": {}
->>>>>>> 9d400522804c1dd6906390db87324004f16925c7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\shema\\source\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
       "projectName": "wprfAPI",
       "projectPath": "C:\\Users\\shema\\source\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
@@ -4650,16 +4645,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shema\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\vscodefiles\\sh\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
-      "projectName": "wprfAPI",
-      "projectPath": "C:\\vscodefiles\\sh\\WPR-1-f\\wprfAPI\\wprfAPI.csproj",
-      "packagesPath": "C:\\Users\\tris9\\.nuget\\packages\\",
-      "outputPath": "C:\\vscodefiles\\sh\\WPR-1-f\\wprfAPI\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\tris9\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 9d400522804c1dd6906390db87324004f16925c7
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4742,5 +4727,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\shema\\source\\WPR-1-f\\wprfAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
