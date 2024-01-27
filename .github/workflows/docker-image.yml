@@ -17,8 +17,8 @@ jobs:
       uses: docker/login-action@v2 
       with:
         username: friedrice69
-        password: dckr_pat_M73wEbvQA9emTXx0y_7i3riXg1E
-        # password: ${{ secrets.wpr }}
+        # password: dckr_pat_M73wEbvQA9emTXx0y_7i3riXg1E
+        password: ${{ secrets.wpr }}
 
     - name: Build and push wprfreact image
       uses: docker/build-push-action@v2
