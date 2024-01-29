@@ -29,29 +29,43 @@ var app = builder.Build();
 
 CreateRoles(app.Services).Wait();
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+     app.UseCors(x => x
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .SetIsOriginAllowed(origin => true) 
+        .AllowCredentials());
 }
+app.UseRouting();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/chat");
+    endpoints.MapControllers().RequireCors("AllowMyOrigin");
+});
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowSpecificOrigin"); 
+app.UseCors(); 
 
 app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapHub<ChatHub>("/chatHub");
+app.MapHub<ChatHub>("/chat");
 
 app.Run();
 
 
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration) 
 {
+    services.AddSignalR();
     services.AddDbContext<AccountContext>(options =>
         options.UseSqlServer(
             configuration.GetConnectionString("DefaultConnection"),
@@ -99,19 +113,20 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
 
     services.AddCors(options =>
     {
-        options.AddPolicy("AllowSpecificOrigin",
+        options.AddPolicy("AllowMyOrigin",
             builder =>
             {
                 builder.WithOrigins("http://localhost:5173")
                        .AllowAnyHeader()
-                       .AllowAnyMethod();
+                       .AllowAnyMethod()
+                       .AllowCredentials();
             });
     });
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
-    services.AddSignalR();
+    
 }
 
 

@@ -16,3 +16,5 @@ dist/
 
 # macOS
 .DS_Store
+wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfo.cs
+wprfAPI/obj/Debug/net8.0/wprfAPI.AssemblyInfoInputs.cache

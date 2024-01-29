@@ -4,56 +4,43 @@ import { Link } from 'react-router-dom';
 import './Chat.css'
 
 function Chat() {
-    const [hubConnection, setHubConnection] = useState(null);
+    const [connection, setConnection] = useState();
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
+    const [user, setUser] = useState('');
+    
 
-    useEffect(() => {
-        const createHubConnection = async () => {
-            const hubConnect = new signalR.HubConnectionBuilder()
-                .withUrl('https://localhost:5173/chat')
-                .build();
-            try {
-                await hubConnect.start();
-                console.log('Connection successful');
-            } catch (err) {
-                alert(err);
-            }
-
-            hubConnect.on('ReceiveMessage', (user, receivedMessage) => {
-                const updatedMessages = [...messages];
-                updatedMessages.push({user, message: receivedMessage});
-                setMessages(updatedMessages);
-            });
-
-            setHubConnection(hubConnect);
-        }
-
-        createHubConnection();
-    }, []);
-
-    const sendMessage = async () => {
+    const connect = async () => { 
         try {
-            await hubConnection.invoke('SendMessage', 'user', message);
-            setMessage('');
-        } catch (err) {
-            console.log(err);
+            const connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:5173/chat').configureLogging(signalR.LogLevel.Information).build();
+            setUser('test');
+            connection.on('ReceiveMessage', (user, message) => {
+                console.log('ReceiveMessage: ', user, message); 
+            });
+            await connection.start();
+            await connection.invoke("SendMessage", {user, message});
+            setConnection(connection);
+        } catch (error) {
+            console.log(error);
         }
     }
 
+    const sendMessage = async () => {
+        connect();
+        setConnection(connection);
+        console.log(message);
+        await connection.invoke("SendMessage", {user, message});
+        
+        }
+
     return (
         <div>
+            <div className='chat-screen'>
+            {messages.map((message, index) => ( <span key={index}>{message.user}: {message.message}</span>))}
+            </div>
             <div className="input-button-container">
-            <input
-                type="text"
-                value={message}
-                onChange={e => setMessage(e.target.value)}
-            />
+            <input type="text" value={message} onChange={e => setMessage(e.target.value)}/>
             <button onClick={sendMessage}>Send</button>
-
-            {messages.map((message, index) => (
-                <span key={index}>{message.user}: {message.message}</span>
-            ))}
             </div>
         </div>
     );
