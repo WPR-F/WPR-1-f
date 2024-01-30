@@ -1,12 +1,9 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy container app to Azure Web App - wprfProject
 
 on:
   push:
     branches:
-      - main
+      - fix-docker-support
   workflow_dispatch:
 
 jobs:
@@ -23,15 +20,15 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_f4cdacb56227441cbef9bed690b5a997 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_d3da83a5ac04403c82e2695c9fee1071 }}
+        username: friedrice69
+        password: ${{ secrets.wpr }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_f4cdacb56227441cbef9bed690b5a997 }}/friedrice69/wprfreact:${{ github.sha }}
-        file: ./Dockerfile
+        tags: friedrice69/wprfreact:latest
+        file: ./wprfReact/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,5 +44,5 @@ jobs:
       with:
         app-name: 'wprfProject'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2083ffdb52ea4a379bb4eac210a69f25 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_f4cdacb56227441cbef9bed690b5a997 }}/friedrice69/wprfreact:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5bc67440f6d34852820a9884f83a8796 }}
+        images: 'friedrice69/wprfreact:latest'
