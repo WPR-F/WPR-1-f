@@ -13,6 +13,9 @@ COPY package*.json ./
 # Install production dependencies.
 RUN npm install --legacy-peer-deps
 
+# Install additional dependencies
+RUN npm install axios gapi-script react-google-login --legacy-peer-deps
+
 # Copy local code to the container image.
 COPY . .
 
@@ -22,5 +25,10 @@ RUN npm run build
 # Install Express
 RUN npm install express --legacy-peer-deps
 
+# Copy the server script
+#COPY wprfReact\server.cjs .
+
 # Run the Express server on container startup.
-CMD [ "node", "server.cjs" ]
+CMD [ "npm", "run", "dev"]
+# RUN npm run dev
+# CMD [ "node", "server.cjs" ]
