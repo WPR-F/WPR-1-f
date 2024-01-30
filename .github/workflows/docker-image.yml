@@ -1,0 +1,41 @@
+# Gemaakt door Shemar
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v2 
+      with:
+        username: friedrice69
+        password: ${{ secrets.wpr }}
+
+    - name: Build and push wprfreact image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./wprfReact
+        file: ./wprfReact/Dockerfile
+        push: true
+        tags: 
+          # friedrice69/wprfreact:${{ github.run_id }}
+          friedrice69/wprfreact:latest
+
+    - name: Build and push wprfapi image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./wprfAPI
+        file: ./wprfAPI/Dockerfile
+        push: true
+        tags: 
+          # friedrice69/wprfapi:${{ github.run_id }}
+          friedrice69/wprfapi:latest

@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install production dependencies.
-RUN npm install
+RUN npm ci --only=production
 
 # Copy local code to the container image.
 COPY . .
@@ -26,6 +26,4 @@ RUN npm install express
 COPY server.cjs .
 
 # Run the Express server on container startup.
-CMD [ "npm", "run", "dev"]
-# RUN npm run dev
-# CMD [ "node", "server.cjs" ]
+CMD [ "node", "server.cjs" ]
