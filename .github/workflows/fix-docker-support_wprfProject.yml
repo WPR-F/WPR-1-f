@@ -28,7 +28,7 @@ jobs:
       with:
         push: true
         tags: friedrice69/wprfreact:latest
-        file: ./Dockerfile
+        file: ./wprfReact/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
