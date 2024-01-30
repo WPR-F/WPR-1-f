@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_eacf2452d0e14ca4851d3561cf10ef5d }}/friedrice69 / wprfreact:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_eacf2452d0e14ca4851d3561cf10ef5d }}/friedrice69:wprfreact:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'wprfProject'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_5bc67440f6d34852820a9884f83a8796 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_eacf2452d0e14ca4851d3561cf10ef5d }}/friedrice69 / wprfreact:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_eacf2452d0e14ca4851d3561cf10ef5d }}/friedrice69:wprfreact:${{ github.sha }}'
