@@ -26,7 +26,7 @@ RUN npm run build
 RUN npm install express --legacy-peer-deps
 
 # Copy the server script
-COPY server.cjs .
+COPY wprfReact\server.cjs .
 
 # Run the Express server on container startup.
 CMD [ "npm", "run", "dev"]
