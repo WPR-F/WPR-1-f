@@ -30,10 +30,6 @@ namespace wprfAPI.Controllers
             //here it adds the user to the role as dotnet wants it
             var result = await _userManager.AddToRoleAsync(user, "Admin");
 
-
-            //here is how i thought it would work
-            // Admin admin = new Admin(id);
-
             if (result.Succeeded)
             {
                 return Ok();
