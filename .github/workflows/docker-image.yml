@@ -25,7 +25,9 @@ jobs:
         context: ./wprfReact
         file: ./wprfReact/Dockerfile
         push: true
-        tags: friedrice69/wprfreact:${{ github.run_id }}
+        tags: 
+          friedrice69/wprfreact:${{ github.run_id }}
+          friedrice69/wprfreact:latest
 
     - name: Build and push wprfapi image
       uses: docker/build-push-action@v2
@@ -33,4 +35,6 @@ jobs:
         context: ./wprfAPI
         file: ./wprfAPI/Dockerfile
         push: true
-        tags: friedrice69/wprfapi:${{ github.run_id }}
+        tags: 
+          friedrice69/wprfapi:${{ github.run_id }}
+          friedrice69/wprfapi:latest
