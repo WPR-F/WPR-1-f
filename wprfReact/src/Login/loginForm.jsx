@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../authContext.js';
 import './loginform.css';
 import { useNavigate } from 'react-router-dom';
 import { GebruikerApiCall, RoleCheck } from '../apiService';
 import GoogleLoginButton from '../Google/GoogleLogin.jsx';
 import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
 
-function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) {
+function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const auth = useContext(AuthContext);
     const navigate = useNavigate();
    
     
@@ -48,19 +50,26 @@ function LoginForm({ setCurrentUser, setIsLoggedIn, setIsAdmin, setIsPanellid}) 
             }
                 const isadmin = await RoleCheck(data, "Admin/checkAdmin");
                 if (isadmin === true) {
-                    setIsAdmin(true);
+                    auth.setIsAdmin(true);
                 }
-                else setIsAdmin(false);
+                else auth.setIsAdmin(false);
 
                 const ispanellid = await RoleCheck(data, "Panellid/checkPanellid");
                 if (ispanellid === true) {
                     console.log("ispanellid1"+ispanellid);
-                    setIsPanellid(true);
+                    auth.setIsPanellid(true);
                 }
-                else setIsPanellid(false);
+                else auth.setIsPanellid(false);
+
+                const isbedrijf = await RoleCheck(data, "Company/checkCompany");
+                if (isbedrijf === true) {
+                    
+                    auth.setIsBedrijf(true);
+                }
+                else auth.setIsBedrijf(false);
                
-                setCurrentUser(data);
-                setIsLoggedIn(true);              
+                auth.setCurrentUser(data);
+                auth.setIsLoggedIn(true);              
                 navigate('/profielpagina');
                 
 
