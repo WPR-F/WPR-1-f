@@ -22,8 +22,5 @@ RUN npm run build
 # Install Express
 RUN npm install express
 
-# Copy the server script
-COPY server.cjs .
-
 # Run the Express server on container startup.
 CMD [ "node", "server.cjs" ]
