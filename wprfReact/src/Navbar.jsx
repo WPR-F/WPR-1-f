@@ -42,8 +42,6 @@ function Navbar() {
                        <>
                          <li onClick={() => navigate('/profielpagina')} id="profile"><a>Profiel</a></li>
                          <li onClick={logOut} id="logout"><a>Uitloggen</a></li>
-                         {auth.isAdmin && <li onClick={() => navigate('/AdminPortal')} id="Adminknop"><a>Adminportal</a></li>}
-                         {auth.isPanellid && <li onClick={() => navigate('/PanellidPortal')} id="Panellidknop"><a>Panellidportal</a></li>}
                       </>
                     )}
                       
@@ -83,8 +81,7 @@ function Navbar() {
                     <>
                       <li onClick={() => navigate('/profielpagina')} id="profileMobile"><a>Profiel</a></li>
                          <li onClick={logOut} id="logoutMobile"><a>Uitloggen</a></li>
-                     {auth.isAdmin && <li onClick={() => navigate('/Adminportal')} id="AdminknopMobile"><a>Adminportal</a></li>}
-                     {auth.isPanellid && <li onClick={() => navigate('/PanellidPortal')} id="PanellidknopMobile"><a>Panellidportal</a></li>}
+            
                      </>
                   )}
                   </ul>

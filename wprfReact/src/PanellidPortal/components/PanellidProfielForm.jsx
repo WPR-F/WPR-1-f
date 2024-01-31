@@ -43,7 +43,7 @@ const PanellidProfielForm = ({ form, handleInputChange, isEditable, activeGroup,
                        <div className="form-group">
                            <label htmlFor="typeBeperking">wat voor type beperking heeft u?</label>
                            <div className="form-input">
-                           <select id="typeBeperking" name="typeBeperking" value={form.typeBeperking} onChange={handleInputChange} disabled={!isEditable}>
+                           <select style={{ width: '150px', height: '25px' }} id="typeBeperking" name="typeBeperking" value={form.typeBeperking} onChange={handleInputChange} disabled={!isEditable}>
                                <option value="">Selecteer type beperking</option>
                                <option value="Motorisch">Motorisch</option>
                                <option value="Zintuigelijk">Zintuigelijk</option>
@@ -115,7 +115,7 @@ const PanellidProfielForm = ({ form, handleInputChange, isEditable, activeGroup,
                                 <div className="form-group">
                                     <label htmlFor="voorkeurBenadering">Voorkeur benadering</label>
                                     <div className="form-input">
-                                    <select id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleInputChange} disabled={!isEditable}>
+                                    <select style={{ width: '150px', height: '25px' }} id="voorkeurBenadering" name="voorkeurBenadering" value={form.voorkeurBenadering} onChange={handleInputChange} disabled={!isEditable}>
                                         <option value="">Selecteer type</option>
                                         <option value="Telefonisch">Telefonisch</option>
                                         <option value="Via Portal">Via Portal</option>
@@ -129,7 +129,7 @@ const PanellidProfielForm = ({ form, handleInputChange, isEditable, activeGroup,
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <button onClick={openDateTime} disabled={!isEditable}>Beschikbaarheid</button>
+                                    <button  onClick={openDateTime} disabled={!isEditable}>Beschikbaarheid</button>
                                 </div>
                             </>
                     )}

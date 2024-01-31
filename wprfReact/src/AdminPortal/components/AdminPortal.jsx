@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate } from 'react-router-dom';
 import { roleValidation } from '../../roleValidation';
+import { AuthContext } from '../../authContext.js';
 
-
-const AdminPortal = ({ isAdmin, isLoggedIn }) => {
+const AdminPortal = () => {
     const navigate = useNavigate();
+    const auth = useContext(AuthContext);
     
     useEffect(() => {
-    roleValidation(navigate, isAdmin, isLoggedIn);
-    
-    }, [isAdmin, isLoggedIn]);
+    roleValidation(navigate, auth.isAdmin, auth.isLoggedIn);
+    }, [auth.isAdmin, auth.isLoggedIn]);
 
     return ( 
     <div className="adminportalbg"><h1>AdminPortal</h1>
