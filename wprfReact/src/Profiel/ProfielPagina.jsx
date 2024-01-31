@@ -42,7 +42,7 @@ function ProfielPagina() {
             <div className='onderkant'>
                
                     {auth.isPanellid && <button onClick={() => navigate('/PanellidPortal')}>Panellidportal</button>}
-                    {auth.isBe && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
+                    {auth.isBedrijf && <button onClick={() => navigate('/BedrijfPortal')}>BedrijfPortal</button>}
                     {auth.isAdmin && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
             
             <button onClick={loguit}>Uitloggen</button>
