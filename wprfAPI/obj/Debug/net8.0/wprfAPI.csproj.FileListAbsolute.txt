@@ -1399,7 +1399,6 @@ C:/Users/shema/source/repos/WPR-1-f/wprfAPI/obj/Debug/net8.0/ref/wprfAPI.dll
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.pdb
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/wprfAPI.genruntimeconfig.cache
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfAPI/obj/Debug/net8.0/ref/wprfAPI.dll
-<<<<<<< HEAD
 C:\Users\shema\source\WPR-1-f\wprfAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\shema\source\WPR-1-f\wprfAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\shema\source\WPR-1-f\wprfAPI\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
@@ -1541,7 +1540,6 @@ C:\Users\shema\source\WPR-1-f\wprfAPI\obj\Debug\net8.0\refint\wprfAPI.dll
 C:\Users\shema\source\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.pdb
 C:\Users\shema\source\WPR-1-f\wprfAPI\obj\Debug\net8.0\wprfAPI.genruntimeconfig.cache
 C:\Users\shema\source\WPR-1-f\wprfAPI\obj\Debug\net8.0\ref\wprfAPI.dll
-=======
 C:\vscodefiles\sh\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.Development.json
 C:\vscodefiles\sh\WPR-1-f\wprfapi\bin\Debug\net8.0\appsettings.json
 C:\vscodefiles\sh\WPR-1-f\wprfapi\bin\Debug\net8.0\wprfAPI.staticwebassets.runtime.json
