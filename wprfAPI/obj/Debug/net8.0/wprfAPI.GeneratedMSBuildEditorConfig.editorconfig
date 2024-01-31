@@ -9,19 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = wprfAPI
 build_property.RootNamespace = wprfAPI
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\shema\source\WPR-1-f\wprfAPI\
-=======
-build_property.ProjectDir = C:\vscodefiles\sh\WPR-1-f\wprfapi\
->>>>>>> 9d400522804c1dd6906390db87324004f16925c7
+build_property.ProjectDir = C:\vscodefiles\wpr\WPR-1-f\wprfapi\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
-build_property.MSBuildProjectDirectory = C:\Users\shema\source\WPR-1-f\wprfAPI
-=======
-build_property.MSBuildProjectDirectory = C:\vscodefiles\sh\WPR-1-f\wprfapi
->>>>>>> 9d400522804c1dd6906390db87324004f16925c7
+build_property.MSBuildProjectDirectory = C:\vscodefiles\wpr\WPR-1-f\wprfapi
 build_property._RazorSourceGeneratorDebug = 

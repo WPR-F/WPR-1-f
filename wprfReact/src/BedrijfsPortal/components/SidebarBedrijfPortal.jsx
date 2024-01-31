@@ -16,7 +16,7 @@ function SidebarBedrijfsPortal() {
                     <ul>
                         <li>
                             <img src={CreateIcon} width="40" height="40"/>
-                            <a onClick={() => navigate("./BedrijfsPortal/Onderzoeken")}>Onderzoeken aanmaken</a>
+                            <a onClick={() => navigate("/BedrijfPortal/Onderzoeken")}>Onderzoeken aanmaken</a>
                         </li>
                         <li>
                             <img src={ChatIcon} width="40" height="40"/> 

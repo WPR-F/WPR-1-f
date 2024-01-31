@@ -11,10 +11,10 @@ namespace wprfAPI.Controllers
     {
 
         private readonly UserManager<User> _userManager;
-        private readonly IPanellidManager _panellidManager;
+        private readonly PanellidManager _panellidManager;
         private readonly AccountContext _context;
 
-        public PanellidController(UserManager<User> userManager, AccountContext context, IPanellidManager panellidManager)
+        public PanellidController(UserManager<User> userManager, AccountContext context, PanellidManager panellidManager)
         {
             _userManager = userManager;
             _panellidManager = panellidManager;
