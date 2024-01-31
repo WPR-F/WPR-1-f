@@ -39,7 +39,7 @@ namespace wprfAPI.Controllers
             _context.Onderzoeken.Add(onderzoek);
             _context.SaveChanges();
 
-             return CreatedAtAction(nameof(CreateOnderzoek), new { id = onderzoek.id }, onderzoek);
+            return CreatedAtAction(nameof(CreateOnderzoek), new { id = onderzoek.id }, onderzoek);
         }
                 
         [HttpGet]

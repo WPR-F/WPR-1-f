@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { roleValidation } from '../../roleValidation';
 
 
-const AdminPortal = ({ isAdmin, isLoggedIn }) => {
+const AdminPortal = () => {
     const navigate = useNavigate();
     
     useEffect(() => {

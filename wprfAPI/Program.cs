@@ -20,6 +20,7 @@ async Task CreateRoles(IServiceProvider serviceProvider)
     }
 }
 
+
 // Add services to the container.
 ConfigureServices(builder.Services, builder.Configuration);
 
@@ -48,6 +49,19 @@ app.Run();
 
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration) 
 {
+
+    services.AddDbContext<ChatContext>(options =>
+        options.UseSqlServer(
+            configuration.GetConnectionString("DefaultConnection"),
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null);
+            }));
+
+
     services.AddDbContext<AccountContext>(options =>
         options.UseSqlServer(
             configuration.GetConnectionString("DefaultConnection"),
@@ -134,8 +148,4 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
-
-
-    
-
 }

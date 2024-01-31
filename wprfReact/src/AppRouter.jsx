@@ -15,6 +15,7 @@ import Onderzoek from './BedrijfsPortal/components/Onderzoek';
 import SidebarAdminPortal from './AdminPortal/components/SidebarAdminPortal';
 import SidebarBedrijfPortal from './BedrijfsPortal/components/SidebarBedrijfPortal';
 import SidebarPanellidPortal from './PanellidPortal/components/SidebarPanellidPortal';
+import Chat from './Chat/Chat';
 
 function AppRouter() {
   return (
@@ -22,6 +23,7 @@ function AppRouter() {
       <Route path="/register" element={<RegisterForm />} />
       <Route path="/login" element={<LoginForm />}/>
       <Route path="/profielpagina" element={<><ProfielPagina/></>} />
+      <Route path="/chat" element={<Chat/>} />
       {/* AdminPortal Components */}
       <Route path="/AdminPortal" element={<><AdminPortal/><SidebarAdminPortal/></>} />
       <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst />} />
