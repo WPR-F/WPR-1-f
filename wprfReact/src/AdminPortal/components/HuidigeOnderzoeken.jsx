@@ -20,6 +20,7 @@ const HuidigeOnderzoeken = () => {
       }, []);
 
     return ( 
+        <>
         <div className='onderzoek-table-container'>
         <h2>Alle Onderzoeken</h2>
         <table className='styled-table'>
@@ -43,7 +44,11 @@ const HuidigeOnderzoeken = () => {
             </tbody>
         </table>
         </div>
-    
+
+         <div className="terugknop">
+         <button onClick={() => navigate("/AdminPortal")}>Terug</button>
+         </div>
+         </>       
     );
 }
  

@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import '../css/PanellidPortal.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
-const OpenOnderzoeken = ({ isPanellid, isLoggedIn }) => {
+const OpenOnderzoeken = () => {
     const navigate = useNavigate();
+    const [onderzoeken, setOnderzoeken] = useState([]);
 
-    
+
+    useEffect(() => {
+        async function fetchOnderzoeken () {
+          const response = await axios.get('http://localhost:5210/api/Onderzoek/getOnderzoeken');
+          console.log(response.data);
+          setOnderzoeken(response.data);
+        }
+        fetchOnderzoeken();
+      }, []);
+
     return ( 
+        <>
         <div className='onderzoek-table-container'>
         <h2>Alle Onderzoeken</h2>
         <table className='styled-table'>
@@ -31,7 +43,11 @@ const OpenOnderzoeken = ({ isPanellid, isLoggedIn }) => {
             </tbody>
         </table>
         </div>
-    
+
+         <div className="terugknop">
+         <button onClick={() => navigate("/PanellidPortal")}>Terug</button>
+         </div>
+         </>       
     );
 }
  

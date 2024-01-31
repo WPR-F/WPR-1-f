@@ -6,5 +6,5 @@ C:/vscodefiles/componentsplit/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreC
 <<<<<<< HEAD
 C:\Users\shema\source\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
 =======
-C:\vscodefiles\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
 >>>>>>> Origin/DevelopGoed
+C:\vscodefiles\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
