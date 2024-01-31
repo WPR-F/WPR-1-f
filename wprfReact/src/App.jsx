@@ -20,7 +20,6 @@ function App() {
       <header className="App-header">
         <Navbar/>
       </header>
-      <Onderzoek/>
       <AppRouter/>
       <footer>
         <Footer/>
