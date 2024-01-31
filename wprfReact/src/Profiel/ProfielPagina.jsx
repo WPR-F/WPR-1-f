@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ProfielPagina.css';
+import './ProfielPagina';
 import { useNavigate } from 'react-router-dom';
 
 function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn, isAdmin, isPanellid }) {

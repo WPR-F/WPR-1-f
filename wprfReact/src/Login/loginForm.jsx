@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './loginform.css';
+import './loginForm';
 import { useNavigate } from 'react-router-dom';
 import { GebruikerApiCall, RoleCheck } from '../apiService';
 
