@@ -15,6 +15,7 @@ function Chat() {
     const fetchMessages = async () => {
         try {
           const response = await axios.get('http://localhost:5210/api/Chat/getMessagesByDate');
+          console.log(response.data);
           setMessages(response.data);
         } catch (error) {
           console.error('Error fetching messages:', error);
@@ -23,6 +24,7 @@ function Chat() {
 
       const handleReceiverChange = (e) => {
         setReceiver(e.target.value);
+        console.log(e.target.value);
       };
     
       const sendMessage = async () => {
@@ -32,15 +34,19 @@ function Chat() {
             text: messageInput,
             datum: Date.now(),
         };
-
-        try {
-          await axios.post('http://localhost:5210/api/Chat/postMessage', messageInput);
-          fetchMessages();
-          setMessageInput('');
-        } catch (error) {
-          console.error('Error sending message:', error);
-        }
+        messageData.ta
+        const url = 'http://localhost:5210/api/Chat/postMessage';
+        const data = messageData;
+        
+        await axios.post(url, data);
+        console.log(data);
+        fetchMessages();
+        setMessageInput('');
+        
+         
+       
       };
+
       useEffect(() => {
         async function fetchAccounts() {
           const response = await axios.get('http://localhost:5210/api/Accounts/getAccounts');
@@ -50,12 +56,12 @@ function Chat() {
         fetchAccounts();
       }, []);
     
-      useEffect(() => {
-        fetchMessages();
-        const intervalId = setInterval(fetchMessages, 5000);
+    //   useEffect(() => {
+    //     fetchMessages();
+    //     const intervalId = setInterval(fetchMessages, 5000);
     
-        return () => clearInterval(intervalId); // Cleanup on component unmount
-      }, []);
+    //     return () => clearInterval(intervalId); // Cleanup on component unmount
+    //   }, []);
 
 
 
@@ -63,7 +69,11 @@ function Chat() {
         <div>
             <div className="chat-container">
                 <div className='chat-screen'>
-                {/* {messages.map((message, index) => ( <span key={index}>{message.user}: {message.message}</span>))} */}
+                {messages.map((message, index) => (
+                    <div key={index}>
+                    <p><strong>{message.sender}</strong>: {message.text}</p>
+                    </div>
+                ))}
                 </div>
                 <div className="input-button-container">
                 <input type="text" value={messageInput} onChange={e => setMessageInput(e.target.value)}/>
