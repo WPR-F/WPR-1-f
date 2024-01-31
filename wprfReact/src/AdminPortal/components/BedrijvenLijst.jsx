@@ -3,6 +3,7 @@ import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
 import { useNavigate } from 'react-router-dom';
 import { GetUsers } from '../../apiService';
+import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 
 
 const BedrijvenLijst = () => {

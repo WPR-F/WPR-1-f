@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 
 
-const HuidigeOnderzoeken = ({ isAdmin, isLoggedIn }) => {
+const HuidigeOnderzoeken = () => {
     const navigate = useNavigate();
     const [onderzoeken, setOnderzoeken] = useState([]);
 

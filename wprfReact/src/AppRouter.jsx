@@ -16,6 +16,8 @@ import SidebarAdminPortal from './AdminPortal/components/SidebarAdminPortal';
 import SidebarBedrijfPortal from './BedrijfsPortal/components/SidebarBedrijfPortal';
 import SidebarPanellidPortal from './PanellidPortal/components/SidebarPanellidPortal';
 import PrivateRoute from './Privateroute'; // Adjust this import statement to match the actual path to your PrivateRoute component
+import AdminPortalSidebar from './AdminPortal/components/AdminPortalSidebar';
+import OpenOnderzoekenSidebar from './PanellidPortal/components/OpenOnderzoekenSidebar';
 
 
 function AppRouter() {
@@ -26,7 +28,7 @@ function AppRouter() {
       <Route path="/profielpagina" element={<><ProfielPagina/></>} />
    
       {/* AdminPortal Components */}
-      <Route path="/AdminPortal" element={<PrivateRoute element={AdminPortal} roles={["Admin"]} />} />
+      <Route path="/AdminPortal" element={<PrivateRoute element={AdminPortalSidebar} roles={["Admin"]} />} />
       <Route path="AdminPortal/PanellidLijst" element={<PrivateRoute element={PanellidLijst} roles={["Admin"]} />} />
       <Route path="AdminPortal/HuidigeOnderzoeken" element={<PrivateRoute element={HuidigeOnderzoeken} roles={["Admin"]} />} />
       <Route path="AdminPortal/BedrijvenLijst" element={<PrivateRoute element={BedrijvenLijst} roles={["Admin"]} />} />
@@ -35,7 +37,7 @@ function AppRouter() {
       {/* PanellidPortal Components */}
       <Route path='/PanellidPortal' element={<PrivateRoute element={PanellidPortal} roles={["Panellid"]} />} />
       <Route path='PanellidPortal/PanellidProfiel' element={<PrivateRoute element={PanellidProfiel} roles={["Panellid"]} />} />
-      <Route path='PanellidPortal/OpenOnderzoeken' element={<PrivateRoute element={OpenOnderzoeken} roles={["Panellid"]} />} />
+      <Route path='PanellidPortal/OpenOnderzoeken' element={<PrivateRoute element={OpenOnderzoekenSidebar} roles={["Panellid"]} />} />
       <Route path='PanellidPortal/ActieveOnderzoeken' element={<PrivateRoute element={ActieveOnderzoeken} roles={["Panellid"]} />} />
 
       {/* BedrijfsPortal Components */}

@@ -3,6 +3,7 @@ import '../css/AdminPortal.css';
 import { useNavigate } from 'react-router-dom';
 import { roleValidation } from '../../roleValidation';
 import { AuthContext } from '../../authContext.js';
+import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 
 const AdminPortal = () => {
     const navigate = useNavigate();

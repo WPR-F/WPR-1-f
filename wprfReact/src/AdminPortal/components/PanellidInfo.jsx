@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchPanellidInformation } from '../../apiService';
+import SidebarAdminPortal from './SidebarAdminPortal.jsx';
 
 const PanellidInfo = () => {
     const navigate = useNavigate();
