@@ -41,9 +41,9 @@ function ProfielPagina() {
             )}
             <div className='onderkant'>
                
-                    {auth.isPanellid && <button onClick={() => navigate('/PanellidPortal')}>Panellidportal</button>}
-                    {auth.isBedrijf && <button onClick={() => navigate('/BedrijfPortal')}>BedrijfPortal</button>}
-                    {auth.isAdmin && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
+            {auth.userRole.includes('Panellid') && <button onClick={() => navigate('/PanellidPortal')}>Panellidportal</button>}
+            {auth.userRole.includes('Company') && <button onClick={() => navigate('/BedrijfPortal')}>BedrijfPortal</button>}
+            {auth.userRole.includes('Admin') && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
             
             <button onClick={loguit}>Uitloggen</button>
             </div>

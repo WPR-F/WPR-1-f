@@ -3,10 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
 import { GetUsers } from '../../apiService';
-import { roleValidation } from '../../roleValidation';
 
 
-const PanellidLijst = ({ isAdmin, isLoggedIn }) => {
+const PanellidLijst = () => {
     const navigate = useNavigate();
     const [panelledenList, setpanelledenList] = useState({user: []});
     const [unsortedList, setUnsortedList] = useState({user: []}); 
@@ -15,9 +14,6 @@ const PanellidLijst = ({ isAdmin, isLoggedIn }) => {
     const [researchApproachOption, setResearchApproachOption] = useState('');
     const [commercialApproachOption, setCommercialApproachOption] = useState('');
     
-    useEffect(() => {
-        roleValidation(navigate, isAdmin, isLoggedIn);
-        }, [isAdmin, isLoggedIn]);
 
     const fetchUsers = async () => {
         const users = await GetUsers('Panellid/getPanellidUsers');
@@ -54,26 +50,26 @@ const PanellidLijst = ({ isAdmin, isLoggedIn }) => {
                 <button onClick={() => navigate("/AdminPortal")}>Terug</button>
             </div>
             <div className="filterOptions">
-            <select onChange={(e) => setSortOption(e.target.value)}> {/* New dropdown menu */}
-                    <option value="">Sort by...</option>
-                    <option value="Naam">Naam</option>
-            </select>
-            <select onChange={(e) => setDisabilityType(e.target.value)}> {/* New dropdown menu for the filter */}
-                    <option value="">Filter by disability type...</option>
-                    <option value="Motorisch">Motorisch</option>
-                    <option value="Zintuigelijk">Zintuigelijk</option>
-                    <option value="Mentaal">Mentaal</option>
-            </select>
-                    <select onChange={(e) => setResearchApproachOption(e.target.value)}>
-                <option value="">Filter op Voorkeur benadering</option>
-                <option value="Telefonisch">Telefonisch</option>
-                <option value="Portal">Via portal</option>
-            </select>
-            <select onChange={(e) => setCommercialApproachOption(e.target.value)}>
-                <option value="">filter op commerciële benadering</option>
-                <option value="true">commerciële benadering</option>
-                <option value="false">geen commerciële benadering</option>
-            </select>
+        <select style={{ width: '165px', height: '20px' }} onChange={(e) => setSortOption(e.target.value)}> 
+            <option value="">Sort by...</option>
+            <option value="Naam">Naam</option>
+        </select>
+        <select style={{ width: '165px', height: '20px' }} onChange={(e) => setDisabilityType(e.target.value)}> 
+            <option value="">Filter by disability type...</option>
+            <option value="Motorisch">Motorisch</option>
+            <option value="Zintuigelijk">Zintuigelijk</option>
+            <option value="Mentaal">Mentaal</option>
+        </select>
+         <select style={{ width: '165px', height: '20px'}} onChange={(e) => setResearchApproachOption(e.target.value)}>
+            <option value="">Filter op Voorkeur benadering</option>
+            <option value="Telefonisch">Telefonisch</option>
+            <option value="Portal">Via portal</option>
+        </select>
+        <select style={{ width: '165px', height: '20px' }} onChange={(e) => setCommercialApproachOption(e.target.value)}>
+            <option value="">filter op commerciële benadering</option>
+            <option value="true">commerciële benadering</option>
+            <option value="false">geen commerciële benadering</option>
+        </select>
             </div>
             <h2>Alle Panelleden:</h2>
             <div className='PanellidList'> 

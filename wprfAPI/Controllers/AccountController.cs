@@ -1,9 +1,12 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.IdentityModel.Tokens;
 using wprfAPI.Users;
 
 namespace wprfAPI.Controllers
@@ -14,11 +17,13 @@ namespace wprfAPI.Controllers
     {
         private readonly AccountContext _context;
         private readonly UserManager<User> _userManager;
+        private readonly IConfiguration _configuration;
 
-        public AccountsController(AccountContext context, UserManager<User> userManager)
+        public AccountsController(AccountContext context, UserManager<User> userManager, IConfiguration configuration)
         {
             _context = context;
             _userManager = userManager;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -111,11 +116,13 @@ namespace wprfAPI.Controllers
 
             return user as User;
         }
+     
+
         [HttpPost]
         [Route("login")]
         public async Task<ActionResult<User>> Login(LoginModel model)
         {
-            var user = await _userManager.FindByEmailAsync(model.Email);
+            var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
 
             if (user == null)
             {
@@ -130,19 +137,56 @@ namespace wprfAPI.Controllers
                 return Unauthorized();
             }
 
-            return Ok(user);
+            var token = await GenerateJwtToken(model.Email);
+            return Ok(new { user, token });
         }
+
         [HttpGet]
         [Route("getAccounts")]
         public IActionResult GetAccounts()
         {
-            var users = _context.Users.ToList();
+            var users = _context.Users.Select(u => u).ToList();
 
-             if (users == null) {
+            if (users == null) 
+            {
                 return NotFound();
             }
             return Ok(users);
         }
         
+    [NonAction]
+   public async Task<string> GenerateJwtToken(string email)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        var roles = await _userManager.GetRolesAsync(user);
+
+        var claims = new List<Claim>
+        {
+            new Claim("Id", user.Id),
+            new Claim("UserName", user.UserName),
+            new Claim(ClaimTypes.Email, user.Email),
+        };
+
+        foreach (var role in roles)
+        {
+            claims.Add(new Claim(ClaimTypes.Role, role));
+        }
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"],
+            audience: _configuration["Jwt:Audience"],
+            claims: claims,
+            expires: DateTime.Now.AddHours(Convert.ToDouble(_configuration["Jwt:ExpirationHours"])),
+            signingCredentials: creds
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
+        
+    }
+
+    
 }

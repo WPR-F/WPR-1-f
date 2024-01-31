@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../css/PanellidPortal.css';
 import '../css/PanellidProfiel.css';
 import { useNavigate } from 'react-router-dom';
-import { roleValidation } from '../../roleValidation';
 import { fetchPanellidInformation, updatePanellidInformation } from '../../apiService';
 import PanellidProfielForm from './PanellidProfielForm';
 
@@ -15,12 +14,7 @@ const PanellidProfiel = ({ currentUser, isPanellid, isLoggedIn }) => {
     const [panellidinfo, setPanellidinfo] = useState({user: []});
 
     useEffect(() => {
-        roleValidation(navigate, isPanellid, isLoggedIn);
-        }, [isPanellid, isLoggedIn]);
-
-    useEffect(() => {
         setPanellidinfo(fetchUserInformation());
-        
     }, []);
 
     const fetchUserInformation = async () => {

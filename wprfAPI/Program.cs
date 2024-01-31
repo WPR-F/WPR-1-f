@@ -1,5 +1,8 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using wprfAPI.Users;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -82,15 +85,26 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
                     errorNumbersToAdd: null);
             }));
 
-    // services.AddDefaultIdentity<User>() 
-    //     .AddEntityFrameworkStores<AccountContext>();
+    services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = configuration["Jwt:Issuer"],
+                ValidAudience = configuration["Jwt:Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
+            };
+        });
 
     services.AddIdentity<User, IdentityRole>()
         .AddEntityFrameworkStores<AccountContext>()
         .AddDefaultTokenProviders(); 
 
    //Code uit dotnet identity core documentatie 
-   // we moeten zelf nog kijken wat voor instellingen we willen gebruiken
    
    services.Configure<IdentityOptions>(options =>
     {

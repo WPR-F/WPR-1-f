@@ -13,8 +13,9 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isPanellid, setIsPanellid] = useState(false);
   const [isBedrijf, setIsBedrijf] = useState(false);
+  const [userRole, setUserRole] = useState();
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, currentUser, setCurrentUser, isAdmin, setIsAdmin, isPanellid, setIsPanellid, isBedrijf, setIsBedrijf }}>
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, currentUser, setCurrentUser, userRole, setUserRole }}>
     <Router>
     <div className="App">
       <header className="App-header">

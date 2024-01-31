@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { GebruikerApiCall, RoleCheck } from '../apiService';
 import GoogleLoginButton from '../Google/GoogleLogin.jsx';
 import { loadGoogleServiceApi } from '../Google/GoogleserviceApi.js';
+import { jwtDecode } from "jwt-decode";
 
 function LoginForm() {
     const [email, setEmail] = useState('');
@@ -12,8 +13,20 @@ function LoginForm() {
     const [errorMessage, setErrorMessage] = useState('');
     const auth = useContext(AuthContext);
     const navigate = useNavigate();
-   
-    
+
+    const TokenDecoder = {
+    decodeToken: (token) => {
+        const decodedToken = jwtDecode(token);
+        console.log(decodedToken);
+
+        // Extract the user role from the decoded token
+        const userRole = decodedToken.role;
+
+        return userRole;
+    },
+  };
+
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -48,29 +61,18 @@ function LoginForm() {
                 console.error('Error details:', data);
                 return;
             }
-                const isadmin = await RoleCheck(data, "Admin/checkAdmin");
-                if (isadmin === true) {
-                    auth.setIsAdmin(true);
-                }
-                else auth.setIsAdmin(false);
 
-                const ispanellid = await RoleCheck(data, "Panellid/checkPanellid");
-                if (ispanellid === true) {
-                    console.log("ispanellid1"+ispanellid);
-                    auth.setIsPanellid(true);
-                }
-                else auth.setIsPanellid(false);
-
-                const isbedrijf = await RoleCheck(data, "Company/checkCompany");
-                if (isbedrijf === true) {
-                    
-                    auth.setIsBedrijf(true);
-                }
-                else auth.setIsBedrijf(false);
-               
-                auth.setCurrentUser(data);
-                auth.setIsLoggedIn(true);              
+            if (data.user && data.token) {
+                const decodedToken = jwtDecode(data.token);
+                const userRoles = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+                console.log('User roles:', userRoles);
+            
+                auth.setCurrentUser(data.user);
+                auth.setIsLoggedIn(true);
+                auth.setUserRole(userRoles); 
+                
                 navigate('/profielpagina');
+            }
                 
 
         } catch (error) {
