@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../../authContext.js';
 import { useNavigate } from 'react-router-dom';
 import '../css/PanellidPortal.css';
 import { roleValidation } from '../../roleValidation';
 
 
-const PanellidPortal = ({ isPanellid, isLoggedIn }) => {
+const PanellidPortal = () => {
     const navigate = useNavigate();
+    const auth = useContext(AuthContext);
 
     useEffect(() => {
-        roleValidation(navigate, isPanellid, isLoggedIn);
-        }, [isPanellid, isLoggedIn]);
+        roleValidation(navigate, auth.isPanellid, auth.isLoggedIn);
+        }, [auth.isPanellid, auth.isLoggedIn]);
 
     return ( 
     <div className="PanellidPortallbg"><h1>PanellidPortal</h1>

@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../authContext.js';
 import './ProfielPagina.css';
 import { useNavigate } from 'react-router-dom';
 
-function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn, isAdmin, isPanellid }) {
+function ProfielPagina() {
     const [isEditable, setIsEditable] = useState(false);
+    const auth = useContext(AuthContext);
     const navigate = useNavigate();
 
     const loguit = () => {
-        setIsLoggedIn(false);
-        setCurrentUser(null);
+        auth.setIsLoggedIn(false);
+        auth.setCurrentUser(null);
     }
 
     useEffect(() => {
-    if (!isLoggedIn)
+    if (!auth.isLoggedIn)
     {
         navigate('/login');
-        console.log(isLoggedIn);
     }
-    }, [isLoggedIn]);
+    }, [auth.isLoggedIn]);
     
 
     const toggleEditable = () => {
@@ -26,13 +27,13 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn,
 
     return (
         <div className='blok'>
-            {currentUser ? (
+            {auth.currentUser ? (
                 <div className='profiel'>
-                    <h1>Welkom {currentUser.userName}!</h1>
+                    <h1>Welkom {auth.currentUser.userName}!</h1>
                     <div className='gegevens'>
-                    <h2>Voornaam: {isEditable ? <textarea>{currentUser.userName}</textarea> : currentUser.userName}</h2>
-                    <h2>Achternaam: {isEditable ? <textarea>{currentUser.lastName}</textarea> : currentUser.lastName}</h2>
-                    <h2>E-mail: {isEditable ? <textarea>{currentUser.email}</textarea> : currentUser.email}</h2>
+                    <h2>Voornaam: {isEditable ? <textarea>{auth.currentUser.userName}</textarea> : auth.currentUser.userName}</h2>
+                    <h2>Achternaam: {isEditable ? <textarea>{auth.currentUser.lastName}</textarea> : auth.currentUser.lastName}</h2>
+                    <h2>E-mail: {isEditable ? <textarea>{auth.currentUser.email}</textarea> : auth.currentUser.email}</h2>
                     </div>
                 </div>
             ) : (
@@ -40,8 +41,9 @@ function ProfielPagina({ currentUser, setIsLoggedIn, setCurrentUser, isLoggedIn,
             )}
             <div className='onderkant'>
                
-                    {isPanellid && <button onClick={() => navigate('/PanellidPortal')}>Panellidportal</button>}
-                    {isAdmin && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
+                    {auth.isPanellid && <button onClick={() => navigate('/PanellidPortal')}>Panellidportal</button>}
+                    {auth.isBedrijf && <button onClick={() => navigate('/BedrijfPortal')}>BedrijfPortal</button>}
+                    {auth.isAdmin && <button onClick={() => navigate('/Adminportal')}>Adminportal</button>}
             
             <button onClick={loguit}>Uitloggen</button>
             </div>

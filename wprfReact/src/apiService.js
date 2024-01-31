@@ -1,6 +1,6 @@
-
 // stuurt een POST request naar de geselecteerde (registreer of login) API endpoint met de ingevoerde gebruikersgegevens.
 // En geeft het response object de waarde van de response van de API. 
+
 export const GebruikerApiCall = async (user, endpoint) => {
     const response = await fetch('http://localhost:5210/api/accounts/'+endpoint, {
         method: 'POST',
@@ -69,11 +69,8 @@ export const GebruikerApiCall = async (user, endpoint) => {
                 console.log("Er is iets mis gegaan met het updaten van Panellid"+error);
                 alert("Er is iets mis gegaan met het updaten van Panellid. probeer het later opnieuw");
             }
-            
-
     }
 
-    
 
 
  

@@ -197,8 +197,43 @@
     cursor: pointer;
   }
   & a {
-    margin: 8px 36px 8px 37px;
+    margin: 8px 38px 8px 38px;
     &:hover {
+      text-decoration: none;
+    }
+  }
+}
+#logout {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #20A883;
+  background-color: #20A883;
+  &:hover {
+    background-color: #131B56;
+    cursor: pointer;
+  }
+  & a {
+    margin: 8px 20px 8px 20px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+#profile {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #20A883;
+  &:hover {
+    background-color: #20A883;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  & a {
+    margin: 8px 35px 8px 35px;
+    &:hover {
+      background-color: #20A883;
       text-decoration: none;
     }
   }
@@ -223,7 +258,6 @@
     }
   }
 }
-
 #loginMobile {
   width: 40%;
   border-style: solid;
@@ -238,6 +272,44 @@
   & a {
     margin: 8px 36px 8px 37px;
     &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#logoutMobile {
+  width: 40%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #20A883;
+  background-color: #20A883;
+  &:hover {
+    background-color: #131B56;
+    cursor: pointer;
+  }
+  & a {
+    margin: 8px 25px 8px 25px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+#profileMobile {
+  width: 40%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #20A883;
+  background-color: #131B56;
+  &:hover {
+    background-color: #20A883;
+    cursor: pointer;
+  }
+  & a {
+    margin: 8px 36px 8px 37px;
+    &:hover {
+      background-color: #20A883;
       text-decoration: none;
     }
   }

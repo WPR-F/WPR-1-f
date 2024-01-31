@@ -11,27 +11,33 @@ import PanellidProfiel from './PanellidPortal/components/PanellidProfiel';
 import OpenOnderzoeken from './PanellidPortal/components/OpenOnderzoeken';
 import ActieveOnderzoeken from './PanellidPortal/components/ActieveOnderzoeken';
 import PanellidInfo from './AdminPortal/components/PanellidInfo';
+import Onderzoek from './BedrijfsPortal/components/Onderzoek';
+import SidebarAdminPortal from './AdminPortal/components/SidebarAdminPortal';
+import SidebarBedrijfPortal from './BedrijfsPortal/components/SidebarBedrijfPortal';
+import SidebarPanellidPortal from './PanellidPortal/components/SidebarPanellidPortal';
 
-function AppRouter({ isLoggedIn, setIsLoggedIn, setCurrentUser, currentUser, isAdmin, setIsAdmin, isPanellid, setIsPanellid}) {
+function AppRouter() {
   return (
     <Routes>
       <Route path="/register" element={<RegisterForm />} />
-      <Route path="/login" element={<LoginForm setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin} isLoggedIn={isLoggedIn} isPanellid={isPanellid} setIsPanellid={setIsPanellid}/> } />
-      <Route path="/profielpagina" element={<ProfielPagina setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} currentUser={currentUser} isLoggedIn={isLoggedIn} isPanellid={isPanellid} isAdmin={isAdmin}/>} />
-
+      <Route path="/login" element={<LoginForm />}/>
+      <Route path="/profielpagina" element={<><ProfielPagina/></>} />
       {/* AdminPortal Components */}
-      <Route path="/AdminPortal" element={<AdminPortal isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
-      <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
-      <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
-      <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} />
-      <Route path='/AdminPortal/PanellidLijst/Panellidinfo/:id' element={<PanellidInfo isAdmin={isAdmin} isLoggedIn={isLoggedIn}/>} /> 
+      <Route path="/AdminPortal" element={<><AdminPortal/><SidebarAdminPortal/></>} />
+      <Route path="AdminPortal/PanellidLijst" element={<PanellidLijst />} />
+      <Route path="AdminPortal/HuidigeOnderzoeken" element={<HuidigeOnderzoeken />} />
+      <Route path="AdminPortal/BedrijvenLijst" element={<BedrijvenLijst />} />
+      <Route path='/AdminPortal/PanellidLijst/Panellidinfo/:id' element={<PanellidInfo />} /> 
 
       {/* PanellidPortal Components */}
-      <Route path='/PanellidPortal' element={<PanellidPortal isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
-      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel currentUser={currentUser} isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
-      <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
-      <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken isLoggedIn={isLoggedIn} isPanellid={isPanellid}/>} />
+      <Route path='/PanellidPortal' element={<><PanellidPortal/><SidebarPanellidPortal/></>} />
+      <Route path='PanellidPortal/PanellidProfiel' element={<PanellidProfiel />} />
+      <Route path='PanellidPortal/OpenOnderzoeken' element={<OpenOnderzoeken />} />
+      <Route path='PanellidPortal/ActieveOnderzoeken' element={<ActieveOnderzoeken />} />
 
+      {/* BedrijfsPortal Components */}
+      <Route path='/BedrijfsPortal' element={<sidebarBedrijfPortal/>} />
+      <Route path='/BedrijfsPortal/onderzoek' element={<><Onderzoek/><SidebarBedrijfPortal/></>} />
     </Routes>
   );
 }

@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
-import SidebarAdminPortal from './SidebarAdminPortal.jsx';
-import SidebarBedrijfPortal from './SidebarBedrijfPortal.jsx';
-import SidebarPanellidPortal from './SidebarPanellidPortal.jsx';
 import ClickstreamApi from './ClickstreamApi.jsx';  
+import { AuthContext } from './authContext.js';
 import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
+import Onderzoek from './BedrijfsPortal/components/Onderzoek.jsx';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState();
   const [isAdmin, setIsAdmin] = useState(false);
   const [isPanellid, setIsPanellid] = useState(false);
-  console.log(currentUser);
+  const [isBedrijf, setIsBedrijf] = useState(false);
   return (
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, currentUser, setCurrentUser, isAdmin, setIsAdmin, isPanellid, setIsPanellid, isBedrijf, setIsBedrijf }}>
     <Router>
     <div className="App">
       <header className="App-header">
-        <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
-        <SidebarAdminPortal/>
+        <Navbar/>
       </header>
-      <AppRouter isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} currentUser={currentUser} 
-      isAdmin={isAdmin} setIsAdmin={setIsAdmin} isPanellid={isPanellid} setIsPanellid={setIsPanellid} />
+      <AppRouter/>
       <footer>
         <Footer/>
       </footer>
     </div>
     <ClickstreamApi/>
+    
     </Router>
+    </AuthContext.Provider>
   );
 }
 

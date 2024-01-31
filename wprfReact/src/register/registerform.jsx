@@ -11,6 +11,7 @@ function RegisterForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [registerType, setRegisterType] = useState('System');
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -28,6 +29,7 @@ function RegisterForm() {
                 userName: Name,
                 lastName,
                 email,
+                registerType,
             },
             password
         };
@@ -63,7 +65,6 @@ function RegisterForm() {
     return (
         <div className='register-form-container'>
             <img src="src\images\accessibilitylogo.png" alt="Logo" className="registerlogo" />
-            <div className="register-container">
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Voornaam" required value={Name} onChange={e => setFirstName(e.target.value)} />
                 <input type="text" placeholder="Achternaam" required value={lastName} onChange={e => setLastName(e.target.value)} />
@@ -73,7 +74,6 @@ function RegisterForm() {
                 <button type="submit">Registreren</button>
             </form>
             <GoogleLoginButton/>
-            </div>
         </div>
     );
 }

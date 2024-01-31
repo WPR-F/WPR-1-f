@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: clamp(450px, 35vw, 700px);
-    height: clamp(750px, 55vh, 750px);
+    height: clamp(800px, 55vh, 900px);
     align-self: center;
     background-color: #131B56;
    

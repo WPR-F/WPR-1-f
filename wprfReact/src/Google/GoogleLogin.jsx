@@ -1,51 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../authContext.js';
 import { useNavigate } from 'react-router-dom';
 import './GoogleButton.css';
+import { GebruikerApiCall, RoleCheck } from '../apiService';
 import { clientId } from './GoogleserviceApi.js';
 import { GoogleLogin } from 'react-google-login';
 import axios from 'axios';
 
-function GoogleLoginButton({setCurrentUser, setIsLoggedIn, currentUser, IsloggedIn}) {
+function GoogleLoginButton() {
     const [Name, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [registerType, setRegisterType] = useState('Google');
-    const [user, setUser] = useState([]);
     const [profileObj, setProfileObj] = useState(null);
+    const auth = useContext(AuthContext);
     const navigate = useNavigate();
     
 
     
     //Vergelijkt de google email met de email bekend in de database. Indien er geen email bekend is wordt er een nieuwe account aangemaakt
     const isAccountregistered =  async (google) => { 
-
+        
         try {
-            const url = 'http://localhost:5210/api/accounts/getemail';
+            const url = 'http://localhost:5210/api/accounts/postbyemail';
             const data = new FormData();
             data.append('email', google.email);
         
             const response = await axios.post(url, data);
-            if (response.data === google.email) {
+
+            if (response.data.email === google.email) {
                 console.log("Emailadres: "+ google.email +" is al in gebruik!")
 
-                //setCurrentUser(response.data);
-                //setIsLoggedIn(true);
+                const isadmin = await RoleCheck(data, "Admin/checkAdmin");
+                if (isadmin === true) {
+                    auth.setIsAdmin(true);
+                }
+                else auth.setIsAdmin(false);
+
+                const ispanellid = await RoleCheck(data, "Panellid/checkPanellid");
+                if (ispanellid === true) {
+                    console.log("ispanellid1"+ispanellid);
+                    auth.setIsPanellid(true);
+                }
+                else auth.setIsPanellid(false);
+
+                const isbedrijf = await RoleCheck(data, "Company/checkCompany");
+                if (isbedrijf === true) {
+                    
+                    auth.setIsBedrijf(true);
+                }
+                else auth.setIsBedrijf(false);
+
+                auth.setCurrentUser(response.data);
+                auth.setIsLoggedIn(true);
+                
                 navigate('/profielpagina');
-            } 
+            } else if (response.data !== google.email){
+                console.log("Emailadres: "+ google.email +" is nog niet in gebruik!")
+                await addAccountToDataBase(google);
+            }
                 
         } catch (error) {
-            //console.error(error);
-            console.log(`Account aangemaakt Email: ${google.email}, Voornaam: ${google.givenName}, Achternaam: ${google.familyName}`);
-            await addAccountToDataBase(google);
+            console.error(error);
 
         }
     };
     
-
+    //Voegt een nieuwe account toe aan de database
     const addAccountToDataBase =  async (google) => { 
-        console.log("Test addAccountToDataBase");
+        console.log(`Account aangemaakt Email: ${google.email}, Voornaam: ${google.givenName}, Achternaam: ${google.familyName}`);
         const user = {
             User: {
                 userName : google.givenName,
@@ -60,22 +85,16 @@ function GoogleLoginButton({setCurrentUser, setIsLoggedIn, currentUser, Islogged
         try {
             const url = 'http://localhost:5210/api/accounts/google';
             const response = await axios.post(url, user);
-            console.log(response.data);
-            //setCurrentUser(response.data);
-            //setIsLoggedIn(true);
+            auth.setCurrentUser(response.data);
+            auth.setIsLoggedIn(true);
             navigate('/profielpagina');
         } catch (error) {
             console.error('Error adding account to database:', error);
-            // Handle the error, show an error message, etc.
         }
         
     
     };
         
-
-       
-    
-
     const googleLoginAuthentication =  async (response) => {
         const { profileObj } = response;
         setProfileObj(profileObj);

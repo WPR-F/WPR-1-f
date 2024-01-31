@@ -86,7 +86,31 @@ namespace wprfAPI.Controllers
 
             return user as User;
         }
+        [HttpGet("{getbyemail}")]
+        public async Task<ActionResult<User>> GetUserByEmail(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
 
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+        [HttpPost]
+        [Route("postbyemail")]
+        public async Task<ActionResult<User>> PostUserByEmail([FromForm]string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user as User;
+        }
         [HttpPost]
         [Route("login")]
         public async Task<ActionResult<User>> Login(LoginModel model)

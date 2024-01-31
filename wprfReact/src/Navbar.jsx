@@ -1,18 +1,22 @@
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from './authContext.js';
 import './Navbar.css';
 import logo from './images/icon_accessibility.png';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-
-
-export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
-   
-      const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
+function Navbar() {
+    const auth = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [mobileButtonsVisible, setMobileButtonsVisible] = useState(false);
       
+    const handleCheckboxClick = () => {
+    setMobileButtonsVisible(!mobileButtonsVisible);
+    };
 
-      const handleCheckboxClick = () => {
-        setMobileButtonsVisible(!mobileButtonsVisible);
-      };
+    const logOut = () => {
+        auth.setIsLoggedIn(false);
+        auth.setCurrentUser(null);
+    }
 
   return (
       <div>
@@ -29,16 +33,17 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
                       <li><a href="#Cassussen">Cassussen</a></li>
                       <li><a href="#Over ons">Over ons</a></li>
                       <li><a href="#Contact">Contact</a> </li>
-                      {!isLoggedIn ? (
+                      {!auth.isLoggedIn ? (
                         <>
-                         <li id="register"><Link to="/register">Registreren</Link></li>
-                         <li id="login"><Link to="/login">Login</Link></li>
-                            </>
+                         <li onClick={() => navigate('/register')} id="register"><a>Registreren</a></li>
+                         <li onClick={() => navigate('/login')} id="login"><a>Login</a></li>
+                        </>
                         ) : (
                        <>
-                         <li id="profile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                         {isAdmin && <li id="Adminknop"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
-                         {isPanellid && <li id="Panellidknop"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
+                         <li onClick={() => navigate('/profielpagina')} id="profile"><a>Profiel</a></li>
+                         <li onClick={logOut} id="logout"><a>Uitloggen</a></li>
+                         {auth.isAdmin && <li onClick={() => navigate('/AdminPortal')} id="Adminknop"><a>Adminportal</a></li>}
+                         {auth.isPanellid && <li onClick={() => navigate('/PanellidPortal')} id="Panellidknop"><a>Panellidportal</a></li>}
                       </>
                     )}
                       
@@ -69,16 +74,17 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
               </div>
               <div className="register-login-container">
                   <ul>
-                  {!isLoggedIn ? (
+                  {!auth.isLoggedIn ? (
                         <>
-                      <li id="registerMobile"><Link to="/register">Registreren</Link></li>
-                      <li id="loginMobile"><Link to="/login">Login</Link></li>
+                      <li onClick={() => navigate('/register')} id="registerMobile"><a>Registreren</a></li>
+                      <li onClick={() => navigate('/login')} id="loginMobile"><a>Login</a></li>
                       </>
                   ) : (
                     <>
-                     <li id="profileMobile"><a><Link to="/profielpagina">Profiel</Link></a></li>
-                     {isAdmin && <li id="AdminknopMobile"><a><Link to="/AdminPortal">Adminportal</Link></a></li>}
-                     {isPanellid && <li id="PanellidknopMobile"><a><Link to="/PanellidPortal">Panellidportal</Link></a></li>}
+                      <li onClick={() => navigate('/profielpagina')} id="profileMobile"><a>Profiel</a></li>
+                         <li onClick={logOut} id="logoutMobile"><a>Uitloggen</a></li>
+                     {auth.isAdmin && <li onClick={() => navigate('/Adminportal')} id="AdminknopMobile"><a>Adminportal</a></li>}
+                     {auth.isPanellid && <li onClick={() => navigate('/PanellidPortal')} id="PanellidknopMobile"><a>Panellidportal</a></li>}
                      </>
                   )}
                   </ul>
@@ -89,3 +95,4 @@ export default function App({ isLoggedIn, currentUser, isAdmin, isPanellid }) {
   );
 }
 
+export default Navbar;

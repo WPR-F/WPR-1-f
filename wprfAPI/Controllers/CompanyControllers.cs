@@ -50,6 +50,25 @@ namespace wprfAPI.Controllers
 
             return Ok(users);
         }
+         [HttpPost]
+        [Route("checkCompany")]
+        public async Task<ActionResult<User>> CheckCompany(CheckCompanyRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
 
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+             var isCompany = await _userManager.IsInRoleAsync(user, "Company");
+
+                if (!isCompany)
+                {
+                    return Forbid();
+                }
+
+            return Ok();
+        }
     }
 }

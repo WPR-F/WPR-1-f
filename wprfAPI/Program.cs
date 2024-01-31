@@ -125,7 +125,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
         options.AddPolicy("AllowSpecificOrigin",
             builder =>
             {
-                builder.WithOrigins("http://localhost:5173")
+                builder.WithOrigins("http://localhost:5173", "https://wprfproject.azurewebsites.net/")
                        .AllowAnyHeader()
                        .AllowAnyMethod();
             });
