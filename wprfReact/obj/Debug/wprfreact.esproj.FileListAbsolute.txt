@@ -3,4 +3,8 @@ C:/accountfix/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cac
 C:/wpr/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
 C:/vscodefiles/componentsplit/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
 /Users/nazihrtoure/Programming /Webprojects/WPR-1-f/wprfReact/obj/Debug/wprfreact.esproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+C:\Users\shema\source\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
+=======
 C:\vscodefiles\wpr\WPR-1-f\wprfReact\obj\Debug\wprfreact.esproj.CoreCompileInputs.cache
+>>>>>>> Origin/DevelopGoed
