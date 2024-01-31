@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "fix-docker-support" ]
 
+env:
+  AZURE_WEBAPP_NAME: wprfProject
+
 jobs:
   build:
     runs-on: ubuntu-latest
