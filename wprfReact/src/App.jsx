@@ -5,6 +5,7 @@ import ClickstreamApi from './ClickstreamApi.jsx';
 import { AuthContext } from './authContext.js';
 import AppRouter from './AppRouter.jsx'; // Import the router
 import { BrowserRouter as Router } from 'react-router-dom';
+import Onderzoek from './BedrijfsPortal/components/Onderzoek.jsx';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,8 +18,9 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
-        <Navbar isLoggedIn={isLoggedIn} currentUser={currentUser} isAdmin={isAdmin}  isPanellid={isPanellid}/>
+        <Navbar/>
       </header>
+      <Onderzoek/>
       <AppRouter/>
       <footer>
         <Footer/>
