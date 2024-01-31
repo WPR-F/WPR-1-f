@@ -39,8 +39,8 @@ function AppRouter() {
       <Route path='PanellidPortal/ActieveOnderzoeken' element={<PrivateRoute element={ActieveOnderzoeken} roles={["Panellid"]} />} />
 
       {/* BedrijfsPortal Components */}
-      <Route path='/BedrijfsPortal' element={<PrivateRoute element={SidebarBedrijfPortal} roles={["Company"]} />} />
-      <Route path='/BedrijfsPortal/onderzoek' element={<PrivateRoute element={Onderzoek} roles={["Company"]} />} />
+      <Route path='/BedrijfPortal' element={<PrivateRoute element={SidebarBedrijfPortal} roles={["Company"]} />} />
+      <Route path='/BedrijfPortal/Onderzoeken' element={<PrivateRoute element={Onderzoek} roles={["Company"]} />} />
     </Routes>
   );
 }
