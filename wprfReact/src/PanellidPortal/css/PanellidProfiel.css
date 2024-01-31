@@ -23,6 +23,8 @@
 }
 .formKnoppen button {
     margin: 0 10px;
+    background-color: #2B50EC;
+    
 }
 
 .dateTime {

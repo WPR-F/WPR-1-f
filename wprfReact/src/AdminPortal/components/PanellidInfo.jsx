@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../css/AdminPortal.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { roleValidation } from '../../roleValidation';
 import { fetchPanellidInformation } from '../../apiService';
 
-const PanellidInfo = ({ isAdmin, isLoggedIn }) => {
+const PanellidInfo = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const [panellidinfo, setPanellidinfo] = useState([]);
-
-    useEffect(() => {
-        roleValidation(navigate, isAdmin, isLoggedIn);
-    }, [isAdmin, isLoggedIn]);
 
     useEffect(() => {
         fetchUserInformation();

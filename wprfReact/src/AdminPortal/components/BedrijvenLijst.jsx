@@ -3,15 +3,11 @@ import '../css/AdminPortal.css';
 import '../css/PanellidLijst.css';
 import { useNavigate } from 'react-router-dom';
 import { GetUsers } from '../../apiService';
-import { roleValidation } from '../../roleValidation';
 
-const BedrijvenLijst = ({ isAdmin, isLoggedIn }) => {
+
+const BedrijvenLijst = () => {
     const [users, setUsers] = useState([]); 
     const navigate = useNavigate();
-
-    useEffect(() => {
-        roleValidation(navigate, isAdmin, isLoggedIn);
-        }, [isAdmin, isLoggedIn]);
 
     const fetchUsers = async () => {
         try {
@@ -25,7 +21,6 @@ const BedrijvenLijst = ({ isAdmin, isLoggedIn }) => {
         useEffect(() => {
             fetchUsers();
         }, []);
-
 
     return ( 
         <div  className="blok">
